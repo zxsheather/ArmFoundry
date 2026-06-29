@@ -1,0 +1,88 @@
+{
+  "best_robot": {
+    "base_xyz": [
+      0.009923,
+      -0.201457,
+      0.071866
+    ],
+    "base_yaw": 0.062669,
+    "joint_limits": [
+      [
+        -3.141593,
+        3.141593
+      ],
+      [
+        -2.6,
+        2.6
+      ],
+      [
+        -2.8,
+        2.8
+      ],
+      [
+        -2.9,
+        2.9
+      ],
+      [
+        -2.5,
+        2.5
+      ],
+      [
+        -3.141593,
+        3.141593
+      ]
+    ],
+    "link_lengths": [
+      0.333006,
+      0.42309,
+      0.26771,
+      0.188269
+    ],
+    "name": "simple_optimized_links",
+    "reach_proxy": 1.212073,
+    "source": "parameterized"
+  },
+  "best_test_metrics": {
+    "collision_proxy": 2.561e-05,
+    "hardware_cost": 1.212073,
+    "ik_success_rate": 1.0,
+    "manipulability_below_threshold": 0.0,
+    "max_position_error": 0.00199,
+    "mean_joint_margin": 1.223379,
+    "mean_manipulability": 0.09443682,
+    "mean_position_error": 0.000237,
+    "min_joint_margin": 0.433749,
+    "min_manipulability": 0.01796682,
+    "num_trajectories": 5,
+    "num_waypoints": 240,
+    "robot_name": "simple_optimized_links",
+    "smoothness_cost": 0.00153338,
+    "trajectory_success_rate": 1.0
+  },
+  "best_train_objective_loss": 0.07246127,
+  "initial_test_metrics": {
+    "collision_proxy": 0.00039562,
+    "hardware_cost": 1.08,
+    "ik_success_rate": 1.0,
+    "manipulability_below_threshold": 0.0,
+    "max_position_error": 0.00145,
+    "mean_joint_margin": 1.054327,
+    "mean_manipulability": 0.05726301,
+    "mean_position_error": 0.000258,
+    "min_joint_margin": 0.325169,
+    "min_manipulability": 0.01425281,
+    "num_trajectories": 5,
+    "num_waypoints": 240,
+    "robot_name": "simple_default",
+    "smoothness_cost": 0.00226762,
+    "trajectory_success_rate": 1.0
+  },
+  "orientation_note": "Orientation is stored when present but not optimized in this first-stage IK evaluator.",
+  "position_only_evaluation": true,
+  "split": {
+    "num_test_trajectories": 5,
+    "num_train_trajectories": 11,
+    "split_by": "episode",
+    "train_fraction": 0.7
+  }
+}

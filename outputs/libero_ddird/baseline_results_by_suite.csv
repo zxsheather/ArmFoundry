@@ -1,0 +1,9 @@
+robot_name,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,mean_joint_margin,min_joint_margin,mean_manipulability,min_manipulability,manipulability_below_threshold,smoothness_cost,collision_proxy,hardware_cost,suite
+simple_default,8,384,1.0,1.0,0.000274,0.00145,1.04073,0.325169,0.05253151,0.01425281,0.0,0.00265577,0.00036791,1.08,libero_synthetic_object
+simple_default,8,384,1.0,1.0,0.000254,0.001679,0.972963,0.399315,0.05503886,0.01896243,0.0,0.00182025,0.00069861,1.08,libero_synthetic_spatial
+panda_proxy,8,384,0.908854,0.5,0.003094,0.058195,1.24133,0.337055,0.03750309,4.2e-07,0.080729,0.00422409,0.0,1.04,libero_synthetic_object
+panda_proxy,8,384,1.0,1.0,0.000272,0.001992,1.102877,0.438182,0.04455508,0.01685328,0.0,0.00226304,0.0,1.04,libero_synthetic_spatial
+ur5_proxy,8,384,1.0,1.0,0.000226,0.001058,0.811172,0.300179,0.08350134,0.0219476,0.0,0.00135904,0.04264152,1.113,libero_synthetic_object
+ur5_proxy,8,384,1.0,1.0,0.000259,0.001932,0.789448,0.323082,0.07955082,0.02635229,0.0,0.00123998,0.04088903,1.113,libero_synthetic_spatial
+xarm6_proxy,8,384,0.861979,0.5,0.005731,0.078575,1.304039,0.347159,0.03303258,6.4e-07,0.104167,0.00515949,2.322e-05,0.946,libero_synthetic_object
+xarm6_proxy,8,384,1.0,1.0,0.000295,0.001946,1.197435,0.432085,0.03834035,0.01551012,0.0,0.0026496,0.0001011,0.946,libero_synthetic_spatial

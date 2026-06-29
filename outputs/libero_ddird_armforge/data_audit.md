@@ -1,0 +1,2255 @@
+# LIBERO Data Audit
+
+- Input path: `data/armforge/raw/libero`
+- Exists: `True`
+- Candidate files: `30`
+
+## HDF5: `data/armforge/raw/libero/libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[138, 7], dtype=float64
+- `data/demo_0/dones`: shape=[138], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[138, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[138, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[138, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[138, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[138, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[138], dtype=uint8
+- `data/demo_0/robot_states`: shape=[138, 9], dtype=float64
+- `data/demo_0/states`: shape=[138, 79], dtype=float64
+- `data/demo_1/actions`: shape=[138, 7], dtype=float64
+- `data/demo_1/dones`: shape=[138], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[138, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[138, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[138, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[138, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[138, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[138], dtype=uint8
+- `data/demo_1/robot_states`: shape=[138, 9], dtype=float64
+- `data/demo_1/states`: shape=[138, 79], dtype=float64
+- `data/demo_10/actions`: shape=[130, 7], dtype=float64
+- `data/demo_10/dones`: shape=[130], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[130, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[130, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[130, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[130, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[130, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[130], dtype=uint8
+- `data/demo_10/robot_states`: shape=[130, 9], dtype=float64
+- `data/demo_10/states`: shape=[130, 79], dtype=float64
+- `data/demo_11/actions`: shape=[127, 7], dtype=float64
+- `data/demo_11/dones`: shape=[127], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[127, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[127, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[127, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[127, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[127, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[127], dtype=uint8
+- `data/demo_11/robot_states`: shape=[127, 9], dtype=float64
+- `data/demo_11/states`: shape=[127, 79], dtype=float64
+- `data/demo_12/actions`: shape=[138, 7], dtype=float64
+- `data/demo_12/dones`: shape=[138], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[138, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[138, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[138, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[138, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[138, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[138], dtype=uint8
+- `data/demo_12/robot_states`: shape=[138, 9], dtype=float64
+- `data/demo_12/states`: shape=[138, 79], dtype=float64
+- `data/demo_13/actions`: shape=[128, 7], dtype=float64
+- `data/demo_13/dones`: shape=[128], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[128, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[128, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[128, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[128, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[128, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[128], dtype=uint8
+- `data/demo_13/robot_states`: shape=[128, 9], dtype=float64
+- `data/demo_13/states`: shape=[128, 79], dtype=float64
+- `data/demo_14/actions`: shape=[128, 7], dtype=float64
+- `data/demo_14/dones`: shape=[128], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[128, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[128, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[128, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[128, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/open_the_top_drawer_and_put_the_bowl_inside_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[170, 7], dtype=float64
+- `data/demo_0/dones`: shape=[170], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[170, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[170, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[170, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[170, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[170, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[170, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[170, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[170], dtype=uint8
+- `data/demo_0/robot_states`: shape=[170, 9], dtype=float64
+- `data/demo_0/states`: shape=[170, 79], dtype=float64
+- `data/demo_1/actions`: shape=[187, 7], dtype=float64
+- `data/demo_1/dones`: shape=[187], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[187, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[187, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[187, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[187, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[187, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[187, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[187, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[187], dtype=uint8
+- `data/demo_1/robot_states`: shape=[187, 9], dtype=float64
+- `data/demo_1/states`: shape=[187, 79], dtype=float64
+- `data/demo_10/actions`: shape=[299, 7], dtype=float64
+- `data/demo_10/dones`: shape=[299], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[299, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[299, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[299, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[299, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[299, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[299, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[299, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[299], dtype=uint8
+- `data/demo_10/robot_states`: shape=[299, 9], dtype=float64
+- `data/demo_10/states`: shape=[299, 79], dtype=float64
+- `data/demo_11/actions`: shape=[228, 7], dtype=float64
+- `data/demo_11/dones`: shape=[228], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[228, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[228, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[228, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[228, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[228, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[228, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[228, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[228], dtype=uint8
+- `data/demo_11/robot_states`: shape=[228, 9], dtype=float64
+- `data/demo_11/states`: shape=[228, 79], dtype=float64
+- `data/demo_12/actions`: shape=[215, 7], dtype=float64
+- `data/demo_12/dones`: shape=[215], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[215, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[215, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[215, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[215, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[215, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[215, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[215, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[215], dtype=uint8
+- `data/demo_12/robot_states`: shape=[215, 9], dtype=float64
+- `data/demo_12/states`: shape=[215, 79], dtype=float64
+- `data/demo_13/actions`: shape=[190, 7], dtype=float64
+- `data/demo_13/dones`: shape=[190], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[190, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[190, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[190, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[190, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[190, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[190, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[190, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[190], dtype=uint8
+- `data/demo_13/robot_states`: shape=[190, 9], dtype=float64
+- `data/demo_13/states`: shape=[190, 79], dtype=float64
+- `data/demo_14/actions`: shape=[178, 7], dtype=float64
+- `data/demo_14/dones`: shape=[178], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[178, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[178, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[178, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[178, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[178, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[178, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[155, 7], dtype=float64
+- `data/demo_0/dones`: shape=[155], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[155, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[155, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[155, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[155, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[155, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[155], dtype=uint8
+- `data/demo_0/robot_states`: shape=[155, 9], dtype=float64
+- `data/demo_0/states`: shape=[155, 79], dtype=float64
+- `data/demo_1/actions`: shape=[128, 7], dtype=float64
+- `data/demo_1/dones`: shape=[128], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[128, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[128, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[128, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[128, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[128, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[128], dtype=uint8
+- `data/demo_1/robot_states`: shape=[128, 9], dtype=float64
+- `data/demo_1/states`: shape=[128, 79], dtype=float64
+- `data/demo_10/actions`: shape=[215, 7], dtype=float64
+- `data/demo_10/dones`: shape=[215], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[215, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[215, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[215, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[215, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[215, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[215, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[215, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[215], dtype=uint8
+- `data/demo_10/robot_states`: shape=[215, 9], dtype=float64
+- `data/demo_10/states`: shape=[215, 79], dtype=float64
+- `data/demo_11/actions`: shape=[144, 7], dtype=float64
+- `data/demo_11/dones`: shape=[144], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[144, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[144, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[144, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[144, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[144, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[144, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[144, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[144], dtype=uint8
+- `data/demo_11/robot_states`: shape=[144, 9], dtype=float64
+- `data/demo_11/states`: shape=[144, 79], dtype=float64
+- `data/demo_12/actions`: shape=[142, 7], dtype=float64
+- `data/demo_12/dones`: shape=[142], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[142, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[142, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[142, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[142, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[142, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[142], dtype=uint8
+- `data/demo_12/robot_states`: shape=[142, 9], dtype=float64
+- `data/demo_12/states`: shape=[142, 79], dtype=float64
+- `data/demo_13/actions`: shape=[151, 7], dtype=float64
+- `data/demo_13/dones`: shape=[151], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[151, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[151, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[151, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[151, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[151, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[151, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[151, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[151], dtype=uint8
+- `data/demo_13/robot_states`: shape=[151, 9], dtype=float64
+- `data/demo_13/states`: shape=[151, 79], dtype=float64
+- `data/demo_14/actions`: shape=[178, 7], dtype=float64
+- `data/demo_14/dones`: shape=[178], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[178, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[178, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[178, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[178, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[178, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[178, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_bowl_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[90, 7], dtype=float64
+- `data/demo_0/dones`: shape=[90], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[90, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[90, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[90, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[90, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[90, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[90], dtype=uint8
+- `data/demo_0/robot_states`: shape=[90, 9], dtype=float64
+- `data/demo_0/states`: shape=[90, 79], dtype=float64
+- `data/demo_1/actions`: shape=[88, 7], dtype=float64
+- `data/demo_1/dones`: shape=[88], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[88, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[88, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[88, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[88, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[88, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[88], dtype=uint8
+- `data/demo_1/robot_states`: shape=[88, 9], dtype=float64
+- `data/demo_1/states`: shape=[88, 79], dtype=float64
+- `data/demo_10/actions`: shape=[112, 7], dtype=float64
+- `data/demo_10/dones`: shape=[112], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[112, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[112, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[112, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[112, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[112, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[112, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[112, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[112], dtype=uint8
+- `data/demo_10/robot_states`: shape=[112, 9], dtype=float64
+- `data/demo_10/states`: shape=[112, 79], dtype=float64
+- `data/demo_11/actions`: shape=[85, 7], dtype=float64
+- `data/demo_11/dones`: shape=[85], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[85, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[85, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[85, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[85, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[85, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[85, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[85, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[85], dtype=uint8
+- `data/demo_11/robot_states`: shape=[85, 9], dtype=float64
+- `data/demo_11/states`: shape=[85, 79], dtype=float64
+- `data/demo_12/actions`: shape=[88, 7], dtype=float64
+- `data/demo_12/dones`: shape=[88], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[88, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[88, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[88, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[88, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[88, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[88], dtype=uint8
+- `data/demo_12/robot_states`: shape=[88, 9], dtype=float64
+- `data/demo_12/states`: shape=[88, 79], dtype=float64
+- `data/demo_13/actions`: shape=[98, 7], dtype=float64
+- `data/demo_13/dones`: shape=[98], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[98, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[98, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[98, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[98, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[98, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[98], dtype=uint8
+- `data/demo_13/robot_states`: shape=[98, 9], dtype=float64
+- `data/demo_13/states`: shape=[98, 79], dtype=float64
+- `data/demo_14/actions`: shape=[87, 7], dtype=float64
+- `data/demo_14/dones`: shape=[87], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[87, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[87, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[87, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[87, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[87, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[87, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_bowl_on_the_stove_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[94, 7], dtype=float64
+- `data/demo_0/dones`: shape=[94], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[94, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[94, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[94, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[94, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[94, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[94, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[94, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[94], dtype=uint8
+- `data/demo_0/robot_states`: shape=[94, 9], dtype=float64
+- `data/demo_0/states`: shape=[94, 79], dtype=float64
+- `data/demo_1/actions`: shape=[99, 7], dtype=float64
+- `data/demo_1/dones`: shape=[99], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[99, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[99, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[99, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[99, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[99, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[99, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[99, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[99], dtype=uint8
+- `data/demo_1/robot_states`: shape=[99, 9], dtype=float64
+- `data/demo_1/states`: shape=[99, 79], dtype=float64
+- `data/demo_10/actions`: shape=[96, 7], dtype=float64
+- `data/demo_10/dones`: shape=[96], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[96, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[96, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[96, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[96, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[96, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[96], dtype=uint8
+- `data/demo_10/robot_states`: shape=[96, 9], dtype=float64
+- `data/demo_10/states`: shape=[96, 79], dtype=float64
+- `data/demo_11/actions`: shape=[93, 7], dtype=float64
+- `data/demo_11/dones`: shape=[93], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[93, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[93, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[93, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[93, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[93, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[93], dtype=uint8
+- `data/demo_11/robot_states`: shape=[93, 9], dtype=float64
+- `data/demo_11/states`: shape=[93, 79], dtype=float64
+- `data/demo_12/actions`: shape=[111, 7], dtype=float64
+- `data/demo_12/dones`: shape=[111], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[111, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[111, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[111, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[111, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[111, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[111, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[111, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[111], dtype=uint8
+- `data/demo_12/robot_states`: shape=[111, 9], dtype=float64
+- `data/demo_12/states`: shape=[111, 79], dtype=float64
+- `data/demo_13/actions`: shape=[94, 7], dtype=float64
+- `data/demo_13/dones`: shape=[94], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[94, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[94, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[94, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[94, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[94, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[94, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[94, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[94], dtype=uint8
+- `data/demo_13/robot_states`: shape=[94, 9], dtype=float64
+- `data/demo_13/states`: shape=[94, 79], dtype=float64
+- `data/demo_14/actions`: shape=[123, 7], dtype=float64
+- `data/demo_14/dones`: shape=[123], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[123, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[123, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[123, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[123, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_bowl_on_top_of_the_cabinet_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[91, 7], dtype=float64
+- `data/demo_0/dones`: shape=[91], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[91, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[91, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[91, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[91, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[91, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[91, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[91, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[91], dtype=uint8
+- `data/demo_0/robot_states`: shape=[91, 9], dtype=float64
+- `data/demo_0/states`: shape=[91, 79], dtype=float64
+- `data/demo_1/actions`: shape=[110, 7], dtype=float64
+- `data/demo_1/dones`: shape=[110], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[110, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[110, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[110, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[110, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[110, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[110, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[110, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[110], dtype=uint8
+- `data/demo_1/robot_states`: shape=[110, 9], dtype=float64
+- `data/demo_1/states`: shape=[110, 79], dtype=float64
+- `data/demo_10/actions`: shape=[88, 7], dtype=float64
+- `data/demo_10/dones`: shape=[88], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[88, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[88, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[88, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[88, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[88, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[88], dtype=uint8
+- `data/demo_10/robot_states`: shape=[88, 9], dtype=float64
+- `data/demo_10/states`: shape=[88, 79], dtype=float64
+- `data/demo_11/actions`: shape=[105, 7], dtype=float64
+- `data/demo_11/dones`: shape=[105], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[105, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[105, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[105, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[105, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[105, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[105, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[105, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[105], dtype=uint8
+- `data/demo_11/robot_states`: shape=[105, 9], dtype=float64
+- `data/demo_11/states`: shape=[105, 79], dtype=float64
+- `data/demo_12/actions`: shape=[98, 7], dtype=float64
+- `data/demo_12/dones`: shape=[98], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[98, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[98, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[98, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[98, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[98, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[98], dtype=uint8
+- `data/demo_12/robot_states`: shape=[98, 9], dtype=float64
+- `data/demo_12/states`: shape=[98, 79], dtype=float64
+- `data/demo_13/actions`: shape=[103, 7], dtype=float64
+- `data/demo_13/dones`: shape=[103], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[103, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[103, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[103, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[103, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[103, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[103], dtype=uint8
+- `data/demo_13/robot_states`: shape=[103, 9], dtype=float64
+- `data/demo_13/states`: shape=[103, 79], dtype=float64
+- `data/demo_14/actions`: shape=[101, 7], dtype=float64
+- `data/demo_14/dones`: shape=[101], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[101, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[101, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[101, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[101, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[101, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[101, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_cream_cheese_in_the_bowl_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[92, 7], dtype=float64
+- `data/demo_0/dones`: shape=[92], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[92, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[92, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[92, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[92, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[92, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[92, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[92, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[92], dtype=uint8
+- `data/demo_0/robot_states`: shape=[92, 9], dtype=float64
+- `data/demo_0/states`: shape=[92, 79], dtype=float64
+- `data/demo_1/actions`: shape=[113, 7], dtype=float64
+- `data/demo_1/dones`: shape=[113], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[113, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[113, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[113, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[113, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[113, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[113, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[113, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[113], dtype=uint8
+- `data/demo_1/robot_states`: shape=[113, 9], dtype=float64
+- `data/demo_1/states`: shape=[113, 79], dtype=float64
+- `data/demo_10/actions`: shape=[107, 7], dtype=float64
+- `data/demo_10/dones`: shape=[107], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[107, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[107, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[107, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[107, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[107, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[107, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[107, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[107], dtype=uint8
+- `data/demo_10/robot_states`: shape=[107, 9], dtype=float64
+- `data/demo_10/states`: shape=[107, 79], dtype=float64
+- `data/demo_11/actions`: shape=[98, 7], dtype=float64
+- `data/demo_11/dones`: shape=[98], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[98, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[98, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[98, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[98, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[98, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[98], dtype=uint8
+- `data/demo_11/robot_states`: shape=[98, 9], dtype=float64
+- `data/demo_11/states`: shape=[98, 79], dtype=float64
+- `data/demo_12/actions`: shape=[136, 7], dtype=float64
+- `data/demo_12/dones`: shape=[136], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[136, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[136, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[136, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[136, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[136, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[136, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[136, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[136], dtype=uint8
+- `data/demo_12/robot_states`: shape=[136, 9], dtype=float64
+- `data/demo_12/states`: shape=[136, 79], dtype=float64
+- `data/demo_13/actions`: shape=[96, 7], dtype=float64
+- `data/demo_13/dones`: shape=[96], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[96, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[96, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[96, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[96, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[96, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[96], dtype=uint8
+- `data/demo_13/robot_states`: shape=[96, 9], dtype=float64
+- `data/demo_13/states`: shape=[96, 79], dtype=float64
+- `data/demo_14/actions`: shape=[106, 7], dtype=float64
+- `data/demo_14/dones`: shape=[106], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[106, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[106, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[106, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[106, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[106, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[106, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[347, 7], dtype=float64
+- `data/demo_0/dones`: shape=[347], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[347, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[347, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[347, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[347, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[347, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[347, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[347, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[347], dtype=uint8
+- `data/demo_0/robot_states`: shape=[347, 9], dtype=float64
+- `data/demo_0/states`: shape=[347, 79], dtype=float64
+- `data/demo_1/actions`: shape=[174, 7], dtype=float64
+- `data/demo_1/dones`: shape=[174], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[174, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[174, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[174, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[174, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[174, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[174, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[174, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[174], dtype=uint8
+- `data/demo_1/robot_states`: shape=[174, 9], dtype=float64
+- `data/demo_1/states`: shape=[174, 79], dtype=float64
+- `data/demo_10/actions`: shape=[157, 7], dtype=float64
+- `data/demo_10/dones`: shape=[157], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[157, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[157, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[157, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[157, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[157, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[157], dtype=uint8
+- `data/demo_10/robot_states`: shape=[157, 9], dtype=float64
+- `data/demo_10/states`: shape=[157, 79], dtype=float64
+- `data/demo_11/actions`: shape=[148, 7], dtype=float64
+- `data/demo_11/dones`: shape=[148], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[148, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[148, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[148, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[148, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[148, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[148], dtype=uint8
+- `data/demo_11/robot_states`: shape=[148, 9], dtype=float64
+- `data/demo_11/states`: shape=[148, 79], dtype=float64
+- `data/demo_12/actions`: shape=[177, 7], dtype=float64
+- `data/demo_12/dones`: shape=[177], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[177, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[177, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[177, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[177, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[177, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[177, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[177, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[177], dtype=uint8
+- `data/demo_12/robot_states`: shape=[177, 9], dtype=float64
+- `data/demo_12/states`: shape=[177, 79], dtype=float64
+- `data/demo_13/actions`: shape=[155, 7], dtype=float64
+- `data/demo_13/dones`: shape=[155], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[155, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[155, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[155, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[155, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[155, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[155], dtype=uint8
+- `data/demo_13/robot_states`: shape=[155, 9], dtype=float64
+- `data/demo_13/states`: shape=[155, 79], dtype=float64
+- `data/demo_14/actions`: shape=[199, 7], dtype=float64
+- `data/demo_14/dones`: shape=[199], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[199, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[199, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[199, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[199, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[199, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[199, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[93, 7], dtype=float64
+- `data/demo_0/dones`: shape=[93], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[93, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[93, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[93, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[93, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[93, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[93], dtype=uint8
+- `data/demo_0/robot_states`: shape=[93, 9], dtype=float64
+- `data/demo_0/states`: shape=[93, 79], dtype=float64
+- `data/demo_1/actions`: shape=[130, 7], dtype=float64
+- `data/demo_1/dones`: shape=[130], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[130, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[130, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[130, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[130, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[130, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[130], dtype=uint8
+- `data/demo_1/robot_states`: shape=[130, 9], dtype=float64
+- `data/demo_1/states`: shape=[130, 79], dtype=float64
+- `data/demo_10/actions`: shape=[104, 7], dtype=float64
+- `data/demo_10/dones`: shape=[104], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[104, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[104, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[104, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[104, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[104, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[104, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[104, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[104], dtype=uint8
+- `data/demo_10/robot_states`: shape=[104, 9], dtype=float64
+- `data/demo_10/states`: shape=[104, 79], dtype=float64
+- `data/demo_11/actions`: shape=[99, 7], dtype=float64
+- `data/demo_11/dones`: shape=[99], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[99, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[99, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[99, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[99, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[99, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[99, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[99, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[99], dtype=uint8
+- `data/demo_11/robot_states`: shape=[99, 9], dtype=float64
+- `data/demo_11/states`: shape=[99, 79], dtype=float64
+- `data/demo_12/actions`: shape=[90, 7], dtype=float64
+- `data/demo_12/dones`: shape=[90], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[90, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[90, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[90, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[90, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[90, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[90], dtype=uint8
+- `data/demo_12/robot_states`: shape=[90, 9], dtype=float64
+- `data/demo_12/states`: shape=[90, 79], dtype=float64
+- `data/demo_13/actions`: shape=[93, 7], dtype=float64
+- `data/demo_13/dones`: shape=[93], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[93, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[93, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[93, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[93, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[93, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[93], dtype=uint8
+- `data/demo_13/robot_states`: shape=[93, 9], dtype=float64
+- `data/demo_13/states`: shape=[93, 79], dtype=float64
+- `data/demo_14/actions`: shape=[100, 7], dtype=float64
+- `data/demo_14/dones`: shape=[100], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[100, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[100, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[100, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[100, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[100, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[100, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_goal/turn_on_the_stove_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[80, 7], dtype=float64
+- `data/demo_0/dones`: shape=[80], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[80, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[80, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[80, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[80, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[80, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[80, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[80, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[80], dtype=uint8
+- `data/demo_0/robot_states`: shape=[80, 9], dtype=float64
+- `data/demo_0/states`: shape=[80, 79], dtype=float64
+- `data/demo_1/actions`: shape=[96, 7], dtype=float64
+- `data/demo_1/dones`: shape=[96], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[96, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[96, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[96, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[96, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[96, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[96, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[96], dtype=uint8
+- `data/demo_1/robot_states`: shape=[96, 9], dtype=float64
+- `data/demo_1/states`: shape=[96, 79], dtype=float64
+- `data/demo_10/actions`: shape=[97, 7], dtype=float64
+- `data/demo_10/dones`: shape=[97], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[97, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[97, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[97, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[97, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[97, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[97, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[97, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[97], dtype=uint8
+- `data/demo_10/robot_states`: shape=[97, 9], dtype=float64
+- `data/demo_10/states`: shape=[97, 79], dtype=float64
+- `data/demo_11/actions`: shape=[88, 7], dtype=float64
+- `data/demo_11/dones`: shape=[88], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[88, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[88, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[88, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[88, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[88, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[88], dtype=uint8
+- `data/demo_11/robot_states`: shape=[88, 9], dtype=float64
+- `data/demo_11/states`: shape=[88, 79], dtype=float64
+- `data/demo_12/actions`: shape=[103, 7], dtype=float64
+- `data/demo_12/dones`: shape=[103], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[103, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[103, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[103, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[103, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[103, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[103], dtype=uint8
+- `data/demo_12/robot_states`: shape=[103, 9], dtype=float64
+- `data/demo_12/states`: shape=[103, 79], dtype=float64
+- `data/demo_13/actions`: shape=[90, 7], dtype=float64
+- `data/demo_13/dones`: shape=[90], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[90, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[90, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[90, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[90, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[90, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[90, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[90], dtype=uint8
+- `data/demo_13/robot_states`: shape=[90, 9], dtype=float64
+- `data/demo_13/states`: shape=[90, 79], dtype=float64
+- `data/demo_14/actions`: shape=[89, 7], dtype=float64
+- `data/demo_14/dones`: shape=[89], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[89, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[89, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[89, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[89, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[89, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[89, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[148, 7], dtype=float64
+- `data/demo_0/dones`: shape=[148], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[148, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[148, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[148, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[148, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[148, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[148], dtype=uint8
+- `data/demo_0/robot_states`: shape=[148, 9], dtype=float64
+- `data/demo_0/states`: shape=[148, 110], dtype=float64
+- `data/demo_1/actions`: shape=[179, 7], dtype=float64
+- `data/demo_1/dones`: shape=[179], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[179, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[179, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[179, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[179, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[179, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[179, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[179, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[179], dtype=uint8
+- `data/demo_1/robot_states`: shape=[179, 9], dtype=float64
+- `data/demo_1/states`: shape=[179, 110], dtype=float64
+- `data/demo_10/actions`: shape=[157, 7], dtype=float64
+- `data/demo_10/dones`: shape=[157], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[157, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[157, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[157, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[157, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[157, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[157], dtype=uint8
+- `data/demo_10/robot_states`: shape=[157, 9], dtype=float64
+- `data/demo_10/states`: shape=[157, 110], dtype=float64
+- `data/demo_11/actions`: shape=[152, 7], dtype=float64
+- `data/demo_11/dones`: shape=[152], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[152, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[152, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[152, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[152, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[152, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[152], dtype=uint8
+- `data/demo_11/robot_states`: shape=[152, 9], dtype=float64
+- `data/demo_11/states`: shape=[152, 110], dtype=float64
+- `data/demo_12/actions`: shape=[172, 7], dtype=float64
+- `data/demo_12/dones`: shape=[172], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[172, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[172, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[172, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[172, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[172, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[172, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[172, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[172], dtype=uint8
+- `data/demo_12/robot_states`: shape=[172, 9], dtype=float64
+- `data/demo_12/states`: shape=[172, 110], dtype=float64
+- `data/demo_13/actions`: shape=[146, 7], dtype=float64
+- `data/demo_13/dones`: shape=[146], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[146, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[146, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[146, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[146, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[146, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[146, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[146, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[146], dtype=uint8
+- `data/demo_13/robot_states`: shape=[146, 9], dtype=float64
+- `data/demo_13/states`: shape=[146, 110], dtype=float64
+- `data/demo_14/actions`: shape=[149, 7], dtype=float64
+- `data/demo_14/dones`: shape=[149], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[149, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[149, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[149, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[149, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[134, 7], dtype=float64
+- `data/demo_0/dones`: shape=[134], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[134, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[134, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[134, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[134, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[134, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[134, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[134, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[134], dtype=uint8
+- `data/demo_0/robot_states`: shape=[134, 9], dtype=float64
+- `data/demo_0/states`: shape=[134, 110], dtype=float64
+- `data/demo_1/actions`: shape=[179, 7], dtype=float64
+- `data/demo_1/dones`: shape=[179], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[179, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[179, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[179, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[179, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[179, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[179, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[179, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[179], dtype=uint8
+- `data/demo_1/robot_states`: shape=[179, 9], dtype=float64
+- `data/demo_1/states`: shape=[179, 110], dtype=float64
+- `data/demo_10/actions`: shape=[130, 7], dtype=float64
+- `data/demo_10/dones`: shape=[130], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[130, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[130, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[130, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[130, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[130, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[130, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[130], dtype=uint8
+- `data/demo_10/robot_states`: shape=[130, 9], dtype=float64
+- `data/demo_10/states`: shape=[130, 110], dtype=float64
+- `data/demo_11/actions`: shape=[149, 7], dtype=float64
+- `data/demo_11/dones`: shape=[149], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[149, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[149, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[149, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[149, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[149, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[149], dtype=uint8
+- `data/demo_11/robot_states`: shape=[149, 9], dtype=float64
+- `data/demo_11/states`: shape=[149, 110], dtype=float64
+- `data/demo_12/actions`: shape=[126, 7], dtype=float64
+- `data/demo_12/dones`: shape=[126], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[126, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[126, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[126, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[126, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[126, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[126, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[126, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[126], dtype=uint8
+- `data/demo_12/robot_states`: shape=[126, 9], dtype=float64
+- `data/demo_12/states`: shape=[126, 110], dtype=float64
+- `data/demo_13/actions`: shape=[222, 7], dtype=float64
+- `data/demo_13/dones`: shape=[222], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[222, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[222, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[222, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[222, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[222, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[222, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[222, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[222], dtype=uint8
+- `data/demo_13/robot_states`: shape=[222, 9], dtype=float64
+- `data/demo_13/states`: shape=[222, 110], dtype=float64
+- `data/demo_14/actions`: shape=[125, 7], dtype=float64
+- `data/demo_14/dones`: shape=[125], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[125, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[125, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[125, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[125, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[125, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[125, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_butter_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[169, 7], dtype=float64
+- `data/demo_0/dones`: shape=[169], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[169, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[169, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[169, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[169, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[169, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[169, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[169, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[169], dtype=uint8
+- `data/demo_0/robot_states`: shape=[169, 9], dtype=float64
+- `data/demo_0/states`: shape=[169, 110], dtype=float64
+- `data/demo_1/actions`: shape=[149, 7], dtype=float64
+- `data/demo_1/dones`: shape=[149], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[149, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[149, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[149, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[149, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[149, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[149], dtype=uint8
+- `data/demo_1/robot_states`: shape=[149, 9], dtype=float64
+- `data/demo_1/states`: shape=[149, 110], dtype=float64
+- `data/demo_10/actions`: shape=[152, 7], dtype=float64
+- `data/demo_10/dones`: shape=[152], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[152, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[152, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[152, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[152, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[152, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[152], dtype=uint8
+- `data/demo_10/robot_states`: shape=[152, 9], dtype=float64
+- `data/demo_10/states`: shape=[152, 110], dtype=float64
+- `data/demo_11/actions`: shape=[171, 7], dtype=float64
+- `data/demo_11/dones`: shape=[171], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[171, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[171, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[171, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[171, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[171, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[171, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[171, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[171], dtype=uint8
+- `data/demo_11/robot_states`: shape=[171, 9], dtype=float64
+- `data/demo_11/states`: shape=[171, 110], dtype=float64
+- `data/demo_12/actions`: shape=[154, 7], dtype=float64
+- `data/demo_12/dones`: shape=[154], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[154, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[154, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[154, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[154, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[154, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[154], dtype=uint8
+- `data/demo_12/robot_states`: shape=[154, 9], dtype=float64
+- `data/demo_12/states`: shape=[154, 110], dtype=float64
+- `data/demo_13/actions`: shape=[149, 7], dtype=float64
+- `data/demo_13/dones`: shape=[149], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[149, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[149, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[149, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[149, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[149, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[149, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[149], dtype=uint8
+- `data/demo_13/robot_states`: shape=[149, 9], dtype=float64
+- `data/demo_13/states`: shape=[149, 110], dtype=float64
+- `data/demo_14/actions`: shape=[154, 7], dtype=float64
+- `data/demo_14/dones`: shape=[154], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[154, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[154, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[154, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[154, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[168, 7], dtype=float64
+- `data/demo_0/dones`: shape=[168], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[168, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[168, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[168, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[168, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[168, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[168, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[168, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[168], dtype=uint8
+- `data/demo_0/robot_states`: shape=[168, 9], dtype=float64
+- `data/demo_0/states`: shape=[168, 110], dtype=float64
+- `data/demo_1/actions`: shape=[150, 7], dtype=float64
+- `data/demo_1/dones`: shape=[150], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[150, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[150, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[150, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[150, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[150, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[150], dtype=uint8
+- `data/demo_1/robot_states`: shape=[150, 9], dtype=float64
+- `data/demo_1/states`: shape=[150, 110], dtype=float64
+- `data/demo_10/actions`: shape=[152, 7], dtype=float64
+- `data/demo_10/dones`: shape=[152], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[152, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[152, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[152, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[152, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[152, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[152, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[152], dtype=uint8
+- `data/demo_10/robot_states`: shape=[152, 9], dtype=float64
+- `data/demo_10/states`: shape=[152, 110], dtype=float64
+- `data/demo_11/actions`: shape=[163, 7], dtype=float64
+- `data/demo_11/dones`: shape=[163], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[163, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[163, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[163, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[163, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[163, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[163, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[163, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[163], dtype=uint8
+- `data/demo_11/robot_states`: shape=[163, 9], dtype=float64
+- `data/demo_11/states`: shape=[163, 110], dtype=float64
+- `data/demo_12/actions`: shape=[158, 7], dtype=float64
+- `data/demo_12/dones`: shape=[158], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[158, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[158, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[158, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[158, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[158, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[158, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[158, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[158], dtype=uint8
+- `data/demo_12/robot_states`: shape=[158, 9], dtype=float64
+- `data/demo_12/states`: shape=[158, 110], dtype=float64
+- `data/demo_13/actions`: shape=[154, 7], dtype=float64
+- `data/demo_13/dones`: shape=[154], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[154, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[154, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[154, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[154, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[154, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[154, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[154], dtype=uint8
+- `data/demo_13/robot_states`: shape=[154, 9], dtype=float64
+- `data/demo_13/states`: shape=[154, 110], dtype=float64
+- `data/demo_14/actions`: shape=[160, 7], dtype=float64
+- `data/demo_14/dones`: shape=[160], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[160, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[160, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[160, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[160, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[139, 7], dtype=float64
+- `data/demo_0/dones`: shape=[139], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[139, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[139, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[139, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[139, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[139, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[139], dtype=uint8
+- `data/demo_0/robot_states`: shape=[139, 9], dtype=float64
+- `data/demo_0/states`: shape=[139, 110], dtype=float64
+- `data/demo_1/actions`: shape=[187, 7], dtype=float64
+- `data/demo_1/dones`: shape=[187], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[187, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[187, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[187, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[187, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[187, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[187, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[187, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[187], dtype=uint8
+- `data/demo_1/robot_states`: shape=[187, 9], dtype=float64
+- `data/demo_1/states`: shape=[187, 110], dtype=float64
+- `data/demo_10/actions`: shape=[132, 7], dtype=float64
+- `data/demo_10/dones`: shape=[132], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[132, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[132, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[132, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[132, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[132, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[132, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[132, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[132], dtype=uint8
+- `data/demo_10/robot_states`: shape=[132, 9], dtype=float64
+- `data/demo_10/states`: shape=[132, 110], dtype=float64
+- `data/demo_11/actions`: shape=[162, 7], dtype=float64
+- `data/demo_11/dones`: shape=[162], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[162, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[162, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[162, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[162, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[162, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[162, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[162, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[162], dtype=uint8
+- `data/demo_11/robot_states`: shape=[162, 9], dtype=float64
+- `data/demo_11/states`: shape=[162, 110], dtype=float64
+- `data/demo_12/actions`: shape=[133, 7], dtype=float64
+- `data/demo_12/dones`: shape=[133], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[133, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[133, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[133, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[133, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[133, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[133, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[133, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[133], dtype=uint8
+- `data/demo_12/robot_states`: shape=[133, 9], dtype=float64
+- `data/demo_12/states`: shape=[133, 110], dtype=float64
+- `data/demo_13/actions`: shape=[142, 7], dtype=float64
+- `data/demo_13/dones`: shape=[142], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[142, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[142, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[142, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[142, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[142, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[142], dtype=uint8
+- `data/demo_13/robot_states`: shape=[142, 9], dtype=float64
+- `data/demo_13/states`: shape=[142, 110], dtype=float64
+- `data/demo_14/actions`: shape=[157, 7], dtype=float64
+- `data/demo_14/dones`: shape=[157], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[157, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[157, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[157, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[157, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[157, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[248, 7], dtype=float64
+- `data/demo_0/dones`: shape=[248], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[248, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[248, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[248, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[248, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[248, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[248, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[248, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[248], dtype=uint8
+- `data/demo_0/robot_states`: shape=[248, 9], dtype=float64
+- `data/demo_0/states`: shape=[248, 110], dtype=float64
+- `data/demo_1/actions`: shape=[155, 7], dtype=float64
+- `data/demo_1/dones`: shape=[155], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[155, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[155, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[155, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[155, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[155, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[155, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[155], dtype=uint8
+- `data/demo_1/robot_states`: shape=[155, 9], dtype=float64
+- `data/demo_1/states`: shape=[155, 110], dtype=float64
+- `data/demo_10/actions`: shape=[160, 7], dtype=float64
+- `data/demo_10/dones`: shape=[160], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[160, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[160, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[160, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[160, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[160, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[160], dtype=uint8
+- `data/demo_10/robot_states`: shape=[160, 9], dtype=float64
+- `data/demo_10/states`: shape=[160, 110], dtype=float64
+- `data/demo_11/actions`: shape=[148, 7], dtype=float64
+- `data/demo_11/dones`: shape=[148], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[148, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[148, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[148, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[148, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[148, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[148, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[148], dtype=uint8
+- `data/demo_11/robot_states`: shape=[148, 9], dtype=float64
+- `data/demo_11/states`: shape=[148, 110], dtype=float64
+- `data/demo_12/actions`: shape=[162, 7], dtype=float64
+- `data/demo_12/dones`: shape=[162], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[162, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[162, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[162, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[162, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[162, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[162, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[162, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[162], dtype=uint8
+- `data/demo_12/robot_states`: shape=[162, 9], dtype=float64
+- `data/demo_12/states`: shape=[162, 110], dtype=float64
+- `data/demo_13/actions`: shape=[150, 7], dtype=float64
+- `data/demo_13/dones`: shape=[150], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[150, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[150, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[150, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[150, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[150, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[150], dtype=uint8
+- `data/demo_13/robot_states`: shape=[150, 9], dtype=float64
+- `data/demo_13/states`: shape=[150, 110], dtype=float64
+- `data/demo_14/actions`: shape=[141, 7], dtype=float64
+- `data/demo_14/dones`: shape=[141], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[141, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[141, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_milk_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[150, 7], dtype=float64
+- `data/demo_0/dones`: shape=[150], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[150, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[150, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[150, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[150, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[150, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[150, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[150], dtype=uint8
+- `data/demo_0/robot_states`: shape=[150, 9], dtype=float64
+- `data/demo_0/states`: shape=[150, 110], dtype=float64
+- `data/demo_1/actions`: shape=[131, 7], dtype=float64
+- `data/demo_1/dones`: shape=[131], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[131, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[131, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[131, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[131, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[131, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[131, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[131, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[131], dtype=uint8
+- `data/demo_1/robot_states`: shape=[131, 9], dtype=float64
+- `data/demo_1/states`: shape=[131, 110], dtype=float64
+- `data/demo_10/actions`: shape=[143, 7], dtype=float64
+- `data/demo_10/dones`: shape=[143], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[143, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[143, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[143, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[143, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[143, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[143, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[143, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[143], dtype=uint8
+- `data/demo_10/robot_states`: shape=[143, 9], dtype=float64
+- `data/demo_10/states`: shape=[143, 110], dtype=float64
+- `data/demo_11/actions`: shape=[143, 7], dtype=float64
+- `data/demo_11/dones`: shape=[143], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[143, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[143, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[143, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[143, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[143, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[143, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[143, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[143], dtype=uint8
+- `data/demo_11/robot_states`: shape=[143, 9], dtype=float64
+- `data/demo_11/states`: shape=[143, 110], dtype=float64
+- `data/demo_12/actions`: shape=[127, 7], dtype=float64
+- `data/demo_12/dones`: shape=[127], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[127, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[127, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[127, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[127, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[127, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[127], dtype=uint8
+- `data/demo_12/robot_states`: shape=[127, 9], dtype=float64
+- `data/demo_12/states`: shape=[127, 110], dtype=float64
+- `data/demo_13/actions`: shape=[135, 7], dtype=float64
+- `data/demo_13/dones`: shape=[135], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[135, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[135, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[135, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[135, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[135, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[135], dtype=uint8
+- `data/demo_13/robot_states`: shape=[135, 9], dtype=float64
+- `data/demo_13/states`: shape=[135, 110], dtype=float64
+- `data/demo_14/actions`: shape=[141, 7], dtype=float64
+- `data/demo_14/dones`: shape=[141], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[141, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[141, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[126, 7], dtype=float64
+- `data/demo_0/dones`: shape=[126], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[126, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[126, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[126, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[126, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[126, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[126, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[126, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[126], dtype=uint8
+- `data/demo_0/robot_states`: shape=[126, 9], dtype=float64
+- `data/demo_0/states`: shape=[126, 110], dtype=float64
+- `data/demo_1/actions`: shape=[135, 7], dtype=float64
+- `data/demo_1/dones`: shape=[135], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[135, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[135, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[135, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[135, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[135, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[135], dtype=uint8
+- `data/demo_1/robot_states`: shape=[135, 9], dtype=float64
+- `data/demo_1/states`: shape=[135, 110], dtype=float64
+- `data/demo_10/actions`: shape=[134, 7], dtype=float64
+- `data/demo_10/dones`: shape=[134], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[134, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[134, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[134, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[134, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[134, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[134, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[134, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[134], dtype=uint8
+- `data/demo_10/robot_states`: shape=[134, 9], dtype=float64
+- `data/demo_10/states`: shape=[134, 110], dtype=float64
+- `data/demo_11/actions`: shape=[167, 7], dtype=float64
+- `data/demo_11/dones`: shape=[167], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[167, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[167, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[167, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[167, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[167, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[167, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[167, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[167], dtype=uint8
+- `data/demo_11/robot_states`: shape=[167, 9], dtype=float64
+- `data/demo_11/states`: shape=[167, 110], dtype=float64
+- `data/demo_12/actions`: shape=[144, 7], dtype=float64
+- `data/demo_12/dones`: shape=[144], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[144, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[144, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[144, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[144, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[144, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[144, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[144, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[144], dtype=uint8
+- `data/demo_12/robot_states`: shape=[144, 9], dtype=float64
+- `data/demo_12/states`: shape=[144, 110], dtype=float64
+- `data/demo_13/actions`: shape=[129, 7], dtype=float64
+- `data/demo_13/dones`: shape=[129], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[129, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[129, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[129, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[129, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[129, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[129, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[129, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[129], dtype=uint8
+- `data/demo_13/robot_states`: shape=[129, 9], dtype=float64
+- `data/demo_13/states`: shape=[129, 110], dtype=float64
+- `data/demo_14/actions`: shape=[114, 7], dtype=float64
+- `data/demo_14/dones`: shape=[114], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[114, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[114, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[114, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[114, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[114, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[114, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[137, 7], dtype=float64
+- `data/demo_0/dones`: shape=[137], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[137, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[137, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[137, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[137, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[137, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[137], dtype=uint8
+- `data/demo_0/robot_states`: shape=[137, 9], dtype=float64
+- `data/demo_0/states`: shape=[137, 110], dtype=float64
+- `data/demo_1/actions`: shape=[124, 7], dtype=float64
+- `data/demo_1/dones`: shape=[124], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[124, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[124, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[124, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[124, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[124, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[124], dtype=uint8
+- `data/demo_1/robot_states`: shape=[124, 9], dtype=float64
+- `data/demo_1/states`: shape=[124, 110], dtype=float64
+- `data/demo_10/actions`: shape=[163, 7], dtype=float64
+- `data/demo_10/dones`: shape=[163], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[163, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[163, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[163, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[163, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[163, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[163, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[163, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[163], dtype=uint8
+- `data/demo_10/robot_states`: shape=[163, 9], dtype=float64
+- `data/demo_10/states`: shape=[163, 110], dtype=float64
+- `data/demo_11/actions`: shape=[167, 7], dtype=float64
+- `data/demo_11/dones`: shape=[167], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[167, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[167, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[167, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[167, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[167, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[167, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[167, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[167], dtype=uint8
+- `data/demo_11/robot_states`: shape=[167, 9], dtype=float64
+- `data/demo_11/states`: shape=[167, 110], dtype=float64
+- `data/demo_12/actions`: shape=[122, 7], dtype=float64
+- `data/demo_12/dones`: shape=[122], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[122, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[122, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[122, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[122, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[122, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[122, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[122, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[122], dtype=uint8
+- `data/demo_12/robot_states`: shape=[122, 9], dtype=float64
+- `data/demo_12/states`: shape=[122, 110], dtype=float64
+- `data/demo_13/actions`: shape=[139, 7], dtype=float64
+- `data/demo_13/dones`: shape=[139], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[139, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[139, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[139, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[139, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[139, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[139], dtype=uint8
+- `data/demo_13/robot_states`: shape=[139, 9], dtype=float64
+- `data/demo_13/states`: shape=[139, 110], dtype=float64
+- `data/demo_14/actions`: shape=[124, 7], dtype=float64
+- `data/demo_14/dones`: shape=[124], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[124, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[124, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[124, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[124, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[132, 7], dtype=float64
+- `data/demo_0/dones`: shape=[132], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[132, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[132, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[132, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[132, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[132, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[132, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[132, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[132], dtype=uint8
+- `data/demo_0/robot_states`: shape=[132, 9], dtype=float64
+- `data/demo_0/states`: shape=[132, 110], dtype=float64
+- `data/demo_1/actions`: shape=[160, 7], dtype=float64
+- `data/demo_1/dones`: shape=[160], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[160, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[160, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[160, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[160, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[160, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[160, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[160], dtype=uint8
+- `data/demo_1/robot_states`: shape=[160, 9], dtype=float64
+- `data/demo_1/states`: shape=[160, 110], dtype=float64
+- `data/demo_10/actions`: shape=[177, 7], dtype=float64
+- `data/demo_10/dones`: shape=[177], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[177, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[177, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[177, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[177, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[177, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[177, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[177, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[177], dtype=uint8
+- `data/demo_10/robot_states`: shape=[177, 9], dtype=float64
+- `data/demo_10/states`: shape=[177, 110], dtype=float64
+- `data/demo_11/actions`: shape=[133, 7], dtype=float64
+- `data/demo_11/dones`: shape=[133], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[133, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[133, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[133, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[133, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[133, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[133, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[133, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[133], dtype=uint8
+- `data/demo_11/robot_states`: shape=[133, 9], dtype=float64
+- `data/demo_11/states`: shape=[133, 110], dtype=float64
+- `data/demo_12/actions`: shape=[136, 7], dtype=float64
+- `data/demo_12/dones`: shape=[136], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[136, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[136, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[136, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[136, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[136, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[136, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[136, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[136], dtype=uint8
+- `data/demo_12/robot_states`: shape=[136, 9], dtype=float64
+- `data/demo_12/states`: shape=[136, 110], dtype=float64
+- `data/demo_13/actions`: shape=[135, 7], dtype=float64
+- `data/demo_13/dones`: shape=[135], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[135, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[135, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[135, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[135, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[135, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[135, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[135], dtype=uint8
+- `data/demo_13/robot_states`: shape=[135, 9], dtype=float64
+- `data/demo_13/states`: shape=[135, 110], dtype=float64
+- `data/demo_14/actions`: shape=[183, 7], dtype=float64
+- `data/demo_14/dones`: shape=[183], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[183, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[183, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[183, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[183, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[183, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[183, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[98, 7], dtype=float64
+- `data/demo_0/dones`: shape=[98], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[98, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[98, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[98, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[98, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[98, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[98, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[98], dtype=uint8
+- `data/demo_0/robot_states`: shape=[98, 9], dtype=float64
+- `data/demo_0/states`: shape=[98, 92], dtype=float64
+- `data/demo_1/actions`: shape=[84, 7], dtype=float64
+- `data/demo_1/dones`: shape=[84], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[84, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[84, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[84, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[84, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[84, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[84, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[84, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[84], dtype=uint8
+- `data/demo_1/robot_states`: shape=[84, 9], dtype=float64
+- `data/demo_1/states`: shape=[84, 92], dtype=float64
+- `data/demo_10/actions`: shape=[93, 7], dtype=float64
+- `data/demo_10/dones`: shape=[93], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[93, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[93, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[93, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[93, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[93, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[93, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[93], dtype=uint8
+- `data/demo_10/robot_states`: shape=[93, 9], dtype=float64
+- `data/demo_10/states`: shape=[93, 92], dtype=float64
+- `data/demo_11/actions`: shape=[128, 7], dtype=float64
+- `data/demo_11/dones`: shape=[128], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[128, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[128, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[128, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[128, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[128, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[128, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[128], dtype=uint8
+- `data/demo_11/robot_states`: shape=[128, 9], dtype=float64
+- `data/demo_11/states`: shape=[128, 92], dtype=float64
+- `data/demo_12/actions`: shape=[86, 7], dtype=float64
+- `data/demo_12/dones`: shape=[86], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[86, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[86, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[86, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[86, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[86, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[86, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[86, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[86], dtype=uint8
+- `data/demo_12/robot_states`: shape=[86, 9], dtype=float64
+- `data/demo_12/states`: shape=[86, 92], dtype=float64
+- `data/demo_13/actions`: shape=[88, 7], dtype=float64
+- `data/demo_13/dones`: shape=[88], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[88, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[88, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[88, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[88, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[88, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[88, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[88], dtype=uint8
+- `data/demo_13/robot_states`: shape=[88, 9], dtype=float64
+- `data/demo_13/states`: shape=[88, 92], dtype=float64
+- `data/demo_14/actions`: shape=[112, 7], dtype=float64
+- `data/demo_14/dones`: shape=[112], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[112, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[112, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[112, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[112, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[112, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[112, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[103, 7], dtype=float64
+- `data/demo_0/dones`: shape=[103], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[103, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[103, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[103, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[103, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[103, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[103, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[103], dtype=uint8
+- `data/demo_0/robot_states`: shape=[103, 9], dtype=float64
+- `data/demo_0/states`: shape=[103, 92], dtype=float64
+- `data/demo_1/actions`: shape=[123, 7], dtype=float64
+- `data/demo_1/dones`: shape=[123], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[123, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[123, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[123, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[123, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[123, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[123], dtype=uint8
+- `data/demo_1/robot_states`: shape=[123, 9], dtype=float64
+- `data/demo_1/states`: shape=[123, 92], dtype=float64
+- `data/demo_10/actions`: shape=[109, 7], dtype=float64
+- `data/demo_10/dones`: shape=[109], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[109, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[109, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[109, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[109, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[109, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[109, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[109, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[109], dtype=uint8
+- `data/demo_10/robot_states`: shape=[109, 9], dtype=float64
+- `data/demo_10/states`: shape=[109, 92], dtype=float64
+- `data/demo_11/actions`: shape=[101, 7], dtype=float64
+- `data/demo_11/dones`: shape=[101], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[101, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[101, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[101, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[101, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[101, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[101, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[101, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[101], dtype=uint8
+- `data/demo_11/robot_states`: shape=[101, 9], dtype=float64
+- `data/demo_11/states`: shape=[101, 92], dtype=float64
+- `data/demo_12/actions`: shape=[124, 7], dtype=float64
+- `data/demo_12/dones`: shape=[124], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[124, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[124, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[124, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[124, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[124, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[124], dtype=uint8
+- `data/demo_12/robot_states`: shape=[124, 9], dtype=float64
+- `data/demo_12/states`: shape=[124, 92], dtype=float64
+- `data/demo_13/actions`: shape=[122, 7], dtype=float64
+- `data/demo_13/dones`: shape=[122], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[122, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[122, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[122, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[122, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[122, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[122, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[122, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[122], dtype=uint8
+- `data/demo_13/robot_states`: shape=[122, 9], dtype=float64
+- `data/demo_13/states`: shape=[122, 92], dtype=float64
+- `data/demo_14/actions`: shape=[114, 7], dtype=float64
+- `data/demo_14/dones`: shape=[114], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[114, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[114, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[114, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[114, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[114, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[114, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[153, 7], dtype=float64
+- `data/demo_0/dones`: shape=[153], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[153, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[153, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[153, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[153, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[153, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[153, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[153, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[153], dtype=uint8
+- `data/demo_0/robot_states`: shape=[153, 9], dtype=float64
+- `data/demo_0/states`: shape=[153, 92], dtype=float64
+- `data/demo_1/actions`: shape=[142, 7], dtype=float64
+- `data/demo_1/dones`: shape=[142], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[142, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[142, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[142, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[142, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[142, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[142, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[142], dtype=uint8
+- `data/demo_1/robot_states`: shape=[142, 9], dtype=float64
+- `data/demo_1/states`: shape=[142, 92], dtype=float64
+- `data/demo_10/actions`: shape=[139, 7], dtype=float64
+- `data/demo_10/dones`: shape=[139], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[139, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[139, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[139, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[139, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[139, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[139, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[139], dtype=uint8
+- `data/demo_10/robot_states`: shape=[139, 9], dtype=float64
+- `data/demo_10/states`: shape=[139, 92], dtype=float64
+- `data/demo_11/actions`: shape=[182, 7], dtype=float64
+- `data/demo_11/dones`: shape=[182], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[182, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[182, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[182, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[182, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[182, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[182, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[182, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[182], dtype=uint8
+- `data/demo_11/robot_states`: shape=[182, 9], dtype=float64
+- `data/demo_11/states`: shape=[182, 92], dtype=float64
+- `data/demo_12/actions`: shape=[145, 7], dtype=float64
+- `data/demo_12/dones`: shape=[145], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[145, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[145, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[145, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[145, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[145, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[145, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[145, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[145], dtype=uint8
+- `data/demo_12/robot_states`: shape=[145, 9], dtype=float64
+- `data/demo_12/states`: shape=[145, 92], dtype=float64
+- `data/demo_13/actions`: shape=[141, 7], dtype=float64
+- `data/demo_13/dones`: shape=[141], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[141, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[141, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[141, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[141, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[141, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[141], dtype=uint8
+- `data/demo_13/robot_states`: shape=[141, 9], dtype=float64
+- `data/demo_13/states`: shape=[141, 92], dtype=float64
+- `data/demo_14/actions`: shape=[138, 7], dtype=float64
+- `data/demo_14/dones`: shape=[138], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[138, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[138, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[138, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[138, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[138, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[123, 7], dtype=float64
+- `data/demo_0/dones`: shape=[123], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[123, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[123, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[123, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[123, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[123, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[123, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[123], dtype=uint8
+- `data/demo_0/robot_states`: shape=[123, 9], dtype=float64
+- `data/demo_0/states`: shape=[123, 92], dtype=float64
+- `data/demo_1/actions`: shape=[137, 7], dtype=float64
+- `data/demo_1/dones`: shape=[137], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[137, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[137, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[137, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[137, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[137, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[137], dtype=uint8
+- `data/demo_1/robot_states`: shape=[137, 9], dtype=float64
+- `data/demo_1/states`: shape=[137, 92], dtype=float64
+- `data/demo_10/actions`: shape=[127, 7], dtype=float64
+- `data/demo_10/dones`: shape=[127], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[127, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[127, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[127, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[127, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[127, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[127, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[127], dtype=uint8
+- `data/demo_10/robot_states`: shape=[127, 9], dtype=float64
+- `data/demo_10/states`: shape=[127, 92], dtype=float64
+- `data/demo_11/actions`: shape=[111, 7], dtype=float64
+- `data/demo_11/dones`: shape=[111], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[111, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[111, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[111, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[111, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[111, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[111, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[111, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[111], dtype=uint8
+- `data/demo_11/robot_states`: shape=[111, 9], dtype=float64
+- `data/demo_11/states`: shape=[111, 92], dtype=float64
+- `data/demo_12/actions`: shape=[124, 7], dtype=float64
+- `data/demo_12/dones`: shape=[124], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[124, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[124, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[124, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[124, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[124, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[124], dtype=uint8
+- `data/demo_12/robot_states`: shape=[124, 9], dtype=float64
+- `data/demo_12/states`: shape=[124, 92], dtype=float64
+- `data/demo_13/actions`: shape=[124, 7], dtype=float64
+- `data/demo_13/dones`: shape=[124], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[124, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[124, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[124, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[124, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[124, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[124, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[124], dtype=uint8
+- `data/demo_13/robot_states`: shape=[124, 9], dtype=float64
+- `data/demo_13/states`: shape=[124, 92], dtype=float64
+- `data/demo_14/actions`: shape=[141, 7], dtype=float64
+- `data/demo_14/dones`: shape=[141], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[141, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[141, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[141, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[141, 2], dtype=float64
+
+## HDF5: `data/armforge/raw/libero/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_demo.hdf5`
+
+- Position candidates: `['data/demo_0/obs/ee_pos', 'data/demo_1/obs/ee_pos', 'data/demo_10/obs/ee_pos', 'data/demo_11/obs/ee_pos', 'data/demo_12/obs/ee_pos', 'data/demo_13/obs/ee_pos', 'data/demo_14/obs/ee_pos', 'data/demo_15/obs/ee_pos', 'data/demo_16/obs/ee_pos', 'data/demo_17/obs/ee_pos', 'data/demo_18/obs/ee_pos', 'data/demo_19/obs/ee_pos', 'data/demo_2/obs/ee_pos', 'data/demo_20/obs/ee_pos', 'data/demo_21/obs/ee_pos', 'data/demo_22/obs/ee_pos', 'data/demo_23/obs/ee_pos', 'data/demo_24/obs/ee_pos', 'data/demo_25/obs/ee_pos', 'data/demo_26/obs/ee_pos', 'data/demo_27/obs/ee_pos', 'data/demo_28/obs/ee_pos', 'data/demo_29/obs/ee_pos', 'data/demo_3/obs/ee_pos', 'data/demo_30/obs/ee_pos', 'data/demo_31/obs/ee_pos', 'data/demo_32/obs/ee_pos', 'data/demo_33/obs/ee_pos', 'data/demo_34/obs/ee_pos', 'data/demo_35/obs/ee_pos', 'data/demo_36/obs/ee_pos', 'data/demo_37/obs/ee_pos', 'data/demo_38/obs/ee_pos', 'data/demo_39/obs/ee_pos', 'data/demo_4/obs/ee_pos', 'data/demo_40/obs/ee_pos', 'data/demo_41/obs/ee_pos', 'data/demo_42/obs/ee_pos', 'data/demo_43/obs/ee_pos', 'data/demo_44/obs/ee_pos', 'data/demo_45/obs/ee_pos', 'data/demo_46/obs/ee_pos', 'data/demo_47/obs/ee_pos', 'data/demo_48/obs/ee_pos', 'data/demo_49/obs/ee_pos', 'data/demo_5/obs/ee_pos', 'data/demo_6/obs/ee_pos', 'data/demo_7/obs/ee_pos', 'data/demo_8/obs/ee_pos', 'data/demo_9/obs/ee_pos']`
+- Orientation candidates: `[]`
+- Orientation-vector candidates: `['data/demo_0/obs/ee_ori', 'data/demo_1/obs/ee_ori', 'data/demo_10/obs/ee_ori', 'data/demo_11/obs/ee_ori', 'data/demo_12/obs/ee_ori', 'data/demo_13/obs/ee_ori', 'data/demo_14/obs/ee_ori', 'data/demo_15/obs/ee_ori', 'data/demo_16/obs/ee_ori', 'data/demo_17/obs/ee_ori', 'data/demo_18/obs/ee_ori', 'data/demo_19/obs/ee_ori', 'data/demo_2/obs/ee_ori', 'data/demo_20/obs/ee_ori', 'data/demo_21/obs/ee_ori', 'data/demo_22/obs/ee_ori', 'data/demo_23/obs/ee_ori', 'data/demo_24/obs/ee_ori', 'data/demo_25/obs/ee_ori', 'data/demo_26/obs/ee_ori', 'data/demo_27/obs/ee_ori', 'data/demo_28/obs/ee_ori', 'data/demo_29/obs/ee_ori', 'data/demo_3/obs/ee_ori', 'data/demo_30/obs/ee_ori', 'data/demo_31/obs/ee_ori', 'data/demo_32/obs/ee_ori', 'data/demo_33/obs/ee_ori', 'data/demo_34/obs/ee_ori', 'data/demo_35/obs/ee_ori', 'data/demo_36/obs/ee_ori', 'data/demo_37/obs/ee_ori', 'data/demo_38/obs/ee_ori', 'data/demo_39/obs/ee_ori', 'data/demo_4/obs/ee_ori', 'data/demo_40/obs/ee_ori', 'data/demo_41/obs/ee_ori', 'data/demo_42/obs/ee_ori', 'data/demo_43/obs/ee_ori', 'data/demo_44/obs/ee_ori', 'data/demo_45/obs/ee_ori', 'data/demo_46/obs/ee_ori', 'data/demo_47/obs/ee_ori', 'data/demo_48/obs/ee_ori', 'data/demo_49/obs/ee_ori', 'data/demo_5/obs/ee_ori', 'data/demo_6/obs/ee_ori', 'data/demo_7/obs/ee_ori', 'data/demo_8/obs/ee_ori', 'data/demo_9/obs/ee_ori']`
+- Gripper candidates: `['data/demo_0/obs/gripper_states', 'data/demo_1/obs/gripper_states', 'data/demo_10/obs/gripper_states', 'data/demo_11/obs/gripper_states', 'data/demo_12/obs/gripper_states', 'data/demo_13/obs/gripper_states', 'data/demo_14/obs/gripper_states', 'data/demo_15/obs/gripper_states', 'data/demo_16/obs/gripper_states', 'data/demo_17/obs/gripper_states', 'data/demo_18/obs/gripper_states', 'data/demo_19/obs/gripper_states', 'data/demo_2/obs/gripper_states', 'data/demo_20/obs/gripper_states', 'data/demo_21/obs/gripper_states', 'data/demo_22/obs/gripper_states', 'data/demo_23/obs/gripper_states', 'data/demo_24/obs/gripper_states', 'data/demo_25/obs/gripper_states', 'data/demo_26/obs/gripper_states', 'data/demo_27/obs/gripper_states', 'data/demo_28/obs/gripper_states', 'data/demo_29/obs/gripper_states', 'data/demo_3/obs/gripper_states', 'data/demo_30/obs/gripper_states', 'data/demo_31/obs/gripper_states', 'data/demo_32/obs/gripper_states', 'data/demo_33/obs/gripper_states', 'data/demo_34/obs/gripper_states', 'data/demo_35/obs/gripper_states', 'data/demo_36/obs/gripper_states', 'data/demo_37/obs/gripper_states', 'data/demo_38/obs/gripper_states', 'data/demo_39/obs/gripper_states', 'data/demo_4/obs/gripper_states', 'data/demo_40/obs/gripper_states', 'data/demo_41/obs/gripper_states', 'data/demo_42/obs/gripper_states', 'data/demo_43/obs/gripper_states', 'data/demo_44/obs/gripper_states', 'data/demo_45/obs/gripper_states', 'data/demo_46/obs/gripper_states', 'data/demo_47/obs/gripper_states', 'data/demo_48/obs/gripper_states', 'data/demo_49/obs/gripper_states', 'data/demo_5/obs/gripper_states', 'data/demo_6/obs/gripper_states', 'data/demo_7/obs/gripper_states', 'data/demo_8/obs/gripper_states', 'data/demo_9/obs/gripper_states']`
+
+Datasets:
+
+- `data/demo_0/actions`: shape=[115, 7], dtype=float64
+- `data/demo_0/dones`: shape=[115], dtype=uint8
+- `data/demo_0/obs/agentview_rgb`: shape=[115, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/ee_ori`: shape=[115, 3], dtype=float64
+- `data/demo_0/obs/ee_pos`: shape=[115, 3], dtype=float64
+- `data/demo_0/obs/ee_states`: shape=[115, 6], dtype=float64
+- `data/demo_0/obs/eye_in_hand_rgb`: shape=[115, 128, 128, 3], dtype=uint8
+- `data/demo_0/obs/gripper_states`: shape=[115, 2], dtype=float64
+- `data/demo_0/obs/joint_states`: shape=[115, 7], dtype=float64
+- `data/demo_0/rewards`: shape=[115], dtype=uint8
+- `data/demo_0/robot_states`: shape=[115, 9], dtype=float64
+- `data/demo_0/states`: shape=[115, 92], dtype=float64
+- `data/demo_1/actions`: shape=[107, 7], dtype=float64
+- `data/demo_1/dones`: shape=[107], dtype=uint8
+- `data/demo_1/obs/agentview_rgb`: shape=[107, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/ee_ori`: shape=[107, 3], dtype=float64
+- `data/demo_1/obs/ee_pos`: shape=[107, 3], dtype=float64
+- `data/demo_1/obs/ee_states`: shape=[107, 6], dtype=float64
+- `data/demo_1/obs/eye_in_hand_rgb`: shape=[107, 128, 128, 3], dtype=uint8
+- `data/demo_1/obs/gripper_states`: shape=[107, 2], dtype=float64
+- `data/demo_1/obs/joint_states`: shape=[107, 7], dtype=float64
+- `data/demo_1/rewards`: shape=[107], dtype=uint8
+- `data/demo_1/robot_states`: shape=[107, 9], dtype=float64
+- `data/demo_1/states`: shape=[107, 92], dtype=float64
+- `data/demo_10/actions`: shape=[116, 7], dtype=float64
+- `data/demo_10/dones`: shape=[116], dtype=uint8
+- `data/demo_10/obs/agentview_rgb`: shape=[116, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/ee_ori`: shape=[116, 3], dtype=float64
+- `data/demo_10/obs/ee_pos`: shape=[116, 3], dtype=float64
+- `data/demo_10/obs/ee_states`: shape=[116, 6], dtype=float64
+- `data/demo_10/obs/eye_in_hand_rgb`: shape=[116, 128, 128, 3], dtype=uint8
+- `data/demo_10/obs/gripper_states`: shape=[116, 2], dtype=float64
+- `data/demo_10/obs/joint_states`: shape=[116, 7], dtype=float64
+- `data/demo_10/rewards`: shape=[116], dtype=uint8
+- `data/demo_10/robot_states`: shape=[116, 9], dtype=float64
+- `data/demo_10/states`: shape=[116, 92], dtype=float64
+- `data/demo_11/actions`: shape=[125, 7], dtype=float64
+- `data/demo_11/dones`: shape=[125], dtype=uint8
+- `data/demo_11/obs/agentview_rgb`: shape=[125, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/ee_ori`: shape=[125, 3], dtype=float64
+- `data/demo_11/obs/ee_pos`: shape=[125, 3], dtype=float64
+- `data/demo_11/obs/ee_states`: shape=[125, 6], dtype=float64
+- `data/demo_11/obs/eye_in_hand_rgb`: shape=[125, 128, 128, 3], dtype=uint8
+- `data/demo_11/obs/gripper_states`: shape=[125, 2], dtype=float64
+- `data/demo_11/obs/joint_states`: shape=[125, 7], dtype=float64
+- `data/demo_11/rewards`: shape=[125], dtype=uint8
+- `data/demo_11/robot_states`: shape=[125, 9], dtype=float64
+- `data/demo_11/states`: shape=[125, 92], dtype=float64
+- `data/demo_12/actions`: shape=[106, 7], dtype=float64
+- `data/demo_12/dones`: shape=[106], dtype=uint8
+- `data/demo_12/obs/agentview_rgb`: shape=[106, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/ee_ori`: shape=[106, 3], dtype=float64
+- `data/demo_12/obs/ee_pos`: shape=[106, 3], dtype=float64
+- `data/demo_12/obs/ee_states`: shape=[106, 6], dtype=float64
+- `data/demo_12/obs/eye_in_hand_rgb`: shape=[106, 128, 128, 3], dtype=uint8
+- `data/demo_12/obs/gripper_states`: shape=[106, 2], dtype=float64
+- `data/demo_12/obs/joint_states`: shape=[106, 7], dtype=float64
+- `data/demo_12/rewards`: shape=[106], dtype=uint8
+- `data/demo_12/robot_states`: shape=[106, 9], dtype=float64
+- `data/demo_12/states`: shape=[106, 92], dtype=float64
+- `data/demo_13/actions`: shape=[137, 7], dtype=float64
+- `data/demo_13/dones`: shape=[137], dtype=uint8
+- `data/demo_13/obs/agentview_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/ee_ori`: shape=[137, 3], dtype=float64
+- `data/demo_13/obs/ee_pos`: shape=[137, 3], dtype=float64
+- `data/demo_13/obs/ee_states`: shape=[137, 6], dtype=float64
+- `data/demo_13/obs/eye_in_hand_rgb`: shape=[137, 128, 128, 3], dtype=uint8
+- `data/demo_13/obs/gripper_states`: shape=[137, 2], dtype=float64
+- `data/demo_13/obs/joint_states`: shape=[137, 7], dtype=float64
+- `data/demo_13/rewards`: shape=[137], dtype=uint8
+- `data/demo_13/robot_states`: shape=[137, 9], dtype=float64
+- `data/demo_13/states`: shape=[137, 92], dtype=float64
+- `data/demo_14/actions`: shape=[97, 7], dtype=float64
+- `data/demo_14/dones`: shape=[97], dtype=uint8
+- `data/demo_14/obs/agentview_rgb`: shape=[97, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/ee_ori`: shape=[97, 3], dtype=float64
+- `data/demo_14/obs/ee_pos`: shape=[97, 3], dtype=float64
+- `data/demo_14/obs/ee_states`: shape=[97, 6], dtype=float64
+- `data/demo_14/obs/eye_in_hand_rgb`: shape=[97, 128, 128, 3], dtype=uint8
+- `data/demo_14/obs/gripper_states`: shape=[97, 2], dtype=float64

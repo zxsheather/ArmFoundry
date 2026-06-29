@@ -1,0 +1,34 @@
+{
+  "contains_gripper": true,
+  "contains_orientation": true,
+  "coordinate_frame": "world",
+  "note": "Generated because real LIBERO demonstrations were not provided.",
+  "num_episodes": 16,
+  "num_suites": 2,
+  "num_tasks": 4,
+  "num_waypoints": 768,
+  "position_bounds": {
+    "max": [
+      0.738538,
+      0.366819,
+      0.453207
+    ],
+    "min": [
+      0.129539,
+      -0.336254,
+      0.212302
+    ]
+  },
+  "robot_in_source": "synthetic_panda_proxy",
+  "source": "Synthetic LIBERO-like fixture",
+  "suites": [
+    "libero_synthetic_object",
+    "libero_synthetic_spatial"
+  ],
+  "tasks": [
+    "libero_synthetic_object/drawer_pull_line",
+    "libero_synthetic_object/wipe_front_arc",
+    "libero_synthetic_spatial/pick_high_right_place_low_left",
+    "libero_synthetic_spatial/pick_low_left_place_high_right"
+  ]
+}

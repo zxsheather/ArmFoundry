@@ -21,7 +21,7 @@
                 <body name="link6" pos="0.076 0.097 0" quat="0.70710548 -0.70710808 0 0">
                   <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
                   <joint name="joint6" axis="0 0 1" range="-6.2831853 6.2831853" />
-                  <site name="link_tcp" pos="0 0 0" />
+                  <site name="link_tcp" pos="0 0 0.172" />
                 </body>
               </body>
             </body>

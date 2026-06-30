@@ -73,7 +73,7 @@ uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
   --outputs outputs/xarm6_mjcf_fk_check
 ```
 
-The generated xArm6 MJCF uses official joint origins and limits, plus minimal inertial values required for MuJoCo FK compilation. It does not include detailed meshes, collision geometry, dynamics, or gripper behavior.
+The generated xArm6 MJCF uses official joint origins and limits, the official xArm gripper TCP offset (`0 0 0.172` from `link6` to `link_tcp`), plus minimal inertial values required for MuJoCo FK compilation. It does not include detailed meshes, collision geometry, dynamics, or gripper behavior. Use `--tcp-offset 0 0 0` only for wrist-origin diagnostics.
 
 ## Reporting
 

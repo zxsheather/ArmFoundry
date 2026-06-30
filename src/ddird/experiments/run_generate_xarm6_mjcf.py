@@ -19,6 +19,8 @@ JOINT_LIMITS = {
     "joint6": (-2.0 * np.pi, 2.0 * np.pi),
 }
 
+DEFAULT_XARM_GRIPPER_TCP_OFFSET = (0.0, 0.0, 0.172)
+
 
 def _load_xarm6_kinematics(path: Path) -> dict[str, dict[str, float]]:
     kinematics: dict[str, dict[str, float]] = {}
@@ -77,8 +79,10 @@ def generate_xarm6_mjcf(
     output_xml: Path,
     robot_name: str = "xarm6_true",
     tcp_site: str = "link_tcp",
+    tcp_offset: tuple[float, float, float] | list[float] | np.ndarray = DEFAULT_XARM_GRIPPER_TCP_OFFSET,
 ) -> dict[str, Any]:
     kinematics = _load_xarm6_kinematics(kinematics_yaml)
+    tcp_offset_array = np.asarray(tcp_offset, dtype=float).reshape(3)
     root = ElementTree.Element("mujoco", {"model": robot_name})
     ElementTree.SubElement(root, "compiler", {"angle": "radian", "autolimits": "true"})
     worldbody = ElementTree.SubElement(root, "worldbody")
@@ -118,7 +122,7 @@ def generate_xarm6_mjcf(
         )
         parent = body
 
-    ElementTree.SubElement(parent, "site", {"name": tcp_site, "pos": "0 0 0"})
+    ElementTree.SubElement(parent, "site", {"name": tcp_site, "pos": _format_vector(tcp_offset_array)})
     ElementTree.indent(root, space="  ")
     output_xml.parent.mkdir(parents=True, exist_ok=True)
     ElementTree.ElementTree(root).write(output_xml, encoding="utf-8", xml_declaration=True)
@@ -135,6 +139,8 @@ def generate_xarm6_mjcf(
         "base_body": "link_base",
         "target_site": tcp_site,
         "target_body": "link6",
+        "tcp_offset_xyz": [round(float(value), 8) for value in tcp_offset_array],
+        "tcp_offset_source": "xarm_description/urdf/gripper/xarm_gripper.urdf.xacro joint_tcp origin",
         "joint_names": list(JOINT_LIMITS),
         "joint_limits": {joint: [round(float(low), 8), round(float(high), 8)] for joint, (low, high) in JOINT_LIMITS.items()},
     }
@@ -149,6 +155,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--outputs", default="outputs/generated_models/xarm6_true")
     parser.add_argument("--robot-name", default="xarm6_true")
     parser.add_argument("--tcp-site", default="link_tcp")
+    parser.add_argument(
+        "--tcp-offset",
+        nargs=3,
+        type=float,
+        default=DEFAULT_XARM_GRIPPER_TCP_OFFSET,
+        metavar=("X", "Y", "Z"),
+        help=(
+            "TCP site offset in link6 local coordinates. Defaults to the official xArm gripper "
+            "link_tcp offset, 0 0 0.172. Use 0 0 0 for wrist-origin diagnostics."
+        ),
+    )
     return parser
 
 
@@ -166,6 +183,7 @@ def main() -> None:
         output_xml=output_xml,
         robot_name=args.robot_name,
         tcp_site=args.tcp_site,
+        tcp_offset=args.tcp_offset,
     )
     print(f"Wrote {metadata['output_xml']} from {metadata['kinematics_yaml']}")
 

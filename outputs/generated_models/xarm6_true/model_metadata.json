@@ -42,5 +42,11 @@
   "source_root": "data/armforge/models/xarm_ros",
   "target_body": "link6",
   "target_site": "link_tcp",
+  "tcp_offset_source": "xarm_description/urdf/gripper/xarm_gripper.urdf.xacro joint_tcp origin",
+  "tcp_offset_xyz": [
+    0.0,
+    0.0,
+    0.172
+  ],
   "xacro_source": "data/armforge/models/xarm_ros/xarm_description/urdf/xarm6/xarm6.urdf.xacro"
 }

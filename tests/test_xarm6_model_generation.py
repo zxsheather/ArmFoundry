@@ -69,7 +69,9 @@ kinematics:
 
     assert metadata["base_body"] == "link_base"
     assert metadata["target_site"] == "link_tcp"
+    assert metadata["tcp_offset_xyz"] == [0.0, 0.0, 0.172]
     assert robot.dof == 6
     assert robot.joint_names == ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
     assert robot.joint_limits.shape == (6, 2)
+    assert np.allclose(robot.target_offset, [0.0, 0.0, 0.172])
     assert np.isfinite(robot.end_effector_position(robot.neutral_q)).all()

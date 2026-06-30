@@ -142,7 +142,7 @@ uv run python -m ddird.experiments.run_eval_mjcf_robot \
   --outputs outputs/ur5e_true_sourcebase \
   --max-waypoints-per-trajectory 80 \
   --num-workers 16 \
-  --max-iters 35 \
+  --max-iters 80 \
   --base-pose-mode source
 ```
 
@@ -164,6 +164,10 @@ uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
   --target-body link6 \
   --outputs outputs/xarm6_mjcf_fk_check
 ```
+
+The generated xArm6 model places `link_tcp` at the official xArm gripper TCP
+offset, `0 0 0.172`, relative to `link6`. Pass `--tcp-offset 0 0 0` only for
+wrist-origin diagnostics.
 
 ## Outputs
 

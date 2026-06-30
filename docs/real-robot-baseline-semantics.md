@@ -41,6 +41,40 @@ uv run python -m ddird.experiments.run_eval_mjcf_robot \
 
 Use the same shape for `xarm6_true` with the xArm MJCF model and its TCP site/body names.
 
+## Current External Model Paths
+
+UR5e is evaluated from the downloaded MuJoCo Menagerie MJCF:
+
+```bash
+uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
+  --mjcf data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml \
+  --robot-name ur5e_true \
+  --base-body base \
+  --target-site attachment_site \
+  --target-body wrist_3_link \
+  --outputs outputs/ur5e_mjcf_fk_check
+```
+
+xArm6 is generated from official xArm ROS default kinematics:
+
+```bash
+uv run python -m ddird.experiments.run_generate_xarm6_mjcf \
+  --xarm-ros-root data/armforge/models/xarm_ros \
+  --outputs outputs/generated_models/xarm6_true \
+  --robot-name xarm6_true \
+  --tcp-site link_tcp
+
+uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
+  --mjcf outputs/generated_models/xarm6_true/xarm6_true.xml \
+  --robot-name xarm6_true \
+  --base-body link_base \
+  --target-site link_tcp \
+  --target-body link6 \
+  --outputs outputs/xarm6_mjcf_fk_check
+```
+
+The generated xArm6 MJCF uses official joint origins and limits, plus minimal inertial values required for MuJoCo FK compilation. It does not include detailed meshes, collision geometry, dynamics, or gripper behavior.
+
 ## Reporting
 
 Reports must keep these categories separate:

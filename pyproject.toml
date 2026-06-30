@@ -17,6 +17,9 @@ dependencies = [
 libero = [
     "h5py>=3.10",
 ]
+mujoco = [
+    "mujoco>=3.2",
+]
 dev = [
     "pytest>=8.0",
 ]

@@ -121,6 +121,50 @@ uv run python -m ddird.experiments.run_eval_mjcf_robot \
   --base-pose-mode source
 ```
 
+For the downloaded MuJoCo Menagerie UR5e model:
+
+```bash
+uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
+  --mjcf data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml \
+  --robot-name ur5e_true \
+  --base-body base \
+  --target-site attachment_site \
+  --target-body wrist_3_link \
+  --outputs outputs/ur5e_mjcf_fk_check
+
+uv run python -m ddird.experiments.run_eval_mjcf_robot \
+  --mjcf data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml \
+  --robot-name ur5e_true \
+  --base-body base \
+  --target-site attachment_site \
+  --target-body wrist_3_link \
+  --data data/libero_ee_trajectories_armforge \
+  --outputs outputs/ur5e_true_sourcebase \
+  --max-waypoints-per-trajectory 80 \
+  --num-workers 16 \
+  --max-iters 35 \
+  --base-pose-mode source
+```
+
+For xArm6, generate an evaluator-compatible MJCF from the downloaded official
+xArm ROS kinematics first:
+
+```bash
+uv run python -m ddird.experiments.run_generate_xarm6_mjcf \
+  --xarm-ros-root data/armforge/models/xarm_ros \
+  --outputs outputs/generated_models/xarm6_true \
+  --robot-name xarm6_true \
+  --tcp-site link_tcp
+
+uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
+  --mjcf outputs/generated_models/xarm6_true/xarm6_true.xml \
+  --robot-name xarm6_true \
+  --base-body link_base \
+  --target-site link_tcp \
+  --target-body link6 \
+  --outputs outputs/xarm6_mjcf_fk_check
+```
+
 ## Outputs
 
 Processed trajectory data is written to:

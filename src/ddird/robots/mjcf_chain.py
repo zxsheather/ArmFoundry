@@ -6,6 +6,8 @@ from xml.etree import ElementTree
 
 import numpy as np
 
+_KINEMATIC_DEFAULT_TAGS = {"body", "joint", "site"}
+
 
 def _parse_vector(value: str | None, default: tuple[float, ...]) -> np.ndarray:
     if value is None:
@@ -68,6 +70,7 @@ class MJCFSerialRobot:
     name: str
     base_xyz: np.ndarray
     base_yaw: float
+    base_quat_wxyz: np.ndarray
     segments: tuple[MJCFBodySegment, ...]
     target_offset: np.ndarray
     target_frame: str
@@ -77,6 +80,7 @@ class MJCFSerialRobot:
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "base_xyz", np.asarray(self.base_xyz, dtype=float).reshape(3))
+        object.__setattr__(self, "base_quat_wxyz", np.asarray(self.base_quat_wxyz, dtype=float).reshape(4))
         object.__setattr__(self, "target_offset", np.asarray(self.target_offset, dtype=float).reshape(3))
         if self.workspace_bounds is not None:
             object.__setattr__(self, "workspace_bounds", np.asarray(self.workspace_bounds, dtype=float))
@@ -84,6 +88,10 @@ class MJCFSerialRobot:
     @property
     def dof(self) -> int:
         return sum(1 for segment in self.segments if segment.joint_name is not None)
+
+    @property
+    def joint_names(self) -> list[str]:
+        return [segment.joint_name for segment in self.segments if segment.joint_name is not None]
 
     @property
     def link_lengths(self) -> np.ndarray:
@@ -135,7 +143,7 @@ class MJCFSerialRobot:
     def forward_kinematics(self, q: np.ndarray) -> dict[str, Any]:
         q = np.asarray(q, dtype=float).reshape(self.dof)
         position = self.base_xyz.astype(float).copy()
-        rotation = _axis_angle(np.array([0.0, 0.0, 1.0]), self.base_yaw)
+        rotation = _axis_angle(np.array([0.0, 0.0, 1.0]), self.base_yaw) @ _quat_wxyz_to_matrix(self.base_quat_wxyz)
         origins: list[np.ndarray] = []
         axes_world: list[np.ndarray] = []
         joint_positions: list[np.ndarray] = [position.copy()]
@@ -212,6 +220,8 @@ class MJCFSerialRobot:
             "name": self.name,
             "base_xyz": self.base_xyz.round(6).tolist(),
             "base_yaw": round(float(self.base_yaw), 6),
+            "base_quat_wxyz": self.base_quat_wxyz.round(6).tolist(),
+            "joint_names": self.joint_names,
             "joint_limits": self.joint_limits.round(6).tolist(),
             "reach_proxy": round(self.reach_proxy, 6),
             "source": self.source,
@@ -245,23 +255,98 @@ def _path_to_target_site(body: ElementTree.Element, target_site: str) -> tuple[l
     return None
 
 
-def _segment_from_body(body: ElementTree.Element) -> MJCFBodySegment:
-    joint = next((child for child in body if child.tag == "joint"), None)
+def _copy_default_attrs(attrs: dict[str, dict[str, str]]) -> dict[str, dict[str, str]]:
+    return {tag: dict(values) for tag, values in attrs.items()}
+
+
+def _collect_default_classes(root: ElementTree.Element) -> dict[str, dict[str, dict[str, str]]]:
+    classes: dict[str, dict[str, dict[str, str]]] = {"main": {}}
+
+    def visit(default: ElementTree.Element, inherited: dict[str, dict[str, str]], inherited_name: str) -> None:
+        class_name = default.attrib.get("class", inherited_name)
+        attrs = _copy_default_attrs(inherited)
+        for child in default:
+            if child.tag in _KINEMATIC_DEFAULT_TAGS:
+                attrs.setdefault(child.tag, {}).update(child.attrib)
+        classes[class_name] = _copy_default_attrs(attrs)
+        for child in default:
+            if child.tag == "default":
+                visit(child, attrs, class_name)
+
+    for default in root.findall("default"):
+        visit(default, classes["main"], default.attrib.get("class", "main"))
+    return classes
+
+
+def _effective_attrs(
+    element: ElementTree.Element,
+    defaults: dict[str, dict[str, dict[str, str]]],
+    class_name: str,
+    tag: str,
+) -> dict[str, str]:
+    attrs = dict(defaults.get(class_name, {}).get(tag, {}))
+    element_class = element.attrib.get("class")
+    if element_class is not None:
+        attrs.update(defaults.get(element_class, {}).get(tag, {}))
+    attrs.update(element.attrib)
+    return attrs
+
+
+def _body_class_contexts(base_body: ElementTree.Element) -> dict[int, str]:
+    contexts: dict[int, str] = {}
+
+    def visit(body: ElementTree.Element, inherited_child_class: str) -> None:
+        body_class = body.attrib.get("class", inherited_child_class)
+        contexts[id(body)] = body_class
+        child_class = body.attrib.get("childclass", body_class)
+        for child in _body_children(body):
+            visit(child, child_class)
+
+    visit(base_body, "main")
+    return contexts
+
+
+def _orientation_quat_wxyz(attrs: dict[str, str], label: str) -> np.ndarray:
+    if "quat" in attrs:
+        return _parse_vector(attrs.get("quat"), (1.0, 0.0, 0.0, 0.0))
+    unsupported = sorted({"axisangle", "euler", "xyaxes", "zaxis"} & set(attrs))
+    if unsupported:
+        raise ValueError(f"{label} uses unsupported MJCF orientation attributes: {', '.join(unsupported)}")
+    return np.array([1.0, 0.0, 0.0, 0.0], dtype=float)
+
+
+def _segment_from_body(
+    body: ElementTree.Element,
+    defaults: dict[str, dict[str, dict[str, str]]],
+    body_class: str,
+) -> MJCFBodySegment:
+    body_attrs = _effective_attrs(body, defaults, body_class, "body")
+    joints = [child for child in body if child.tag == "joint"]
+    if len(joints) > 1:
+        raise ValueError(f"Body {body.attrib.get('name', '<unnamed>')!r} has multiple joints; only serial one-joint bodies are supported")
+    joint = joints[0] if joints else None
     joint_range = None
     joint_name = None
     joint_axis = None
     joint_pos = None
     if joint is not None:
-        joint_name = joint.attrib.get("name", body.attrib.get("name"))
-        joint_axis = _parse_vector(joint.attrib.get("axis"), (0.0, 0.0, 1.0))
-        joint_pos = _parse_vector(joint.attrib.get("pos"), (0.0, 0.0, 0.0))
-        range_values = _parse_vector(joint.attrib.get("range"), (-np.pi, np.pi))
+        joint_class = joint.attrib.get("class", body_class)
+        joint_attrs = _effective_attrs(joint, defaults, joint_class, "joint")
+        joint_type = joint_attrs.get("type", "hinge")
+        if joint_type != "hinge":
+            raise ValueError(f"Joint {joint_attrs.get('name', body_attrs.get('name', '<unnamed>'))!r} has unsupported type {joint_type!r}")
+        joint_name = joint_attrs.get("name", body_attrs.get("name"))
+        joint_axis = _parse_vector(joint_attrs.get("axis"), (0.0, 0.0, 1.0))
+        joint_pos = _parse_vector(joint_attrs.get("pos"), (0.0, 0.0, 0.0))
+        range_values = _parse_vector(joint_attrs.get("range"), (-np.pi, np.pi))
         if range_values.shape == (2,):
             joint_range = (float(range_values[0]), float(range_values[1]))
+        else:
+            raise ValueError(f"Joint {joint_name!r} has invalid range {joint_attrs.get('range')!r}")
     return MJCFBodySegment(
-        name=body.attrib.get("name", "unnamed_body"),
-        pos=_parse_vector(body.attrib.get("pos"), (0.0, 0.0, 0.0)),
-        quat_wxyz=_parse_vector(body.attrib.get("quat"), (1.0, 0.0, 0.0, 0.0)),
+        name=body_attrs.get("name", "unnamed_body"),
+        pos=_parse_vector(body_attrs.get("pos"), (0.0, 0.0, 0.0)),
+        quat_wxyz=_orientation_quat_wxyz(body_attrs, f"Body {body_attrs.get('name', '<unnamed>')!r}"),
         joint_name=joint_name,
         joint_axis=joint_axis,
         joint_pos=joint_pos,
@@ -277,14 +362,20 @@ def serial_robot_from_mjcf_xml(
     target_body: str = "gripper0_eef",
 ) -> MJCFSerialRobot:
     root = ElementTree.fromstring(xml)
+    defaults = _collect_default_classes(root)
     base_body = root.find(f".//body[@name='{base_body_name}']")
     if base_body is None:
         raise ValueError(f"MJCF does not contain body name={base_body_name!r}")
+    body_contexts = _body_class_contexts(base_body)
 
     site_path = _path_to_target_site(base_body, target_site)
     if site_path is not None:
         bodies, site = site_path
-        target_offset = _parse_vector(site.attrib.get("pos"), (0.0, 0.0, 0.0))
+        site_body_class = body_contexts[id(bodies[-1])]
+        site_class = site.attrib.get("class", site_body_class)
+        site_attrs = _effective_attrs(site, defaults, site_class, "site")
+        _orientation_quat_wxyz(site_attrs, f"Site {site_attrs.get('name', target_site)!r}")
+        target_offset = _parse_vector(site_attrs.get("pos"), (0.0, 0.0, 0.0))
         target_frame = target_site
     else:
         body_path = _path_to_target_body(base_body, target_body)
@@ -294,11 +385,13 @@ def serial_robot_from_mjcf_xml(
         target_offset = np.zeros(3, dtype=float)
         target_frame = target_body
 
-    segments = tuple(_segment_from_body(body) for body in bodies[1:])
+    base_attrs = _effective_attrs(base_body, defaults, body_contexts[id(base_body)], "body")
+    segments = tuple(_segment_from_body(body, defaults, body_contexts[id(body)]) for body in bodies[1:])
     return MJCFSerialRobot(
         name=name,
-        base_xyz=_parse_vector(base_body.attrib.get("pos"), (0.0, 0.0, 0.0)),
+        base_xyz=_parse_vector(base_attrs.get("pos"), (0.0, 0.0, 0.0)),
         base_yaw=0.0,
+        base_quat_wxyz=_orientation_quat_wxyz(base_attrs, f"Base body {base_body_name!r}"),
         segments=segments,
         target_offset=target_offset,
         target_frame=target_frame,
@@ -404,6 +497,7 @@ def make_libero_panda_true(name: str = "panda_true") -> MJCFSerialRobot:
         name=name,
         base_xyz=np.zeros(3, dtype=float),
         base_yaw=0.0,
+        base_quat_wxyz=np.array([1.0, 0.0, 0.0, 0.0]),
         segments=segments,
         target_offset=np.zeros(3, dtype=float),
         target_frame="gripper0_grip_site",

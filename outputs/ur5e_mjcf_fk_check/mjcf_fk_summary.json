@@ -1,0 +1,24 @@
+{
+  "base_body": "base",
+  "dof": 6,
+  "joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "mjcf": "data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml",
+  "num_samples": 65,
+  "position_error": {
+    "max": 0.0,
+    "mean": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+  },
+  "robot_name": "ur5e_true",
+  "target_body": "wrist_3_link",
+  "target_frame": "attachment_site",
+  "target_site": "attachment_site"
+}

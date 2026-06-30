@@ -1,0 +1,2 @@
+robot_name,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,mean_joint_margin,min_joint_margin,mean_manipulability,min_manipulability,manipulability_below_threshold,smoothness_cost,collision_proxy,hardware_cost
+xarm6_true,1500,119975,0.890544,0.655333,0.003635,0.089589,1.146069,0.0,0.06522896,0.0,0.088702,0.00452864,0.00023012,1.030873

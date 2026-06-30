@@ -1,0 +1,24 @@
+{
+  "base_body": "link_base",
+  "dof": 6,
+  "joint_names": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6"
+  ],
+  "mjcf": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+  "num_samples": 64,
+  "position_error": {
+    "max": 0.0,
+    "mean": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+  },
+  "robot_name": "xarm6_true",
+  "target_body": "link6",
+  "target_frame": "link_tcp",
+  "target_site": "link_tcp"
+}

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from ddird.data.dataset import create_synthetic_dataset
+import numpy as np
+
+from ddird.data.dataset import TrajectoryRecord, create_synthetic_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
 from ddird.robots.robot_registry import create_robot
 
@@ -28,3 +30,38 @@ def test_parallel_evaluator_matches_sequential(tmp_path):
 
     assert parallel.aggregate == sequential.aggregate
     assert parallel.trajectory_rows == sequential.trajectory_rows
+
+
+def test_source_base_pose_mode_uses_record_metadata(tmp_path):
+    robot = create_robot("simple_default")
+    source_base = np.array([0.4, -0.1, 0.2])
+    target = robot.with_base(base_xyz=source_base).end_effector_position(robot.neutral_q)
+    record = TrajectoryRecord(
+        suite="suite",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=target.reshape(1, 3),
+        metadata={"source_robot_base_xyz": source_base.tolist(), "source_robot_base_yaw": 0.0},
+    )
+
+    result = evaluate_robot(robot, [record], config=EvaluationConfig(max_iters=1, base_pose_mode="source"))
+
+    assert result.aggregate["ik_success_rate"] == 1.0
+
+
+def test_source_base_pose_mode_falls_back_to_libero_suite_base(tmp_path):
+    robot = create_robot("simple_default")
+    source_base = np.array([-0.6, 0.0, 0.0])
+    target = robot.with_base(base_xyz=source_base).end_effector_position(robot.neutral_q)
+    record = TrajectoryRecord(
+        suite="libero_object",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=target.reshape(1, 3),
+    )
+
+    result = evaluate_robot(robot, [record], config=EvaluationConfig(max_iters=1, base_pose_mode="source"))
+
+    assert result.aggregate["ik_success_rate"] == 1.0

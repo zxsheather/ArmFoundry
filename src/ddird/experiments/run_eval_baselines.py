@@ -18,6 +18,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-trajectories", type=int, default=None, help="Optional cap for quick real-data runs.")
     parser.add_argument("--max-waypoints-per-trajectory", type=int, default=None, help="Evenly downsample each trajectory before IK.")
     parser.add_argument("--num-workers", type=int, default=1, help="Parallel worker processes per robot.")
+    parser.add_argument(
+        "--base-pose-mode",
+        choices=("fixed", "source"),
+        default="fixed",
+        help="Use fixed robot baselines or each trajectory's extracted source robot base pose.",
+    )
     parser.add_argument("--seed", type=int, default=7)
     return parser
 
@@ -33,7 +39,7 @@ def main() -> None:
     )
     if not records:
         raise SystemExit("No trajectories selected for evaluation")
-    config = EvaluationConfig(max_iters=args.max_iters)
+    config = EvaluationConfig(max_iters=args.max_iters, base_pose_mode=args.base_pose_mode)
 
     aggregate_rows = []
     suite_rows = []
@@ -55,7 +61,8 @@ def main() -> None:
     write_csv(f"{args.outputs}/baseline_trajectory_results.csv", trajectory_rows)
     print(
         f"Evaluated {len(aggregate_rows)} baseline robots on {len(records)} trajectories "
-        f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers})"
+        f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers}, "
+        f"base_pose_mode={args.base_pose_mode})"
     )
 
 

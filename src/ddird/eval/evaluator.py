@@ -11,6 +11,12 @@ from ddird.eval.ik import solve_position_ik_multiseed
 from ddird.eval.metrics import TrajectoryMetrics, aggregate_metric_dicts, safe_mean, safe_min
 from ddird.robots.simple_chain import SimpleChainRobot
 
+LIBERO_SOURCE_BASE_BY_SUITE = {
+    "libero_goal": ((-0.66, 0.0, 0.912), 0.0),
+    "libero_object": ((-0.6, 0.0, 0.0), 0.0),
+    "libero_spatial": ((-0.66, 0.0, 0.912), 0.0),
+}
+
 
 @dataclass(frozen=True)
 class EvaluationWeights:
@@ -28,7 +34,12 @@ class EvaluationConfig:
     max_iters: int = 120
     manipulability_threshold: float = 0.004
     joint_margin_threshold: float = 0.12
+    base_pose_mode: str = "fixed"
     weights: EvaluationWeights = EvaluationWeights()
+
+    def __post_init__(self) -> None:
+        if self.base_pose_mode not in {"fixed", "source"}:
+            raise ValueError("base_pose_mode must be 'fixed' or 'source'")
 
 
 @dataclass
@@ -62,6 +73,25 @@ def _smoothness(q_values: np.ndarray, successes: np.ndarray) -> float:
     return float(np.mean(diffs))
 
 
+def _record_source_base(record: TrajectoryRecord) -> tuple[np.ndarray, float]:
+    base_xyz = record.metadata.get("source_robot_base_xyz")
+    if base_xyz is not None:
+        return np.asarray(base_xyz, dtype=float).reshape(3), float(record.metadata.get("source_robot_base_yaw", 0.0))
+    if record.suite in LIBERO_SOURCE_BASE_BY_SUITE:
+        fallback_xyz, fallback_yaw = LIBERO_SOURCE_BASE_BY_SUITE[record.suite]
+        return np.asarray(fallback_xyz, dtype=float).reshape(3), float(fallback_yaw)
+    raise ValueError(
+        f"Record {record.suite}/{record.task}/{record.episode_id} does not contain source_robot_base_xyz metadata"
+    )
+
+
+def _robot_for_record(robot: SimpleChainRobot, record: TrajectoryRecord, config: EvaluationConfig) -> SimpleChainRobot:
+    if config.base_pose_mode == "fixed":
+        return robot
+    base_xyz, base_yaw = _record_source_base(record)
+    return robot.with_base(base_xyz=base_xyz, base_yaw=base_yaw)
+
+
 def evaluate_trajectory(
     robot: SimpleChainRobot,
     record: TrajectoryRecord,
@@ -69,6 +99,7 @@ def evaluate_trajectory(
     return_details: bool = False,
 ) -> tuple[TrajectoryMetrics, dict[str, Any] | None]:
     config = config or EvaluationConfig()
+    robot = _robot_for_record(robot, record, config)
     q_prev = robot.neutral_q.copy()
     q_values = []
     successes = []

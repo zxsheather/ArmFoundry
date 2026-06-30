@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any
+from xml.etree import ElementTree
 
 import numpy as np
 
@@ -100,6 +101,53 @@ def _squeeze_gripper(gripper: np.ndarray, timesteps: int) -> np.ndarray:
     if gripper.shape[0] == timesteps:
         return gripper.reshape(timesteps, -1).mean(axis=1)
     return gripper.reshape(-1)
+
+
+def _parse_float_vector(value: Any) -> list[float] | None:
+    if value is None:
+        return None
+    if isinstance(value, bytes):
+        value = value.decode("utf-8")
+    try:
+        return [float(item) for item in str(value).split()]
+    except ValueError:
+        return None
+
+
+def _yaw_from_wxyz_quat(quat: list[float] | None) -> float:
+    if quat is None or len(quat) != 4:
+        return 0.0
+    w, x, y, z = quat
+    return float(np.arctan2(2.0 * (w * z + x * y), 1.0 - 2.0 * (y * y + z * z)))
+
+
+def _source_robot_base_metadata(group: Any) -> dict[str, Any]:
+    model_file = group.attrs.get("model_file")
+    if model_file is None:
+        return {}
+    if isinstance(model_file, bytes):
+        model_file = model_file.decode("utf-8")
+    try:
+        root = ElementTree.fromstring(str(model_file))
+    except ElementTree.ParseError:
+        return {}
+    base_body = root.find(".//body[@name='robot0_base']")
+    if base_body is None:
+        return {}
+
+    base_xyz = _parse_float_vector(base_body.attrib.get("pos"))
+    if base_xyz is None or len(base_xyz) != 3:
+        return {}
+    base_quat = _parse_float_vector(base_body.attrib.get("quat"))
+    metadata: dict[str, Any] = {
+        "source_robot": "Panda",
+        "source_robot_base_body": "robot0_base",
+        "source_robot_base_xyz": [round(value, 6) for value in base_xyz],
+        "source_robot_base_yaw": round(_yaw_from_wxyz_quat(base_quat), 6),
+    }
+    if base_quat is not None and len(base_quat) == 4:
+        metadata["source_robot_base_quat_wxyz"] = [round(value, 6) for value in base_quat]
+    return metadata
 
 
 def _audit_npz(path: Path) -> dict[str, Any]:
@@ -320,6 +368,12 @@ def _extract_hdf5_file(path: Path, output_root: Path, coordinate_frame: str) -> 
             language = group.attrs.get("language_instruction")
             if isinstance(language, bytes):
                 language = language.decode("utf-8")
+            metadata = {
+                "source_file": str(path),
+                "coordinate_frame": coordinate_frame,
+                "source": "LIBERO",
+            }
+            metadata.update(_source_robot_base_metadata(group))
             out_path = save_processed_trajectory(
                 output_root,
                 suite=path.parent.name or "libero_hdf5",
@@ -330,11 +384,7 @@ def _extract_hdf5_file(path: Path, output_root: Path, coordinate_frame: str) -> 
                 ee_ori=ee_ori,
                 gripper=gripper,
                 language_instruction=str(language) if language is not None else None,
-                metadata={
-                    "source_file": str(path),
-                    "coordinate_frame": coordinate_frame,
-                    "source": "LIBERO",
-                },
+                metadata=metadata,
             )
             records.append(load_trajectory_npz(out_path))
     return records

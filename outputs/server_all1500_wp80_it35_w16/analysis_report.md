@@ -1,5 +1,7 @@
 # ArmFoundry / LIBERO 大规模评估阶段汇报
 
+> 更新说明：本报告对应旧的 fixed-base 评估，所有 robot proxy 都被放在 world origin。后续已完成 source-base 校准评估，当前主结论应以 `outputs/server_all1500_wp80_it35_w16_sourcebase/analysis_report.md` 为准。本报告保留为未校准 base 的对照实验。
+
 ## 1. 工作背景
 
 ArmFoundry 当前在做一个数据驱动的机器人硬件评估原型。它的基本思路是：从真实机器人任务数据中提取末端执行器轨迹，把这些轨迹看作任务空间需求，然后评估不同机械臂结构是否能够覆盖这些需求。

@@ -8,6 +8,7 @@ import numpy as np
 
 from ddird.experiments.common import write_csv, write_json
 from ddird.robots.mjcf_chain import MJCFSerialRobot, serial_robot_from_mjcf_xml
+from ddird.robots.tool_frames import tool_frame_metadata
 
 
 def _import_mujoco():
@@ -125,6 +126,13 @@ def build_rows_and_summary(
         "target_frame": robot.target_frame,
         "dof": robot.dof,
         "joint_names": robot.joint_names,
+        "tool_frame": tool_frame_metadata(
+            robot,
+            base_body=base_body,
+            target_site=target_site,
+            target_body=target_body,
+            model_path=mjcf_path,
+        ),
         "num_samples": len(rows),
         "position_error": _summary(errors),
     }

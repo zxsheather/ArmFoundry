@@ -9,6 +9,8 @@ from xml.etree import ElementTree
 import numpy as np
 
 from ddird.experiments.common import write_json
+from ddird.robots.mjcf_chain import serial_robot_from_mjcf_xml
+from ddird.robots.tool_frames import tool_frame_metadata
 
 JOINT_LIMITS = {
     "joint1": (-2.0 * np.pi, 2.0 * np.pi),
@@ -128,6 +130,13 @@ def generate_xarm6_mjcf(
     ElementTree.ElementTree(root).write(output_xml, encoding="utf-8", xml_declaration=True)
 
     xarm_ros_root = next((parent for parent in kinematics_yaml.parents if parent.name == "xarm_ros"), None)
+    robot = serial_robot_from_mjcf_xml(
+        ElementTree.tostring(root, encoding="unicode"),
+        name=robot_name,
+        base_body_name="link_base",
+        target_site=tcp_site,
+        target_body="link6",
+    )
     metadata = {
         "robot_name": robot_name,
         "source": "xArm-Developer/xarm_ros",
@@ -141,6 +150,13 @@ def generate_xarm6_mjcf(
         "target_body": "link6",
         "tcp_offset_xyz": [round(float(value), 8) for value in tcp_offset_array],
         "tcp_offset_source": "xarm_description/urdf/gripper/xarm_gripper.urdf.xacro joint_tcp origin",
+        "tool_frame": tool_frame_metadata(
+            robot,
+            base_body="link_base",
+            target_site=tcp_site,
+            target_body="link6",
+            model_path=output_xml,
+        ),
         "joint_names": list(JOINT_LIMITS),
         "joint_limits": {joint: [round(float(low), 8), round(float(high), 8)] for joint, (low, high) in JOINT_LIMITS.items()},
     }

@@ -20,5 +20,23 @@
   "robot_name": "ur5e_true",
   "target_body": "wrist_3_link",
   "target_frame": "attachment_site",
-  "target_site": "attachment_site"
+  "target_site": "attachment_site",
+  "tool_frame": {
+    "base_body": "base",
+    "concrete_gripper_modeled": false,
+    "model_path": "data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml",
+    "robot_name": "ur5e_true",
+    "semantics": "UR attachment site is used as the TCP; no concrete gripper tip is modeled.",
+    "source": "real_kinematics",
+    "target_body": "wrist_3_link",
+    "target_frame": "attachment_site",
+    "target_offset_xyz": [
+      0.0,
+      0.1,
+      0.0
+    ],
+    "target_site": "attachment_site",
+    "tcp_offset_included": true,
+    "tool_modeling": "attachment_site_only"
+  }
 }

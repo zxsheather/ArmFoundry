@@ -8,6 +8,17 @@ The xArm6 true model in this report uses the official xArm gripper TCP offset (`
 
 The run evaluates 1,500 LIBERO trajectories and 119,975 selected waypoints per robot.
 
+## Tool Frame Semantics
+
+The true-model results are evaluated at the TCP/tool frame below. These semantics are also written to `tool_frame_metadata.json`.
+
+| Robot | Target frame | Tool modeling | TCP / offset included | Concrete gripper modeled |
+|---|---|---|---|---|
+| `panda_true` | `gripper0_grip_site` | source gripper chain | Panda hand/gripper/eef kinematic chain | yes |
+| `ur5e_true` | `attachment_site` | attachment site only | `0 0.1 0` from `wrist_3_link` | no |
+| `xarm6_true` | `link_tcp` | TCP offset only | `0 0 0.172` from `link6` | no |
+| `*_proxy` | endpoint | proxy endpoint | none | no |
+
 ## Why rerun
 
 The previous `ur5e_true` run used `--max-iters 35` and produced:
@@ -132,6 +143,7 @@ Merged results:
 outputs/sourcebase_true_proxy_all_it80/baseline_results.csv
 outputs/sourcebase_true_proxy_all_it80/baseline_results_by_suite.csv
 outputs/sourcebase_true_proxy_all_it80/baseline_trajectory_results.csv
+outputs/sourcebase_true_proxy_all_it80/tool_frame_metadata.json
 ```
 
 Raw sub-runs:

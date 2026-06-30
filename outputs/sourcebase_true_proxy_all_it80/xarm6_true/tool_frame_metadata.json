@@ -1,0 +1,24 @@
+{
+  "base_pose_mode": "source",
+  "max_iters": 80,
+  "robots": [
+    {
+      "base_body": "link_base",
+      "concrete_gripper_modeled": false,
+      "model_path": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+      "robot_name": "xarm6_true",
+      "semantics": "Official xArm gripper TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+      "source": "real_kinematics",
+      "target_body": "link6",
+      "target_frame": "link_tcp",
+      "target_offset_xyz": [
+        0.0,
+        0.0,
+        0.172
+      ],
+      "target_site": "link_tcp",
+      "tcp_offset_included": true,
+      "tool_modeling": "tcp_offset_only"
+    }
+  ]
+}

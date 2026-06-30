@@ -6,8 +6,15 @@ import warnings
 from ddird.data.dataset import load_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
 from ddird.eval.metrics import aggregate_metric_dicts
-from ddird.experiments.common import DEFAULT_DATA_ROOT, DEFAULT_OUTPUT_ROOT, filter_records, write_csv
+from ddird.experiments.common import (
+    DEFAULT_DATA_ROOT,
+    DEFAULT_OUTPUT_ROOT,
+    filter_records,
+    write_csv,
+    write_json,
+)
 from ddird.robots.robot_registry import baseline_robots
+from ddird.robots.tool_frames import tool_frame_metadata
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -68,7 +75,8 @@ def main() -> None:
     aggregate_rows = []
     suite_rows = []
     trajectory_rows = []
-    for robot in baseline_robots(include_true_models=args.include_true_models):
+    robots = baseline_robots(include_true_models=args.include_true_models)
+    for robot in robots:
         result = evaluate_robot(robot, records, config=config, num_workers=args.num_workers)
         aggregate_rows.append(result.aggregate)
         for suite in sorted({row["suite"] for row in result.trajectory_rows}):
@@ -83,6 +91,22 @@ def main() -> None:
     write_csv(f"{args.outputs}/baseline_results.csv", aggregate_rows)
     write_csv(f"{args.outputs}/baseline_results_by_suite.csv", suite_rows)
     write_csv(f"{args.outputs}/baseline_trajectory_results.csv", trajectory_rows)
+    write_json(
+        f"{args.outputs}/tool_frame_metadata.json",
+        {
+            "base_pose_mode": base_pose_mode,
+            "max_iters": args.max_iters,
+            "robots": [
+                tool_frame_metadata(
+                    robot,
+                    base_body="robot0_base" if robot.name == "panda_true" else None,
+                    target_site="gripper0_grip_site" if robot.name == "panda_true" else None,
+                    target_body="gripper0_eef" if robot.name == "panda_true" else None,
+                )
+                for robot in robots
+            ],
+        },
+    )
     print(
         f"Evaluated {len(aggregate_rows)} baseline robots on {len(records)} trajectories "
         f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers}, "

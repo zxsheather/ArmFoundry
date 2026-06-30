@@ -83,4 +83,6 @@ Reports must keep these categories separate:
 - `*_proxy`: simplified built-in proxy chains.
 - `ur5_true` / `xarm6_true`: external real-model cross-embodiment reachability baselines.
 
+Benchmark output directories should include `tool_frame_metadata.json` describing each robot's evaluated TCP/tool frame, target site/body, target offset, and whether a concrete gripper is modeled. Reports should summarize that metadata before comparing reachability metrics.
+
 Do not compare `ur5_proxy=100%` or similar proxy results as if they were real robot performance.

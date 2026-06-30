@@ -6,8 +6,15 @@ from pathlib import Path
 from ddird.data.dataset import load_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
 from ddird.eval.metrics import aggregate_metric_dicts
-from ddird.experiments.common import DEFAULT_DATA_ROOT, DEFAULT_OUTPUT_ROOT, filter_records, write_csv
+from ddird.experiments.common import (
+    DEFAULT_DATA_ROOT,
+    DEFAULT_OUTPUT_ROOT,
+    filter_records,
+    write_csv,
+    write_json,
+)
 from ddird.robots.mjcf_chain import serial_robot_from_mjcf_xml
+from ddird.robots.tool_frames import tool_frame_metadata
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -71,9 +78,26 @@ def main() -> None:
         aggregate["suite"] = suite
         suite_rows.append(aggregate)
 
-    write_csv(f"{args.outputs}/baseline_results.csv", [result.aggregate])
-    write_csv(f"{args.outputs}/baseline_results_by_suite.csv", suite_rows)
-    write_csv(f"{args.outputs}/baseline_trajectory_results.csv", result.trajectory_rows)
+    outputs = Path(args.outputs)
+    write_csv(outputs / "baseline_results.csv", [result.aggregate])
+    write_csv(outputs / "baseline_results_by_suite.csv", suite_rows)
+    write_csv(outputs / "baseline_trajectory_results.csv", result.trajectory_rows)
+    write_json(
+        outputs / "tool_frame_metadata.json",
+        {
+            "base_pose_mode": args.base_pose_mode,
+            "max_iters": args.max_iters,
+            "robots": [
+                tool_frame_metadata(
+                    robot,
+                    base_body=args.base_body,
+                    target_site=args.target_site,
+                    target_body=args.target_body,
+                    model_path=args.mjcf,
+                )
+            ],
+        },
+    )
     print(
         f"Evaluated {robot.name} on {len(records)} trajectories "
         f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers}, "

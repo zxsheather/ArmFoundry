@@ -70,6 +70,9 @@ kinematics:
     assert metadata["base_body"] == "link_base"
     assert metadata["target_site"] == "link_tcp"
     assert metadata["tcp_offset_xyz"] == [0.0, 0.0, 0.172]
+    assert metadata["tool_frame"]["tool_modeling"] == "tcp_offset_only"
+    assert metadata["tool_frame"]["tcp_offset_included"] is True
+    assert metadata["tool_frame"]["concrete_gripper_modeled"] is False
     assert robot.dof == 6
     assert robot.joint_names == ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
     assert robot.joint_limits.shape == (6, 2)

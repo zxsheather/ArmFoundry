@@ -38,5 +38,7 @@ def test_mjcf_fk_check_builds_summary_shape():
     assert summary["robot_name"] == "fixture"
     assert summary["base_body"] == "base"
     assert summary["target_site"] == "tcp"
+    assert summary["tool_frame"]["target_frame"] == "tcp"
+    assert summary["tool_frame"]["target_offset_xyz"] == [0.2, 0.0, 0.0]
     assert summary["joint_names"] == ["joint1"]
     assert summary["position_error"]["max"] == 0.0

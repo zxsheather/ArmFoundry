@@ -4,7 +4,8 @@ ArmFoundry is a minimal DDIRD prototype for evaluating robot-arm hardware
 against a distribution of end-effector trajectories. The implementation follows
 `docs/guide.md`: extract or generate EE trajectories, evaluate candidate arms
 with IK/reachability/manipulability metrics, optimize simple hardware
-parameters, compare against commercial-arm proxies, and write a report.
+parameters, compare against commercial-arm proxies or explicitly loaded real
+kinematic models, and write a report.
 
 ## Setup
 
@@ -68,13 +69,57 @@ uv run python -m ddird.experiments.run_eval_baselines \
   --suite libero_spatial \
   --max-trajectories 12 \
   --max-waypoints-per-trajectory 40 \
-  --num-workers 4
+  --num-workers 4 \
+  --base-pose-mode source
 ```
 
 `--max-trajectories` limits how many trajectories are selected. `--max-waypoints-per-trajectory`
 keeps each selected trajectory in temporal order but evenly samples at most that
 many waypoints for the current run. It does not rewrite the processed `.npz`
 files.
+
+For LIBERO world-frame data, source-base evaluation is the default. It places
+the robot model at the source workcell base pose parsed from LIBERO metadata or
+from the built-in suite-level fallback. Use `--base-pose-mode fixed` only as a
+diagnostic.
+
+Built-in `*_proxy` robots are simplified serial-chain approximations, not real
+commercial robot models. Use `--include-true-models` to include available true
+kinematic baselines such as `panda_true`:
+
+```bash
+uv run python -m ddird.experiments.run_eval_baselines \
+  --data data/libero_ee_trajectories_armforge \
+  --outputs outputs/libero_true_models_sample \
+  --suite libero_spatial \
+  --max-trajectories 12 \
+  --max-waypoints-per-trajectory 40 \
+  --num-workers 4 \
+  --include-true-models
+```
+
+Check the source Panda FK against raw LIBERO `joint_states` with:
+
+```bash
+uv run python -m ddird.experiments.run_check_libero_panda_fk \
+  --input data/armforge/raw/libero \
+  --outputs outputs/libero_panda_fk_check
+```
+
+Evaluate an external real MJCF robot model, such as a UR5 or xArm model, with:
+
+```bash
+uv run python -m ddird.experiments.run_eval_mjcf_robot \
+  --mjcf /path/to/robot.xml \
+  --robot-name ur5_true \
+  --base-body robot0_base \
+  --target-site tool0 \
+  --target-body tool0 \
+  --data data/libero_ee_trajectories_armforge \
+  --outputs outputs/ur5_true_sourcebase \
+  --max-waypoints-per-trajectory 80 \
+  --base-pose-mode source
+```
 
 ## Outputs
 
@@ -105,4 +150,7 @@ Important outputs include:
 This is a kinematic first-stage prototype. It does not train a LIBERO policy,
 does not optimize robot intelligence, and does not claim industrial validation.
 It uses demonstration end-effector trajectories as task-space requirements for
-hardware evaluation and simple hardware search.
+hardware evaluation and simple hardware search. `*_proxy` results are proxy
+results only; real robot claims require explicitly loaded real kinematic models
+such as `panda_true` or an external MJCF robot evaluated with
+`run_eval_mjcf_robot`.

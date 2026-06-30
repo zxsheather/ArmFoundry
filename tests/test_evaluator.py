@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import numpy as np
+import pytest
 
 from ddird.data.dataset import TrajectoryRecord, create_synthetic_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
+from ddird.experiments.run_eval_baselines import _resolve_base_pose_mode
 from ddird.robots.robot_registry import create_robot
 
 
@@ -65,3 +67,43 @@ def test_source_base_pose_mode_falls_back_to_libero_suite_base(tmp_path):
     result = evaluate_robot(robot, [record], config=EvaluationConfig(max_iters=1, base_pose_mode="source"))
 
     assert result.aggregate["ik_success_rate"] == 1.0
+
+
+def test_auto_base_pose_mode_selects_source_for_libero_world(tmp_path):
+    record = TrajectoryRecord(
+        suite="libero_goal",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=np.zeros((1, 3)),
+        metadata={"source": "LIBERO", "coordinate_frame": "world"},
+    )
+
+    assert _resolve_base_pose_mode("auto", [record]) == "source"
+
+
+def test_auto_base_pose_mode_keeps_fixed_for_synthetic_data(tmp_path):
+    record = TrajectoryRecord(
+        suite="synthetic",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=np.zeros((1, 3)),
+        metadata={"source": "synthetic", "coordinate_frame": "robot"},
+    )
+
+    assert _resolve_base_pose_mode("auto", [record]) == "fixed"
+
+
+def test_fixed_base_pose_mode_warns_for_libero_world(tmp_path):
+    record = TrajectoryRecord(
+        suite="libero_goal",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=np.zeros((1, 3)),
+        metadata={"source": "LIBERO", "coordinate_frame": "world"},
+    )
+
+    with pytest.warns(UserWarning, match="Using fixed base pose"):
+        assert _resolve_base_pose_mode("fixed", [record]) == "fixed"

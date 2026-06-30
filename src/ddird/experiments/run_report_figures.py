@@ -74,7 +74,14 @@ def _write_report(
             ]
         )
 
-    lines.extend(["## Baseline Comparison", ""])
+    lines.extend(
+        [
+            "## Baseline Comparison",
+            "",
+            "`*_proxy` rows are simplified serial-chain proxy models, not real commercial robot performance. `*_true` rows are explicitly loaded real kinematic models when available.",
+            "",
+        ]
+    )
     lines.append("| Robot | IK success | Trajectory success | Mean joint margin | Mean manipulability | Hardware cost |")
     lines.append("|---|---:|---:|---:|---:|---:|")
     for row in baseline_rows:
@@ -92,7 +99,7 @@ def _write_report(
             "",
             "## Viability Assessment",
             "",
-            "The prototype is viable if optimized hardware improves held-out IK success, joint-limit margin, or manipulability relative to the initial simple model while staying comparable to commercial proxy baselines.",
+            "The prototype is viable if optimized hardware improves held-out IK success, joint-limit margin, or manipulability relative to the initial simple model while staying clear about whether a row is a proxy or a true kinematic model.",
             "",
             "Failure cases concentrate where target points fall outside the arm's reachable shell, near table/workspace boundaries, or around low-manipulability postures.",
             "",

@@ -1,0 +1,11 @@
+{
+  "demo_mean_error": {
+    "max": 0.00041727,
+    "mean": 0.00030329,
+    "p95": 0.00037144,
+    "p99": 0.00039021
+  },
+  "num_demos": 1500,
+  "target_body": "gripper0_eef",
+  "target_site": "gripper0_grip_site"
+}

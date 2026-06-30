@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import warnings
 
 from ddird.data.dataset import load_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
@@ -10,7 +11,7 @@ from ddird.robots.robot_registry import baseline_robots
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Evaluate baseline robot-arm proxies on processed EE trajectories.")
+    parser = argparse.ArgumentParser(description="Evaluate robot-arm baselines on processed EE trajectories.")
     parser.add_argument("--data", default=DEFAULT_DATA_ROOT)
     parser.add_argument("--outputs", default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--max-iters", type=int, default=80)
@@ -20,12 +21,34 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--num-workers", type=int, default=1, help="Parallel worker processes per robot.")
     parser.add_argument(
         "--base-pose-mode",
-        choices=("fixed", "source"),
-        default="fixed",
-        help="Use fixed robot baselines or each trajectory's extracted source robot base pose.",
+        choices=("auto", "fixed", "source"),
+        default="auto",
+        help=(
+            "Use fixed robot baselines, each trajectory's source robot base pose, or auto-select source for "
+            "LIBERO world-frame records and fixed for synthetic records."
+        ),
     )
+    parser.add_argument("--include-true-models", action="store_true", help="Also evaluate available true robot models such as panda_true.")
     parser.add_argument("--seed", type=int, default=7)
     return parser
+
+
+def _record_is_libero_world(record) -> bool:
+    source = str(record.metadata.get("source", "")).lower()
+    frame = str(record.metadata.get("coordinate_frame", "")).lower()
+    return source == "libero" and frame == "world"
+
+
+def _resolve_base_pose_mode(requested: str, records) -> str:
+    if requested == "auto":
+        return "source" if any(_record_is_libero_world(record) for record in records) else "fixed"
+    if requested == "fixed" and any(_record_is_libero_world(record) for record in records):
+        warnings.warn(
+            "Using fixed base pose for LIBERO world-frame records. This is diagnostic only; "
+            "source-base mode is the recommended evaluation mode.",
+            stacklevel=2,
+        )
+    return requested
 
 
 def main() -> None:
@@ -39,12 +62,13 @@ def main() -> None:
     )
     if not records:
         raise SystemExit("No trajectories selected for evaluation")
-    config = EvaluationConfig(max_iters=args.max_iters, base_pose_mode=args.base_pose_mode)
+    base_pose_mode = _resolve_base_pose_mode(args.base_pose_mode, records)
+    config = EvaluationConfig(max_iters=args.max_iters, base_pose_mode=base_pose_mode)
 
     aggregate_rows = []
     suite_rows = []
     trajectory_rows = []
-    for robot in baseline_robots():
+    for robot in baseline_robots(include_true_models=args.include_true_models):
         result = evaluate_robot(robot, records, config=config, num_workers=args.num_workers)
         aggregate_rows.append(result.aggregate)
         for suite in sorted({row["suite"] for row in result.trajectory_rows}):
@@ -62,7 +86,7 @@ def main() -> None:
     print(
         f"Evaluated {len(aggregate_rows)} baseline robots on {len(records)} trajectories "
         f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers}, "
-        f"base_pose_mode={args.base_pose_mode})"
+        f"base_pose_mode={base_pose_mode})"
     )
 
 

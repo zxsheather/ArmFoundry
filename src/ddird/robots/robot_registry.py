@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+from ddird.robots.mjcf_chain import make_libero_panda_true
 from ddird.robots.simple_chain import SimpleChainRobot, make_simple_arm
 
 
-def create_robot(name: str) -> SimpleChainRobot:
+def create_robot(name: str):
     key = name.lower()
     if key in {"simple_default", "simple"}:
         return make_simple_arm(
@@ -21,6 +22,8 @@ def create_robot(name: str) -> SimpleChainRobot:
             link_lengths=(0.333, 0.316, 0.284, 0.107),
             source="commercial_proxy",
         )
+    if key in {"panda_true", "franka_panda_true"}:
+        return make_libero_panda_true()
     if key in {"ur5", "ur5e"}:
         return make_simple_arm(
             name="ur5_proxy",
@@ -40,10 +43,13 @@ def create_robot(name: str) -> SimpleChainRobot:
     raise KeyError(f"Unknown robot {name!r}")
 
 
-def baseline_robots() -> list[SimpleChainRobot]:
-    return [
+def baseline_robots(include_true_models: bool = False) -> list:
+    robots = [
         create_robot("simple_default"),
         create_robot("panda"),
         create_robot("ur5"),
         create_robot("xarm6"),
     ]
+    if include_true_models:
+        robots.insert(2, create_robot("panda_true"))
+    return robots

@@ -15,6 +15,10 @@ def _target_offset(robot: Any) -> np.ndarray:
     return np.asarray(getattr(robot, "target_offset", np.zeros(3, dtype=float)), dtype=float).reshape(3)
 
 
+def _target_quat(robot: Any) -> np.ndarray:
+    return np.asarray(getattr(robot, "target_quat_wxyz", np.array([1.0, 0.0, 0.0, 0.0])), dtype=float).reshape(4)
+
+
 def _source(robot: Any) -> str:
     return str(getattr(robot, "source", "unknown"))
 
@@ -46,12 +50,19 @@ def _tool_modeling(robot: Any, target_site: str | None) -> tuple[str, bool, bool
             False,
             "xArm6 is evaluated at link6/wrist origin; this is diagnostic and does not represent gripper TCP reachability.",
         )
-    if name in {"ur5_true", "ur5e_true"} or target_frame == "attachment_site":
+    if target_frame == "attachment_site":
         return (
             "attachment_site_only",
             has_target_offset,
             False,
             "UR attachment site is used as the TCP; no concrete gripper tip is modeled.",
+        )
+    if name.startswith("ur5") and has_target_offset:
+        return (
+            "tcp_offset_only",
+            True,
+            False,
+            "Explicit UR TCP offset is included; detailed gripper geometry and actuation are not modeled.",
         )
     if source == "real_kinematics":
         return (
@@ -86,6 +97,7 @@ def tool_frame_metadata(
         "target_body": target_body,
         "target_frame": target_frame,
         "target_offset_xyz": _rounded_vector(_target_offset(robot)),
+        "target_quat_wxyz": _rounded_vector(_target_quat(robot), size=4),
         "tool_modeling": tool_modeling,
         "tcp_offset_included": bool(tcp_offset_included),
         "concrete_gripper_modeled": bool(concrete_gripper_modeled),

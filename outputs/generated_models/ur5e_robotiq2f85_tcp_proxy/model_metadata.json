@@ -1,0 +1,62 @@
+{
+  "attachment_body": "wrist_3_link",
+  "attachment_site": "attachment_site",
+  "attachment_to_tool_tcp_pos_xyz": [
+    0.0,
+    0.0,
+    0.1558
+  ],
+  "attachment_to_tool_tcp_quat_wxyz": [
+    0.70710678,
+    0.0,
+    0.0,
+    -0.70710678
+  ],
+  "base_body": "base",
+  "concrete_gripper_modeled": false,
+  "output_xml": "outputs/generated_models/ur5e_robotiq2f85_tcp_proxy/ur5e_true_robotiq2f85_tcp_proxy.xml",
+  "robot_name": "ur5e_true_robotiq2f85_tcp_proxy",
+  "robotiq_mjcf": "data/armforge/models/mujoco_menagerie/robotiq_2f85/2f85.xml",
+  "source": "MuJoCo Menagerie UR5e with Robotiq 2F-85 pinch TCP proxy",
+  "target_body": "wrist_3_link",
+  "target_offset_xyz": [
+    0.0,
+    0.2558,
+    0.0
+  ],
+  "target_quat_wxyz": [
+    -0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "target_site": "ur5e_robotiq2f85_tcp",
+  "tcp_offset_source": "data/armforge/models/mujoco_menagerie/robotiq_2f85/2f85.xml site 'pinch', composed onto UR5e 'attachment_site'",
+  "tool_frame": {
+    "base_body": "base",
+    "concrete_gripper_modeled": false,
+    "model_path": "outputs/generated_models/ur5e_robotiq2f85_tcp_proxy/ur5e_true_robotiq2f85_tcp_proxy.xml",
+    "robot_name": "ur5e_true_robotiq2f85_tcp_proxy",
+    "semantics": "Explicit UR TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+    "source": "real_kinematics",
+    "target_body": "wrist_3_link",
+    "target_frame": "ur5e_robotiq2f85_tcp",
+    "target_offset_xyz": [
+      0.0,
+      0.2558,
+      0.0
+    ],
+    "target_quat_wxyz": [
+      -0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "target_site": "ur5e_robotiq2f85_tcp",
+    "tcp_offset_included": true,
+    "tool_modeling": "tcp_offset_only"
+  },
+  "tool_modeling": "tcp_offset_only",
+  "tool_tcp_site": "pinch",
+  "ur5e_mjcf": "data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml"
+}

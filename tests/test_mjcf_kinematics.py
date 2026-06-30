@@ -201,6 +201,26 @@ def test_mjcf_parser_applies_base_quaternion_to_fk():
     assert np.allclose(robot.end_effector_position(np.zeros(0)), [-1.0, 0.0, 0.0])
 
 
+def test_mjcf_parser_applies_target_site_quaternion_to_fk_rotation():
+    xml = """
+    <mujoco>
+      <worldbody>
+        <body name="base">
+          <body name="link">
+            <joint name="joint1" axis="0 0 1" range="-1 1"/>
+            <site name="tcp" pos="0 0 0" quat="0.70710678 0 0 0.70710678"/>
+          </body>
+        </body>
+      </worldbody>
+    </mujoco>
+    """
+    robot = serial_robot_from_mjcf_xml(xml, name="site_quat_fixture", base_body_name="base", target_site="tcp", target_body="link")
+    rotation = robot.end_effector_rotation(np.zeros(1))
+
+    assert np.allclose(rotation @ np.array([1.0, 0.0, 0.0]), [0.0, 1.0, 0.0], atol=1e-6)
+    assert np.allclose(robot.target_quat_wxyz, [0.70710678, 0.0, 0.0, 0.70710678])
+
+
 def test_downloaded_menagerie_ur5e_parses_when_available():
     path = Path("data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml")
     if not path.exists():

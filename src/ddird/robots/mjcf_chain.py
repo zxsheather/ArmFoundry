@@ -74,6 +74,7 @@ class MJCFSerialRobot:
     segments: tuple[MJCFBodySegment, ...]
     target_offset: np.ndarray
     target_frame: str
+    target_quat_wxyz: np.ndarray
     table_height: float = 0.0
     workspace_bounds: np.ndarray | None = None
     source: str = "real_kinematics"
@@ -82,6 +83,7 @@ class MJCFSerialRobot:
         object.__setattr__(self, "base_xyz", np.asarray(self.base_xyz, dtype=float).reshape(3))
         object.__setattr__(self, "base_quat_wxyz", np.asarray(self.base_quat_wxyz, dtype=float).reshape(4))
         object.__setattr__(self, "target_offset", np.asarray(self.target_offset, dtype=float).reshape(3))
+        object.__setattr__(self, "target_quat_wxyz", np.asarray(self.target_quat_wxyz, dtype=float).reshape(4))
         if self.workspace_bounds is not None:
             object.__setattr__(self, "workspace_bounds", np.asarray(self.workspace_bounds, dtype=float))
 
@@ -164,6 +166,7 @@ class MJCFSerialRobot:
                 joint_index += 1
 
         position = position + rotation @ self.target_offset
+        rotation = rotation @ _quat_wxyz_to_matrix(self.target_quat_wxyz)
         joint_positions.append(position.copy())
         return {
             "position": position,
@@ -233,6 +236,7 @@ class MJCFSerialRobot:
             "reach_proxy": round(self.reach_proxy, 6),
             "source": self.source,
             "target_frame": self.target_frame,
+            "target_quat_wxyz": self.target_quat_wxyz.round(6).tolist(),
         }
 
 
@@ -381,8 +385,8 @@ def serial_robot_from_mjcf_xml(
         site_body_class = body_contexts[id(bodies[-1])]
         site_class = site.attrib.get("class", site_body_class)
         site_attrs = _effective_attrs(site, defaults, site_class, "site")
-        _orientation_quat_wxyz(site_attrs, f"Site {site_attrs.get('name', target_site)!r}")
         target_offset = _parse_vector(site_attrs.get("pos"), (0.0, 0.0, 0.0))
+        target_quat_wxyz = _orientation_quat_wxyz(site_attrs, f"Site {site_attrs.get('name', target_site)!r}")
         target_frame = target_site
     else:
         body_path = _path_to_target_body(base_body, target_body)
@@ -390,6 +394,7 @@ def serial_robot_from_mjcf_xml(
             raise ValueError(f"MJCF does not contain target site {target_site!r} or body {target_body!r}")
         bodies = body_path
         target_offset = np.zeros(3, dtype=float)
+        target_quat_wxyz = np.array([1.0, 0.0, 0.0, 0.0], dtype=float)
         target_frame = target_body
 
     base_attrs = _effective_attrs(base_body, defaults, body_contexts[id(base_body)], "body")
@@ -402,6 +407,7 @@ def serial_robot_from_mjcf_xml(
         segments=segments,
         target_offset=target_offset,
         target_frame=target_frame,
+        target_quat_wxyz=target_quat_wxyz,
         workspace_bounds=np.array([[-1.2, 1.2], [-1.2, 1.2], [-0.02, 1.4]], dtype=float),
         source="real_kinematics",
     )
@@ -508,6 +514,7 @@ def make_libero_panda_true(name: str = "panda_true") -> MJCFSerialRobot:
         segments=segments,
         target_offset=np.zeros(3, dtype=float),
         target_frame="gripper0_grip_site",
+        target_quat_wxyz=np.array([1.0, 0.0, 0.0, 0.0]),
         workspace_bounds=np.array([[-1.2, 1.2], [-1.2, 1.2], [-0.02, 1.4]], dtype=float),
         source="real_kinematics",
     )

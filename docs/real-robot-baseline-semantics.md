@@ -55,6 +55,29 @@ uv run --extra mujoco python -m ddird.experiments.run_check_mjcf_fk \
   --outputs outputs/ur5e_mjcf_fk_check
 ```
 
+This is the bare-arm attachment-site baseline. It answers whether the UR5e wrist/tool mounting site can reach the source Panda end-effector positions; it does not represent a concrete gripper TCP.
+
+For an explicit UR5e tool/TCP proxy, generate a Robotiq 2F-85 pinch TCP site:
+
+```bash
+uv run python -m ddird.experiments.run_generate_ur5e_tcp_mjcf
+
+uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot \
+  --mjcf outputs/generated_models/ur5e_robotiq2f85_tcp_proxy/ur5e_true_robotiq2f85_tcp_proxy.xml \
+  --robot-name ur5e_true_robotiq2f85_tcp_proxy \
+  --base-body base \
+  --target-site ur5e_robotiq2f85_tcp \
+  --target-body wrist_3_link \
+  --data data/libero_ee_trajectories_armforge \
+  --outputs outputs/ur5e_robotiq2f85_tcp_proxy_sourcebase \
+  --max-waypoints-per-trajectory 80 \
+  --num-workers 16 \
+  --max-iters 80 \
+  --base-pose-mode source
+```
+
+The generated `ur5e_robotiq2f85_tcp_proxy` model adds a site named `ur5e_robotiq2f85_tcp` to the UR5e wrist body. The site transform is derived from the MuJoCo Menagerie Robotiq 2F-85 `pinch` site and composed onto the UR5e `attachment_site`. This is a `tcp_offset_only` model: the Robotiq pinch TCP offset and orientation are included, but Robotiq meshes, collision geometry, gripper joints, actuation, and contact behavior are not modeled.
+
 xArm6 is generated from official xArm ROS default kinematics:
 
 ```bash
@@ -99,7 +122,8 @@ Tool-frame cases:
 
 - `panda_true`: source gripper-chain baseline; eligible for direct source-orientation pose evaluation after `ee_ori` normalization.
 - `xarm6_true`: official xArm gripper TCP offset is included, but detailed gripper geometry and source-to-xArm tool-frame mapping are not modeled; orientation-aware results are diagnostic unless such a mapping is added.
-- `ur5e_true`: currently uses the Menagerie `attachment_site` on `wrist_3_link`; it should remain position-only or diagnostic until a concrete UR5e tool/TCP is chosen.
+- `ur5e_true`: bare-arm Menagerie `attachment_site` on `wrist_3_link`; position-only and pose-aware results remain attachment-site diagnostics.
+- `ur5e_true_robotiq2f85_tcp_proxy`: explicit Robotiq 2F-85 pinch TCP proxy; the TCP offset and fixed TCP orientation are included, but the concrete gripper is not modeled.
 - `*_proxy`: simplified endpoint chains; orientation-aware results are diagnostic only.
 
 Pose reports should include these fields in addition to the existing position metrics:

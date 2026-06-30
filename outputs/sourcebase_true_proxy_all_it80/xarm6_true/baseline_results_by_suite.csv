@@ -1,0 +1,4 @@
+robot_name,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,mean_joint_margin,min_joint_margin,mean_manipulability,min_manipulability,manipulability_below_threshold,smoothness_cost,collision_proxy,hardware_cost,suite
+xarm6_true,500,39981,0.951927,0.872,0.001718,0.08389,1.17294,0.0,0.06767757,0.0,0.033878,0.00386795,0.00040348,1.030873,libero_goal
+xarm6_true,500,40000,1.0,1.0,0.000368,0.002,1.33018,0.72994,0.08004772,0.02601064,0.0,0.00206809,0.0,1.030873,libero_object
+xarm6_true,500,39994,0.719708,0.094,0.008818,0.089577,0.935137,0.103836,0.04796162,0.0,0.232779,0.00759104,0.00028687,1.030873,libero_spatial

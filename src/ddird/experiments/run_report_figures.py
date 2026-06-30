@@ -69,7 +69,7 @@ def _write_report(
             [
                 "## Simplification",
                 "",
-                "The current evaluator is position-only. Orientation and gripper traces are preserved when present, but orientation feasibility is not yet included in IK or manipulability scoring.",
+                "The default report path is position-only. Orientation and gripper traces are preserved when present; use the benchmark CLIs with `--evaluation-mode pose` to include orientation feasibility.",
                 "",
             ]
         )

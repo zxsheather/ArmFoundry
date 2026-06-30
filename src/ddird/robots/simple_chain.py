@@ -163,6 +163,9 @@ class SimpleChainRobot:
     def end_effector_position(self, q: np.ndarray) -> np.ndarray:
         return np.asarray(self.forward_kinematics(q)["position"], dtype=float)
 
+    def end_effector_rotation(self, q: np.ndarray) -> np.ndarray:
+        return np.asarray(self.forward_kinematics(q)["rotation"], dtype=float)
+
     def position_jacobian(self, q: np.ndarray) -> np.ndarray:
         fk = self.forward_kinematics(q)
         end = fk["position"]
@@ -170,6 +173,10 @@ class SimpleChainRobot:
         for index, (axis, origin) in enumerate(zip(fk["axes"], fk["origins"], strict=True)):
             jac[:, index] = np.cross(axis, end - origin)
         return jac
+
+    def orientation_jacobian(self, q: np.ndarray) -> np.ndarray:
+        fk = self.forward_kinematics(q)
+        return np.asarray(fk["axes"], dtype=float).T
 
     def joint_margin(self, q: np.ndarray) -> np.ndarray:
         q = np.asarray(q, dtype=float).reshape(self.dof)

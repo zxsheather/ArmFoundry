@@ -25,9 +25,14 @@ class TrajectoryMetrics:
     smoothness_cost: float
     collision_proxy: float
     hardware_cost: float
+    orientation_tolerance_rad: float | None = None
+    mean_orientation_error_rad: float | None = None
+    max_orientation_error_rad: float | None = None
+    pose_success_rate: float | None = None
+    trajectory_pose_success: bool | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        row = {
             "robot_name": self.robot_name,
             "suite": self.suite,
             "task": self.task,
@@ -46,6 +51,17 @@ class TrajectoryMetrics:
             "collision_proxy": round(float(self.collision_proxy), 8),
             "hardware_cost": round(float(self.hardware_cost), 6),
         }
+        if self.pose_success_rate is not None:
+            row.update(
+                {
+                    "orientation_tolerance_rad": round(float(self.orientation_tolerance_rad or 0.0), 6),
+                    "mean_orientation_error_rad": round(float(self.mean_orientation_error_rad or 0.0), 6),
+                    "max_orientation_error_rad": round(float(self.max_orientation_error_rad or 0.0), 6),
+                    "pose_success_rate": round(float(self.pose_success_rate), 6),
+                    "trajectory_pose_success": int(bool(self.trajectory_pose_success)),
+                }
+            )
+        return row
 
 
 def safe_mean(values: np.ndarray, default: float = 0.0) -> float:
@@ -83,7 +99,7 @@ def aggregate_metric_dicts(rows: list[dict[str, Any]], group_name: str = "overal
 
     total_waypoints = sum(int(row["num_waypoints"]) for row in rows)
     weighted_success = sum(float(row["ik_success_rate"]) * int(row["num_waypoints"]) for row in rows)
-    return {
+    aggregate = {
         "robot_name": group_name,
         "num_trajectories": len(rows),
         "num_waypoints": total_waypoints,
@@ -100,3 +116,16 @@ def aggregate_metric_dicts(rows: list[dict[str, Any]], group_name: str = "overal
         "collision_proxy": round(float(np.mean([float(row["collision_proxy"]) for row in rows])), 8),
         "hardware_cost": round(float(np.mean([float(row["hardware_cost"]) for row in rows])), 6),
     }
+    if all("pose_success_rate" in row for row in rows):
+        weighted_pose_success = sum(float(row["pose_success_rate"]) * int(row["num_waypoints"]) for row in rows)
+        weighted_orientation_error = sum(float(row["mean_orientation_error_rad"]) * int(row["num_waypoints"]) for row in rows)
+        aggregate.update(
+            {
+                "orientation_tolerance_rad": round(float(rows[0]["orientation_tolerance_rad"]), 6),
+                "mean_orientation_error_rad": round(weighted_orientation_error / max(1, total_waypoints), 6),
+                "max_orientation_error_rad": round(float(np.max([float(row["max_orientation_error_rad"]) for row in rows])), 6),
+                "pose_success_rate": round(weighted_pose_success / max(1, total_waypoints), 6),
+                "trajectory_pose_success_rate": round(float(np.mean([float(row["trajectory_pose_success"]) for row in rows])), 6),
+            }
+        )
+    return aggregate

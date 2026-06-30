@@ -5,7 +5,9 @@ import pytest
 
 from ddird.data.dataset import TrajectoryRecord, create_synthetic_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
-from ddird.experiments.run_eval_baselines import _resolve_base_pose_mode
+from ddird.eval.orientation import matrix_to_rotvec, rotvec_to_matrix
+from ddird.experiments.run_eval_baselines import _resolve_base_pose_mode, build_parser
+from ddird.experiments.run_eval_mjcf_robot import build_parser as build_mjcf_parser
 from ddird.robots.robot_registry import create_robot
 
 
@@ -32,6 +34,127 @@ def test_parallel_evaluator_matches_sequential(tmp_path):
 
     assert parallel.aggregate == sequential.aggregate
     assert parallel.trajectory_rows == sequential.trajectory_rows
+
+
+def test_pose_evaluator_reports_orientation_metrics_for_successful_pose(tmp_path):
+    robot = create_robot("simple_default")
+    q_target = robot.neutral_q
+    fk = robot.forward_kinematics(q_target)
+    record = TrajectoryRecord(
+        suite="suite",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=fk["position"].reshape(1, 3),
+        ee_ori=matrix_to_rotvec(fk["rotation"]).reshape(1, 3),
+    )
+
+    result = evaluate_robot(
+        robot,
+        [record],
+        config=EvaluationConfig(
+            max_iters=1,
+            evaluation_mode="pose",
+            orientation_format="rotvec",
+            orientation_tolerance=0.01,
+        ),
+    )
+
+    assert result.aggregate["ik_success_rate"] == 1.0
+    assert result.aggregate["pose_success_rate"] == 1.0
+    assert result.aggregate["trajectory_pose_success_rate"] == 1.0
+    assert result.aggregate["mean_orientation_error_rad"] == 0.0
+
+
+def test_pose_evaluator_marks_orientation_failure(tmp_path):
+    robot = create_robot("simple_default")
+    q_target = robot.neutral_q
+    fk = robot.forward_kinematics(q_target)
+    target_rotation = fk["rotation"] @ rotvec_to_matrix(np.array([0.0, 0.0, np.pi / 2.0]))
+    record = TrajectoryRecord(
+        suite="suite",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=fk["position"].reshape(1, 3),
+        ee_ori=matrix_to_rotvec(target_rotation).reshape(1, 3),
+    )
+
+    result = evaluate_robot(
+        robot,
+        [record],
+        config=EvaluationConfig(
+            max_iters=1,
+            evaluation_mode="pose",
+            orientation_format="rotvec",
+            orientation_tolerance=0.01,
+        ),
+    )
+
+    assert result.aggregate["ik_success_rate"] == 0.0
+    assert result.aggregate["pose_success_rate"] == 0.0
+    assert result.aggregate["trajectory_pose_success_rate"] == 0.0
+    assert result.aggregate["mean_orientation_error_rad"] > 0.01
+
+
+def test_position_only_evaluator_keeps_pose_metrics_out_of_default_rows(tmp_path):
+    robot = create_robot("simple_default")
+    q_target = robot.neutral_q
+    fk = robot.forward_kinematics(q_target)
+    record = TrajectoryRecord(
+        suite="suite",
+        task="task",
+        episode_id="episode",
+        path=tmp_path / "episode.npz",
+        ee_pos=fk["position"].reshape(1, 3),
+        ee_ori=matrix_to_rotvec(fk["rotation"]).reshape(1, 3),
+    )
+
+    result = evaluate_robot(robot, [record], config=EvaluationConfig(max_iters=1))
+
+    assert result.aggregate["ik_success_rate"] == 1.0
+    assert "pose_success_rate" not in result.aggregate
+    assert "mean_orientation_error_rad" not in result.trajectory_rows[0]
+
+
+def test_baseline_cli_exposes_pose_evaluation_options():
+    args = build_parser().parse_args(
+        [
+            "--evaluation-mode",
+            "pose",
+            "--orientation-format",
+            "rotvec",
+            "--orientation-tolerance",
+            "0.05",
+            "--orientation-weight",
+            "0.5",
+        ]
+    )
+
+    assert args.evaluation_mode == "pose"
+    assert args.orientation_format == "rotvec"
+    assert args.orientation_tolerance == 0.05
+    assert args.orientation_weight == 0.5
+
+
+def test_mjcf_cli_exposes_pose_evaluation_options():
+    args = build_mjcf_parser().parse_args(
+        [
+            "--mjcf",
+            "robot.xml",
+            "--robot-name",
+            "ur5e_true",
+            "--base-body",
+            "base",
+            "--evaluation-mode",
+            "pose",
+            "--orientation-format",
+            "rotvec",
+        ]
+    )
+
+    assert args.evaluation_mode == "pose"
+    assert args.orientation_format == "rotvec"
 
 
 def test_source_base_pose_mode_uses_record_metadata(tmp_path):

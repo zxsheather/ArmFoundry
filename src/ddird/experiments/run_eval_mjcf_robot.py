@@ -6,6 +6,7 @@ from pathlib import Path
 from ddird.data.dataset import load_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
 from ddird.eval.metrics import aggregate_metric_dicts
+from ddird.eval.orientation import ORIENTATION_FORMATS
 from ddird.experiments.common import (
     DEFAULT_DATA_ROOT,
     DEFAULT_OUTPUT_ROOT,
@@ -27,6 +28,30 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--data", default=DEFAULT_DATA_ROOT)
     parser.add_argument("--outputs", default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--max-iters", type=int, default=80)
+    parser.add_argument(
+        "--evaluation-mode",
+        choices=("position", "pose"),
+        default="position",
+        help="Use the current position-only IK path or pose-aware IK with position and orientation constraints.",
+    )
+    parser.add_argument(
+        "--orientation-tolerance",
+        type=float,
+        default=0.10,
+        help="Pose-aware orientation tolerance in radians.",
+    )
+    parser.add_argument(
+        "--orientation-format",
+        choices=ORIENTATION_FORMATS,
+        default="auto",
+        help="How to decode trajectory orientation arrays in pose-aware mode.",
+    )
+    parser.add_argument(
+        "--orientation-weight",
+        type=float,
+        default=1.0,
+        help="Weight applied to angular error inside the pose IK solve.",
+    )
     parser.add_argument("--suite", default=None)
     parser.add_argument("--max-trajectories", type=int, default=None)
     parser.add_argument("--max-waypoints-per-trajectory", type=int, default=None)
@@ -66,7 +91,14 @@ def main() -> None:
     result = evaluate_robot(
         robot,
         records,
-        config=EvaluationConfig(max_iters=args.max_iters, base_pose_mode=args.base_pose_mode),
+        config=EvaluationConfig(
+            max_iters=args.max_iters,
+            base_pose_mode=args.base_pose_mode,
+            evaluation_mode=args.evaluation_mode,
+            orientation_tolerance=args.orientation_tolerance,
+            orientation_format=args.orientation_format,
+            orientation_weight=args.orientation_weight,
+        ),
         num_workers=args.num_workers,
     )
     suite_rows = []
@@ -86,7 +118,11 @@ def main() -> None:
         outputs / "tool_frame_metadata.json",
         {
             "base_pose_mode": args.base_pose_mode,
+            "evaluation_mode": args.evaluation_mode,
             "max_iters": args.max_iters,
+            "orientation_format": args.orientation_format,
+            "orientation_tolerance_rad": args.orientation_tolerance,
+            "orientation_weight": args.orientation_weight,
             "robots": [
                 tool_frame_metadata(
                     robot,
@@ -101,7 +137,7 @@ def main() -> None:
     print(
         f"Evaluated {robot.name} on {len(records)} trajectories "
         f"({sum(record.num_waypoints for record in records)} waypoints, workers={args.num_workers}, "
-        f"base_pose_mode={args.base_pose_mode})"
+        f"base_pose_mode={args.base_pose_mode}, evaluation_mode={args.evaluation_mode})"
     )
 
 

@@ -7,8 +7,9 @@ from typing import Any
 import numpy as np
 
 from ddird.data.dataset import TrajectoryRecord
-from ddird.eval.ik import solve_position_ik_multiseed
+from ddird.eval.ik import solve_pose_ik_multiseed, solve_position_ik_multiseed
 from ddird.eval.metrics import TrajectoryMetrics, aggregate_metric_dicts, safe_mean, safe_min
+from ddird.eval.orientation import ORIENTATION_FORMATS, record_orientation_matrices
 from ddird.robots.simple_chain import SimpleChainRobot
 
 LIBERO_SOURCE_BASE_BY_SUITE = {
@@ -35,11 +36,23 @@ class EvaluationConfig:
     manipulability_threshold: float = 0.004
     joint_margin_threshold: float = 0.12
     base_pose_mode: str = "fixed"
+    evaluation_mode: str = "position"
+    orientation_tolerance: float = 0.10
+    orientation_format: str = "auto"
+    orientation_weight: float = 1.0
     weights: EvaluationWeights = EvaluationWeights()
 
     def __post_init__(self) -> None:
         if self.base_pose_mode not in {"fixed", "source"}:
             raise ValueError("base_pose_mode must be 'fixed' or 'source'")
+        if self.evaluation_mode not in {"position", "pose"}:
+            raise ValueError("evaluation_mode must be 'position' or 'pose'")
+        if self.orientation_tolerance <= 0.0:
+            raise ValueError("orientation_tolerance must be positive")
+        if self.orientation_format not in ORIENTATION_FORMATS:
+            raise ValueError(f"orientation_format must be one of {ORIENTATION_FORMATS}")
+        if self.orientation_weight <= 0.0:
+            raise ValueError("orientation_weight must be positive")
 
 
 @dataclass
@@ -108,25 +121,57 @@ def evaluate_trajectory(
     manip = []
     collisions = []
     achieved = []
+    achieved_rotations = []
+    orientation_errors = []
+    pose_successes = []
+    target_rotations = None
+    if config.evaluation_mode == "pose":
+        target_rotations = record_orientation_matrices(record, config.orientation_format)
+        if target_rotations is None:
+            raise ValueError(
+                f"Pose-aware evaluation requested, but {record.path} does not contain orientation data"
+            )
+        if len(target_rotations) != record.num_waypoints:
+            raise ValueError(
+                f"Pose-aware evaluation requested, but {record.path} has {len(target_rotations)} orientations "
+                f"for {record.num_waypoints} waypoints"
+            )
 
-    for target in record.ee_pos:
+    for index, target in enumerate(record.ee_pos):
         seeds = [q_prev, robot.neutral_q, -robot.neutral_q]
-        ik = solve_position_ik_multiseed(
-            robot,
-            target,
-            seeds=seeds,
-            max_iters=config.max_iters,
-            tolerance=config.ik_tolerance,
-        )
+        if target_rotations is None:
+            ik = solve_position_ik_multiseed(
+                robot,
+                target,
+                seeds=seeds,
+                max_iters=config.max_iters,
+                tolerance=config.ik_tolerance,
+            )
+        else:
+            ik = solve_pose_ik_multiseed(
+                robot,
+                target,
+                target_rotations[index],
+                seeds=seeds,
+                max_iters=config.max_iters,
+                position_tolerance=config.ik_tolerance,
+                orientation_tolerance=config.orientation_tolerance,
+                orientation_weight=config.orientation_weight,
+            )
         q = ik.q
         q_prev = q.copy()
         q_values.append(q)
         successes.append(ik.success)
-        errors.append(ik.error_norm)
+        errors.append(ik.position_error_norm if ik.position_error_norm is not None else ik.error_norm)
+        if ik.orientation_error_norm is not None:
+            orientation_errors.append(ik.orientation_error_norm)
+            pose_successes.append(ik.success)
         margins.append(float(np.min(robot.joint_margin(q))))
         manip.append(robot.manipulability(q))
         collisions.append(robot.collision_proxy(q))
         achieved.append(robot.end_effector_position(q))
+        if target_rotations is not None:
+            achieved_rotations.append(robot.end_effector_rotation(q))
 
     q_array = np.asarray(q_values, dtype=float)
     success_array = np.asarray(successes, dtype=bool)
@@ -134,6 +179,8 @@ def evaluate_trajectory(
     margins_array = np.asarray(margins, dtype=float)
     manip_array = np.asarray(manip, dtype=float)
     collision_array = np.asarray(collisions, dtype=float)
+    orientation_error_array = np.asarray(orientation_errors, dtype=float)
+    pose_success_array = np.asarray(pose_successes, dtype=bool)
 
     metrics = TrajectoryMetrics(
         robot_name=robot.name,
@@ -153,6 +200,11 @@ def evaluate_trajectory(
         smoothness_cost=_smoothness(q_array, success_array),
         collision_proxy=safe_mean(collision_array),
         hardware_cost=robot.reach_proxy,
+        orientation_tolerance_rad=config.orientation_tolerance if target_rotations is not None else None,
+        mean_orientation_error_rad=safe_mean(orientation_error_array) if target_rotations is not None else None,
+        max_orientation_error_rad=float(np.max(orientation_error_array)) if len(orientation_error_array) else None,
+        pose_success_rate=float(np.mean(pose_success_array)) if len(pose_success_array) else None,
+        trajectory_pose_success=bool(np.all(pose_success_array)) if len(pose_success_array) else None,
     )
 
     details = None
@@ -166,6 +218,15 @@ def evaluate_trajectory(
             "joint_margin": margins_array,
             "manipulability": manip_array,
         }
+        if target_rotations is not None:
+            details.update(
+                {
+                    "target_rotation": target_rotations,
+                    "achieved_rotation": np.asarray(achieved_rotations, dtype=float),
+                    "orientation_error": orientation_error_array,
+                    "pose_success": pose_success_array,
+                }
+            )
     return metrics, details
 
 

@@ -1,0 +1,3 @@
+[ur5e_true]
+Evaluated ur5e_true on 1500 trajectories (119975 waypoints, workers=16, base_pose_mode=source, evaluation_mode=pose)
+real 63.962 user 995.101 sys 0.326

@@ -1,0 +1,80 @@
+{
+  "base_pose_mode": "source",
+  "benchmark": "sourcebase_true_pose_it80",
+  "commands": {
+    "panda_true": "uv run python -m ddird.experiments.run_eval_baselines --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/panda_true --robots panda_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10",
+    "ur5e_true": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml --robot-name ur5e_true --base-body base --target-site attachment_site --target-body wrist_3_link --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/ur5e_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10",
+    "xarm6_true": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf outputs/generated_models/xarm6_true/xarm6_true.xml --robot-name xarm6_true --base-body link_base --target-site link_tcp --target-body link6 --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/xarm6_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10"
+  },
+  "data": "data/libero_ee_trajectories_armforge",
+  "evaluation_mode": "pose",
+  "max_iters": 80,
+  "max_waypoints_per_trajectory": 80,
+  "num_workers": 16,
+  "orientation_format": "rotvec",
+  "orientation_tolerance_rad": 0.1,
+  "position_only_reference": "outputs/sourcebase_true_proxy_all_it80",
+  "position_tolerance_m": 0.002,
+  "robots": [
+    {
+      "base_body": "robot0_base",
+      "command": "uv run python -m ddird.experiments.run_eval_baselines --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/panda_true --robots panda_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10",
+      "concrete_gripper_modeled": true,
+      "output_dir": "outputs/sourcebase_true_pose_it80/panda_true",
+      "robot_name": "panda_true",
+      "semantics": "LIBERO source Panda gripper/eef kinematic chain is included up to the recorded gripper site.",
+      "source": "real_kinematics",
+      "target_body": "gripper0_eef",
+      "target_frame": "gripper0_grip_site",
+      "target_offset_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_site": "gripper0_grip_site",
+      "tcp_offset_included": true,
+      "tool_modeling": "source_gripper_chain"
+    },
+    {
+      "base_body": "base",
+      "command": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml --robot-name ur5e_true --base-body base --target-site attachment_site --target-body wrist_3_link --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/ur5e_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10",
+      "concrete_gripper_modeled": false,
+      "model_path": "data/armforge/models/mujoco_menagerie/universal_robots_ur5e/ur5e.xml",
+      "output_dir": "outputs/sourcebase_true_pose_it80/ur5e_true",
+      "robot_name": "ur5e_true",
+      "semantics": "UR attachment site is used as the TCP; no concrete gripper tip is modeled.",
+      "source": "real_kinematics",
+      "target_body": "wrist_3_link",
+      "target_frame": "attachment_site",
+      "target_offset_xyz": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "target_site": "attachment_site",
+      "tcp_offset_included": true,
+      "tool_modeling": "attachment_site_only"
+    },
+    {
+      "base_body": "link_base",
+      "command": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf outputs/generated_models/xarm6_true/xarm6_true.xml --robot-name xarm6_true --base-body link_base --target-site link_tcp --target-body link6 --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_true_pose_it80/xarm6_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10",
+      "concrete_gripper_modeled": false,
+      "model_path": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+      "output_dir": "outputs/sourcebase_true_pose_it80/xarm6_true",
+      "robot_name": "xarm6_true",
+      "semantics": "Official xArm gripper TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+      "source": "real_kinematics",
+      "target_body": "link6",
+      "target_frame": "link_tcp",
+      "target_offset_xyz": [
+        0.0,
+        0.0,
+        0.172
+      ],
+      "target_site": "link_tcp",
+      "tcp_offset_included": true,
+      "tool_modeling": "tcp_offset_only"
+    }
+  ],
+  "run_log": "outputs/sourcebase_true_pose_it80/run.log"
+}

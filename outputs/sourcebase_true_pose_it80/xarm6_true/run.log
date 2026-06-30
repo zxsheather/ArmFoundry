@@ -1,0 +1,3 @@
+[xarm6_true]
+Evaluated xarm6_true on 1500 trajectories (119975 waypoints, workers=16, base_pose_mode=source, evaluation_mode=pose)
+real 380.349 user 5975.658 sys 0.575

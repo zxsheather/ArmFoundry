@@ -14,7 +14,7 @@ from ddird.experiments.common import (
     write_csv,
     write_json,
 )
-from ddird.robots.robot_registry import baseline_robots
+from ddird.robots.robot_registry import baseline_robots, create_robot
 from ddird.robots.tool_frames import tool_frame_metadata
 
 
@@ -61,6 +61,12 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument("--include-true-models", action="store_true", help="Also evaluate available true robot models such as panda_true.")
+    parser.add_argument(
+        "--robots",
+        nargs="+",
+        default=None,
+        help="Optional explicit robot registry names to evaluate, e.g. panda_true. Overrides the default baseline set.",
+    )
     parser.add_argument("--seed", type=int, default=7)
     return parser
 
@@ -107,7 +113,11 @@ def main() -> None:
     aggregate_rows = []
     suite_rows = []
     trajectory_rows = []
-    robots = baseline_robots(include_true_models=args.include_true_models)
+    robots = (
+        [create_robot(robot_name) for robot_name in args.robots]
+        if args.robots is not None
+        else baseline_robots(include_true_models=args.include_true_models)
+    )
     for robot in robots:
         result = evaluate_robot(robot, records, config=config, num_workers=args.num_workers)
         aggregate_rows.append(result.aggregate)

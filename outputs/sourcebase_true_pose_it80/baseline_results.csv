@@ -1,0 +1,4 @@
+robot_name,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,mean_joint_margin,min_joint_margin,mean_manipulability,min_manipulability,manipulability_below_threshold,smoothness_cost,collision_proxy,hardware_cost,orientation_tolerance_rad,mean_orientation_error_rad,max_orientation_error_rad,pose_success_rate,trajectory_pose_success_rate
+panda_true,1500,119975,0.995299,0.946667,0.000495,0.08294,0.39912,0.0,0.17995762,0.02193688,0.0,0.01949797,0.01513034,1.415762,0.1,0.011822,1.686391,0.995299,0.946667
+ur5e_true,1500,119975,0.966651,0.788,0.001152,0.617089,1.832952,0.465172,0.0809107,0.00720513,0.0,0.38046493,0.00321593,1.464731,0.1,0.00224,0.428595,0.966651,0.788
+xarm6_true,1500,119975,0.719183,0.242,0.0112,0.111168,1.274039,0.299946,0.14035062,0.02604513,0.0,0.01468042,0.00247573,1.202873,0.1,0.023499,1.244216,0.719183,0.242

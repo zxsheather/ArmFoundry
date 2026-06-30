@@ -1,0 +1,27 @@
+{
+  "base_pose_mode": "source",
+  "evaluation_mode": "pose",
+  "max_iters": 80,
+  "orientation_format": "rotvec",
+  "orientation_tolerance_rad": 0.1,
+  "orientation_weight": 1.0,
+  "robots": [
+    {
+      "base_body": "robot0_base",
+      "concrete_gripper_modeled": true,
+      "robot_name": "panda_true",
+      "semantics": "LIBERO source Panda gripper/eef kinematic chain is included up to the recorded gripper site.",
+      "source": "real_kinematics",
+      "target_body": "gripper0_eef",
+      "target_frame": "gripper0_grip_site",
+      "target_offset_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_site": "gripper0_grip_site",
+      "tcp_offset_included": true,
+      "tool_modeling": "source_gripper_chain"
+    }
+  ]
+}

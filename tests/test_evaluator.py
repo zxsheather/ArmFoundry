@@ -137,6 +137,12 @@ def test_baseline_cli_exposes_pose_evaluation_options():
     assert args.orientation_weight == 0.5
 
 
+def test_baseline_cli_accepts_explicit_robot_subset():
+    args = build_parser().parse_args(["--robots", "panda_true", "simple_default"])
+
+    assert args.robots == ["panda_true", "simple_default"]
+
+
 def test_mjcf_cli_exposes_pose_evaluation_options():
     args = build_mjcf_parser().parse_args(
         [

@@ -16,7 +16,7 @@ Default semantics:
 
 - Base placement: use `--base-pose-mode source`, placing the candidate robot at the LIBERO source workcell base pose for each suite unless an explicit workcell placement file is provided.
 - Tool frame: use the target site or body named by the caller, such as `tool0`, as the robot TCP.
-- Orientation: position-only until orientation-aware IK is implemented.
+- Orientation: position-only remains the primary cross-embodiment benchmark. Orientation-aware evaluation is a separate diagnostic pose benchmark defined below.
 - Result meaning: reachability and kinematic quality only, not manipulation success.
 - Naming: real imported models must use names such as `ur5_true` and `xarm6_true`; simplified built-in models keep the `*_proxy` suffix.
 
@@ -86,3 +86,27 @@ Reports must keep these categories separate:
 Benchmark output directories should include `tool_frame_metadata.json` describing each robot's evaluated TCP/tool frame, target site/body, target offset, and whether a concrete gripper is modeled. Reports should summarize that metadata before comparing reachability metrics.
 
 Do not compare `ur5_proxy=100%` or similar proxy results as if they were real robot performance.
+
+## Orientation-Aware Benchmark Semantics
+
+ArmFoundry should keep the position-only benchmark as the primary cross-embodiment reachability result. It answers whether the evaluated TCP can visit the LIBERO source Panda end-effector positions from the selected base placement. It does not claim manipulation success.
+
+Orientation-aware IK should be reported as a diagnostic pose benchmark. The source demonstrations define desired orientation at the LIBERO Panda gripper/TCP frame. The extracted records currently preserve orientation when available as `ee_ori`; before using it for pose error, the implementation must confirm and normalize its representation from the source data, because the current processed records store a 3-vector orientation rather than `ee_quat`.
+
+For `panda_true`, the recorded source Panda orientation maps directly to the evaluated Panda TCP once the representation is normalized. For non-source robots, the source Panda position maps to each target robot's documented TCP position, but full orientation comparison also requires an explicit source-TCP-to-target-TCP frame mapping. Without that per-robot mapping, orientation-aware results for `ur5e_true`, `xarm6_true`, and all `*_proxy` robots must be labeled diagnostic and must not be interpreted as fair task success.
+
+Tool-frame cases:
+
+- `panda_true`: source gripper-chain baseline; eligible for direct source-orientation pose evaluation after `ee_ori` normalization.
+- `xarm6_true`: official xArm gripper TCP offset is included, but detailed gripper geometry and source-to-xArm tool-frame mapping are not modeled; orientation-aware results are diagnostic unless such a mapping is added.
+- `ur5e_true`: currently uses the Menagerie `attachment_site` on `wrist_3_link`; it should remain position-only or diagnostic until a concrete UR5e tool/TCP is chosen.
+- `*_proxy`: simplified endpoint chains; orientation-aware results are diagnostic only.
+
+Pose reports should include these fields in addition to the existing position metrics:
+
+- `orientation_tolerance_rad`, initially `0.10` rad, with sensitivity runs at `0.05`, `0.10`, and `0.20` rad when comparing conclusions.
+- `mean_orientation_error_rad` and `max_orientation_error_rad`.
+- `pose_success_rate`, counting a waypoint as successful only when both position and orientation errors are within tolerance.
+- `trajectory_pose_success_rate`, counting a trajectory as successful only when every selected waypoint is pose-successful.
+
+Use the existing position tolerance (`0.002` m by default) for the position half of pose success unless a benchmark run explicitly documents a different tolerance.

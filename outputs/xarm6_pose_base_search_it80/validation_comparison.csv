@@ -1,0 +1,4 @@
+suite,source_trajectory_pose_success_rate,best_trajectory_pose_success_rate,trajectory_pose_success_delta,source_pose_success_rate,best_pose_success_rate,pose_success_delta,source_mean_position_error,best_mean_position_error,source_mean_orientation_error_rad,best_mean_orientation_error_rad,best_base_x,best_base_y,best_base_z,best_base_yaw,dx_from_source,dy_from_source,dz_from_source,yaw_delta_from_source
+libero_goal,0.394,1.0,0.606,0.784373,1.0,0.215627,0.009383,0.000427,0.027339,0.002645,-0.420951,-0.106435,0.931218,0.006215,0.239049,-0.106435,0.019218,0.006215
+libero_object,0.25,1.0,0.75,0.76195,1.0,0.23805,0.007608,0.000613,0.01633,0.001131,-0.27116,0.044749,0.057728,0.10762,0.32884,0.044749,0.057728,0.10762
+libero_spatial,0.082,1.0,0.918,0.611242,1.0,0.388758,0.016609,0.000445,0.026832,0.00139,-0.465993,0.027575,0.896745,0.635845,0.194007,0.027575,-0.015255,0.635845

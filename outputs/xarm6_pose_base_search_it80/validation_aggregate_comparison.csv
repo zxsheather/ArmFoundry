@@ -1,0 +1,3 @@
+label,num_trajectories,num_waypoints,pose_success_rate,trajectory_pose_success_rate,mean_position_error,max_position_error,mean_orientation_error_rad,max_orientation_error_rad
+source_base,1500,119975,0.719183,0.242,0.0112,0.111168,0.0235,1.244216
+suite_specific_best_search_base,1500,119975,1.0,1.0,0.000495,0.002,0.001722,0.099798

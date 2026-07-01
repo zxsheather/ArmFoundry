@@ -1,0 +1,151 @@
+{
+  "base_body": "link_base",
+  "bounds": {
+    "dx": 0.35,
+    "dy": 0.35,
+    "dz": 0.2,
+    "min_z": 0.0,
+    "yaw": 0.7
+  },
+  "evaluation_config": {
+    "base_pose_mode": "fixed",
+    "evaluation_mode": "pose",
+    "max_iters": 80,
+    "orientation_format": "rotvec",
+    "orientation_tolerance_rad": 0.1,
+    "orientation_weight": 1.0,
+    "tool_frame_mapping": "canonical_tool"
+  },
+  "experiment": "mjcf_base_search",
+  "max_eval_trajectories": null,
+  "max_search_trajectories": 60,
+  "max_waypoints_per_trajectory": 80,
+  "mjcf": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+  "num_candidates": 15,
+  "num_workers": 16,
+  "robot_name": "xarm6_true",
+  "search_scope": "suite",
+  "seed": 23,
+  "split": {
+    "libero_goal": {
+      "num_group_trajectories": 500,
+      "num_test_trajectories": 150,
+      "num_train_trajectories": 350,
+      "test_tasks": [
+        "open_the_middle_drawer_of_the_cabinet_demo",
+        "open_the_top_drawer_and_put_the_bowl_inside_demo",
+        "put_the_bowl_on_the_stove_demo"
+      ],
+      "train_tasks": [
+        "push_the_plate_to_the_front_of_the_stove_demo",
+        "put_the_bowl_on_the_plate_demo",
+        "put_the_bowl_on_top_of_the_cabinet_demo",
+        "put_the_cream_cheese_in_the_bowl_demo",
+        "put_the_wine_bottle_on_the_rack_demo",
+        "put_the_wine_bottle_on_top_of_the_cabinet_demo",
+        "turn_on_the_stove_demo"
+      ]
+    },
+    "libero_object": {
+      "num_group_trajectories": 500,
+      "num_test_trajectories": 150,
+      "num_train_trajectories": 350,
+      "test_tasks": [
+        "pick_up_the_orange_juice_and_place_it_in_the_basket_demo",
+        "pick_up_the_salad_dressing_and_place_it_in_the_basket_demo",
+        "pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo"
+      ],
+      "train_tasks": [
+        "pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo",
+        "pick_up_the_bbq_sauce_and_place_it_in_the_basket_demo",
+        "pick_up_the_butter_and_place_it_in_the_basket_demo",
+        "pick_up_the_chocolate_pudding_and_place_it_in_the_basket_demo",
+        "pick_up_the_cream_cheese_and_place_it_in_the_basket_demo",
+        "pick_up_the_ketchup_and_place_it_in_the_basket_demo",
+        "pick_up_the_milk_and_place_it_in_the_basket_demo"
+      ]
+    },
+    "libero_spatial": {
+      "num_group_trajectories": 500,
+      "num_test_trajectories": 150,
+      "num_train_trajectories": 350,
+      "test_tasks": [
+        "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_demo"
+      ],
+      "train_tasks": [
+        "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_demo",
+        "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_demo"
+      ]
+    }
+  },
+  "split_by": "task",
+  "target_body": "link6",
+  "target_site": "link_tcp",
+  "tool_frame": {
+    "base_body": "link_base",
+    "concrete_gripper_modeled": false,
+    "model_path": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+    "robot_name": "xarm6_true",
+    "semantics": "Official xArm gripper TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+    "source": "real_kinematics",
+    "target_body": "link6",
+    "target_frame": "link_tcp",
+    "target_offset_xyz": [
+      0.0,
+      0.0,
+      0.172
+    ],
+    "target_quat_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_site": "link_tcp",
+    "tcp_offset_included": true,
+    "tool_modeling": "tcp_offset_only"
+  },
+  "tool_frame_mapping_metadata": {
+    "canonical_frame": {
+      "name": "parallel_jaw_pinch_tcp",
+      "origin": "pinch center / gripper TCP",
+      "x_axis": "+Y cross +Z; completes a right-handed frame",
+      "y_axis": "finger opening/closing direction between left and right jaws",
+      "z_axis": "tool approach direction from palm/wrist toward the pinch point"
+    },
+    "canonical_to_target_quat_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "eligible": true,
+    "mode": "canonical_tool",
+    "pose_fairness_claim": true,
+    "rationale": "Official xArm gripper joint_tcp has rpy=0, +Z offset to the TCP, and symmetric finger structure along +/-Y, matching the canonical parallel-jaw axes. The benchmark model still includes only the TCP offset, not full gripper geometry.",
+    "source_frame": "libero_panda/gripper0_grip_site",
+    "source_to_canonical_quat_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_to_target_quat_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": "mapped_tcp_offset_only",
+    "target_frame": "link_tcp",
+    "target_robot": "xarm6_true"
+  },
+  "train_fraction": 0.7
+}

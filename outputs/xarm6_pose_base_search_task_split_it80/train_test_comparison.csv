@@ -1,0 +1,4 @@
+group,reference_test_trajectory_success,best_test_trajectory_success,test_trajectory_success_delta,reference_test_waypoint_success,best_test_waypoint_success,test_waypoint_success_delta,best_base_x,best_base_y,best_base_z,best_base_yaw
+libero_goal,0.36,1.0,0.64,0.776167,1.0,0.223833,-0.315288,-0.133681,1.025004,-0.467094
+libero_object,0.04,0.986667,0.946667,0.573833,0.999,0.425167,-0.447235,0.22912,0.074962,-0.348135
+libero_spatial,0.073333,0.466667,0.393334,0.632417,0.767333,0.134916,-0.538064,0.186874,0.718466,-0.563609

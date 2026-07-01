@@ -1,0 +1,7 @@
+model,suite,tool_modeling,position_ik_success_rate,position_trajectory_success_rate,pose_success_rate,trajectory_pose_success_rate,pose_mean_position_error,pose_mean_orientation_error_rad,pose_max_orientation_error_rad,target_frame
+ur5e_true_attachment_site,libero_goal,attachment_site_only,1.0,1.0,0.999125,0.972,0.000442,0.002743,0.154432,attachment_site
+ur5e_true_attachment_site,libero_object,attachment_site_only,1.0,1.0,0.9994,0.96,0.000477,0.000917,0.09085,attachment_site
+ur5e_true_attachment_site,libero_spatial,attachment_site_only,1.0,1.0,0.901435,0.432,0.002536,0.003061,0.428595,attachment_site
+ur5e_true_robotiq2f85_tcp_proxy,libero_goal,tcp_offset_only,1.0,1.0,0.990495,0.902,0.000451,0.002415,0.09955,ur5e_robotiq2f85_tcp
+ur5e_true_robotiq2f85_tcp_proxy,libero_object,tcp_offset_only,1.0,1.0,1.0,1.0,0.000384,0.000739,0.09092,ur5e_robotiq2f85_tcp
+ur5e_true_robotiq2f85_tcp_proxy,libero_spatial,tcp_offset_only,1.0,1.0,1.0,1.0,0.00035,0.001079,0.095321,ur5e_robotiq2f85_tcp

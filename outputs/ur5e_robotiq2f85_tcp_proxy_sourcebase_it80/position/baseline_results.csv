@@ -1,0 +1,2 @@
+robot_name,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,mean_joint_margin,min_joint_margin,mean_manipulability,min_manipulability,manipulability_below_threshold,smoothness_cost,collision_proxy,hardware_cost
+ur5e_true_robotiq2f85_tcp_proxy,1500,119975,1.0,1.0,0.000374,0.002,0.883973,1e-06,0.10838191,0.00106691,6.7e-05,0.01370798,0.00273809,1.620531

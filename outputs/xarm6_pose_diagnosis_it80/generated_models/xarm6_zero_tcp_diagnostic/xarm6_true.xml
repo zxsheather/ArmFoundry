@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="xarm6_true">
+  <compiler angle="radian" autolimits="true" />
+  <worldbody>
+    <body name="link_base">
+      <body name="link1" pos="0 0 0.267" quat="1 0 0 0">
+        <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+        <joint name="joint1" axis="0 0 1" range="-6.2831853 6.2831853" />
+        <body name="link2" pos="0 0 0" quat="0.70710548 -0.70710808 0 0">
+          <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+          <joint name="joint2" axis="0 0 1" range="-2.059 2.0944" />
+          <body name="link3" pos="0.0535 -0.2845 0" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+            <joint name="joint3" axis="0 0 1" range="-3.927 0.19198" />
+            <body name="link4" pos="0.0775 0.3425 0" quat="0.70710548 -0.70710808 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+              <joint name="joint4" axis="0 0 1" range="-6.2831853 6.2831853" />
+              <body name="link5" pos="0 0 0" quat="0.70710548 0.70710808 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+                <joint name="joint5" axis="0 0 1" range="-1.69297 3.1415927" />
+                <body name="link6" pos="0.076 0.097 0" quat="0.70710548 -0.70710808 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+                  <joint name="joint6" axis="0 0 1" range="-6.2831853 6.2831853" />
+                  <site name="link_tcp" pos="0 0 0" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

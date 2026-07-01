@@ -1,0 +1,16 @@
+suite,task,num_trajectories,trajectory_pose_success_rate,pose_success_rate,mean_position_error,mean_orientation_error_rad
+libero_spatial,pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo,50,0.0,0.185,0.050556,0.098185
+libero_spatial,pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_demo,50,0.0,0.32625,0.02641,0.035759
+libero_goal,put_the_wine_bottle_on_top_of_the_cabinet_demo,50,0.0,0.57525,0.034605,0.138693
+libero_spatial,pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo,50,0.0,0.663,0.015953,0.019755
+libero_spatial,pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo,50,0.0,0.68425,0.016107,0.021617
+libero_spatial,pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_demo,50,0.02,0.3995,0.02409,0.046295
+libero_object,pick_up_the_orange_juice_and_place_it_in_the_basket_demo,50,0.02,0.41425,0.021302,0.050094
+libero_goal,open_the_top_drawer_and_put_the_bowl_inside_demo,50,0.02,0.71325,0.009313,0.021173
+libero_object,pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo,50,0.02,0.741,0.006047,0.010778
+libero_spatial,pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_demo,50,0.04,0.58825,0.010451,0.01416
+libero_goal,put_the_bowl_on_the_plate_demo,50,0.04,0.734854,0.009073,0.013917
+libero_spatial,pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_demo,50,0.04,0.77675,0.009165,0.011221
+libero_goal,push_the_plate_to_the_front_of_the_stove_demo,50,0.06,0.4935,0.014075,0.020485
+libero_goal,open_the_middle_drawer_of_the_cabinet_demo,50,0.06,0.61525,0.01409,0.034303
+libero_object,pick_up_the_salad_dressing_and_place_it_in_the_basket_demo,50,0.08,0.56625,0.013653,0.030322

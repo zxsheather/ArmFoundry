@@ -1,0 +1,8 @@
+section,robot_or_group,num_trajectories,pose_success_rate,trajectory_pose_success_rate,mean_position_error,max_position_error,mean_orientation_error_rad,max_orientation_error_rad
+full_canonical_pose,panda_true,1500,0.995299,0.946667,0.000495,0.08294,0.011822,1.686391
+full_canonical_pose,xarm6_true,1500,0.719183,0.242,0.0112,0.111168,0.023499,1.244216
+full_canonical_pose,ur5e_true_robotiq2f85_tcp_proxy,1500,0.996833,0.967333,0.000395,0.025089,0.001411,0.09955
+xarm6_by_suite,libero_goal,500,0.784373,0.394,0.009383,0.109641,0.027339,1.244216
+xarm6_by_suite,libero_object,500,0.76195,0.25,0.007608,0.110176,0.01633,0.607734
+xarm6_by_suite,libero_spatial,500,0.611242,0.082,0.016609,0.111168,0.026832,0.464622
+xarm6_position_only_reference,sourcebase_true_proxy_all_it80/xarm6_true,1500,,1.0,0.000297,0.002,,

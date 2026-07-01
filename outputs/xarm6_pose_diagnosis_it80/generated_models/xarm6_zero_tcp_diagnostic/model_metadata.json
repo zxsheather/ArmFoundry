@@ -1,0 +1,76 @@
+{
+  "base_body": "link_base",
+  "joint_limits": {
+    "joint1": [
+      -6.28318531,
+      6.28318531
+    ],
+    "joint2": [
+      -2.059,
+      2.0944
+    ],
+    "joint3": [
+      -3.927,
+      0.19198
+    ],
+    "joint4": [
+      -6.28318531,
+      6.28318531
+    ],
+    "joint5": [
+      -1.69297,
+      3.14159265
+    ],
+    "joint6": [
+      -6.28318531,
+      6.28318531
+    ]
+  },
+  "joint_names": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6"
+  ],
+  "kinematics_yaml": "data/armforge/models/xarm_ros/xarm_description/config/kinematics/default/xarm6_default_kinematics.yaml",
+  "output_xml": "outputs/xarm6_pose_diagnosis_it80/generated_models/xarm6_zero_tcp_diagnostic/xarm6_true.xml",
+  "robot_name": "xarm6_true",
+  "source": "xArm-Developer/xarm_ros",
+  "source_commit": "0b5118eb6bf664fc3891c14b203e6ecbd5095dca",
+  "source_root": "data/armforge/models/xarm_ros",
+  "target_body": "link6",
+  "target_site": "link_tcp",
+  "tcp_offset_source": "xarm_description/urdf/gripper/xarm_gripper.urdf.xacro joint_tcp origin",
+  "tcp_offset_xyz": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "tool_frame": {
+    "base_body": "link_base",
+    "concrete_gripper_modeled": false,
+    "model_path": "outputs/xarm6_pose_diagnosis_it80/generated_models/xarm6_zero_tcp_diagnostic/xarm6_true.xml",
+    "robot_name": "xarm6_true",
+    "semantics": "xArm6 is evaluated at link6/wrist origin; this is diagnostic and does not represent gripper TCP reachability.",
+    "source": "real_kinematics",
+    "target_body": "link6",
+    "target_frame": "link_tcp",
+    "target_offset_xyz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_quat_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_site": "link_tcp",
+    "tcp_offset_included": false,
+    "tool_modeling": "wrist_origin_diagnostic"
+  },
+  "xacro_source": "data/armforge/models/xarm_ros/xarm_description/urdf/xarm6/xarm6.urdf.xacro"
+}

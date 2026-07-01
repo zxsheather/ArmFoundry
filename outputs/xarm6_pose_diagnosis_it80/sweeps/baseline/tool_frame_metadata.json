@@ -1,0 +1,72 @@
+{
+  "base_pose_mode": "source",
+  "evaluation_mode": "pose",
+  "max_iters": 80,
+  "orientation_format": "rotvec",
+  "orientation_tolerance_rad": 0.1,
+  "orientation_weight": 1.0,
+  "robots": [
+    {
+      "base_body": "link_base",
+      "concrete_gripper_modeled": false,
+      "model_path": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+      "robot_name": "xarm6_true",
+      "semantics": "Official xArm gripper TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+      "source": "real_kinematics",
+      "target_body": "link6",
+      "target_frame": "link_tcp",
+      "target_offset_xyz": [
+        0.0,
+        0.0,
+        0.172
+      ],
+      "target_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_site": "link_tcp",
+      "tcp_offset_included": true,
+      "tool_modeling": "tcp_offset_only"
+    }
+  ],
+  "tool_frame_mapping": "canonical_tool",
+  "tool_frame_mappings": [
+    {
+      "canonical_frame": {
+        "name": "parallel_jaw_pinch_tcp",
+        "origin": "pinch center / gripper TCP",
+        "x_axis": "+Y cross +Z; completes a right-handed frame",
+        "y_axis": "finger opening/closing direction between left and right jaws",
+        "z_axis": "tool approach direction from palm/wrist toward the pinch point"
+      },
+      "canonical_to_target_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eligible": true,
+      "mode": "canonical_tool",
+      "pose_fairness_claim": true,
+      "rationale": "Official xArm gripper joint_tcp has rpy=0, +Z offset to the TCP, and symmetric finger structure along +/-Y, matching the canonical parallel-jaw axes. The benchmark model still includes only the TCP offset, not full gripper geometry.",
+      "source_frame": "libero_panda/gripper0_grip_site",
+      "source_to_canonical_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_to_target_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "status": "mapped_tcp_offset_only",
+      "target_frame": "link_tcp",
+      "target_robot": "xarm6_true"
+    }
+  ]
+}

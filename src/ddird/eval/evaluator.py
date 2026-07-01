@@ -10,6 +10,7 @@ from ddird.data.dataset import TrajectoryRecord
 from ddird.eval.ik import solve_pose_ik_multiseed, solve_position_ik_multiseed
 from ddird.eval.metrics import TrajectoryMetrics, aggregate_metric_dicts, safe_mean, safe_min
 from ddird.eval.orientation import ORIENTATION_FORMATS, record_orientation_matrices
+from ddird.eval.tool_frame_mapping import TOOL_FRAME_MAPPING_MODES, apply_tool_frame_mapping
 from ddird.robots.simple_chain import SimpleChainRobot
 
 LIBERO_SOURCE_BASE_BY_SUITE = {
@@ -40,6 +41,7 @@ class EvaluationConfig:
     orientation_tolerance: float = 0.10
     orientation_format: str = "auto"
     orientation_weight: float = 1.0
+    tool_frame_mapping: str = "identity"
     weights: EvaluationWeights = EvaluationWeights()
 
     def __post_init__(self) -> None:
@@ -53,6 +55,8 @@ class EvaluationConfig:
             raise ValueError(f"orientation_format must be one of {ORIENTATION_FORMATS}")
         if self.orientation_weight <= 0.0:
             raise ValueError("orientation_weight must be positive")
+        if self.tool_frame_mapping not in TOOL_FRAME_MAPPING_MODES:
+            raise ValueError(f"tool_frame_mapping must be one of {TOOL_FRAME_MAPPING_MODES}")
 
 
 @dataclass
@@ -136,6 +140,7 @@ def evaluate_trajectory(
                 f"Pose-aware evaluation requested, but {record.path} has {len(target_rotations)} orientations "
                 f"for {record.num_waypoints} waypoints"
             )
+        target_rotations = apply_tool_frame_mapping(target_rotations, robot, config.tool_frame_mapping)
 
     for index, target in enumerate(record.ee_pos):
         seeds = [q_prev, robot.neutral_q, -robot.neutral_q]

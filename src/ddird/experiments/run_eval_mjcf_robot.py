@@ -7,6 +7,7 @@ from ddird.data.dataset import load_dataset
 from ddird.eval.evaluator import EvaluationConfig, evaluate_robot
 from ddird.eval.metrics import aggregate_metric_dicts
 from ddird.eval.orientation import ORIENTATION_FORMATS
+from ddird.eval.tool_frame_mapping import TOOL_FRAME_MAPPING_MODES, tool_frame_mapping_metadata
 from ddird.experiments.common import (
     DEFAULT_DATA_ROOT,
     DEFAULT_OUTPUT_ROOT,
@@ -51,6 +52,15 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=1.0,
         help="Weight applied to angular error inside the pose IK solve.",
+    )
+    parser.add_argument(
+        "--tool-frame-mapping",
+        choices=TOOL_FRAME_MAPPING_MODES,
+        default="identity",
+        help=(
+            "How to map source orientation frames to the target robot TCP. "
+            "Use canonical_tool only for robots with an explicit canonical mapping."
+        ),
     )
     parser.add_argument("--suite", default=None)
     parser.add_argument("--max-trajectories", type=int, default=None)
@@ -98,6 +108,7 @@ def main() -> None:
             orientation_tolerance=args.orientation_tolerance,
             orientation_format=args.orientation_format,
             orientation_weight=args.orientation_weight,
+            tool_frame_mapping=args.tool_frame_mapping,
         ),
         num_workers=args.num_workers,
     )
@@ -123,6 +134,7 @@ def main() -> None:
             "orientation_format": args.orientation_format,
             "orientation_tolerance_rad": args.orientation_tolerance,
             "orientation_weight": args.orientation_weight,
+            "tool_frame_mapping": args.tool_frame_mapping,
             "robots": [
                 tool_frame_metadata(
                     robot,
@@ -132,6 +144,7 @@ def main() -> None:
                     model_path=args.mjcf,
                 )
             ],
+            "tool_frame_mappings": [tool_frame_mapping_metadata(robot, args.tool_frame_mapping)],
         },
     )
     print(

@@ -128,6 +128,8 @@ def test_baseline_cli_exposes_pose_evaluation_options():
             "0.05",
             "--orientation-weight",
             "0.5",
+            "--tool-frame-mapping",
+            "canonical_tool",
         ]
     )
 
@@ -135,6 +137,7 @@ def test_baseline_cli_exposes_pose_evaluation_options():
     assert args.orientation_format == "rotvec"
     assert args.orientation_tolerance == 0.05
     assert args.orientation_weight == 0.5
+    assert args.tool_frame_mapping == "canonical_tool"
 
 
 def test_baseline_cli_accepts_explicit_robot_subset():
@@ -156,11 +159,14 @@ def test_mjcf_cli_exposes_pose_evaluation_options():
             "pose",
             "--orientation-format",
             "rotvec",
+            "--tool-frame-mapping",
+            "canonical_tool",
         ]
     )
 
     assert args.evaluation_mode == "pose"
     assert args.orientation_format == "rotvec"
+    assert args.tool_frame_mapping == "canonical_tool"
 
 
 def test_source_base_pose_mode_uses_record_metadata(tmp_path):

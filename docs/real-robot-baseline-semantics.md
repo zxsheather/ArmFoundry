@@ -114,16 +114,21 @@ Do not compare `ur5_proxy=100%` or similar proxy results as if they were real ro
 
 ArmFoundry should keep the position-only benchmark as the primary cross-embodiment reachability result. It answers whether the evaluated TCP can visit the LIBERO source Panda end-effector positions from the selected base placement. It does not claim manipulation success.
 
-Orientation-aware IK should be reported as a diagnostic pose benchmark. The source demonstrations define desired orientation at the LIBERO Panda gripper/TCP frame. The extracted records currently preserve orientation when available as `ee_ori`; before using it for pose error, the implementation must confirm and normalize its representation from the source data, because the current processed records store a 3-vector orientation rather than `ee_quat`.
+Orientation-aware IK has two modes:
 
-For `panda_true`, the recorded source Panda orientation maps directly to the evaluated Panda TCP once the representation is normalized. For non-source robots, the source Panda position maps to each target robot's documented TCP position, but full orientation comparison also requires an explicit source-TCP-to-target-TCP frame mapping. Without that per-robot mapping, orientation-aware results for `ur5e_true`, `xarm6_true`, and all `*_proxy` robots must be labeled diagnostic and must not be interpreted as fair task success.
+- `--tool-frame-mapping identity`: legacy diagnostic behavior. The source Panda orientation is passed directly to the target robot TCP.
+- `--tool-frame-mapping canonical_tool`: pose-fairness behavior. The source Panda TCP orientation is mapped through the canonical parallel-jaw pinch TCP frame before being sent to the target robot TCP.
+
+The canonical frame is defined in `docs/canonical-tool-frame-mapping.md`. Its origin is the pinch center; +Z points from palm/wrist toward the pinch point; +Y is the finger opening/closing direction; +X completes a right-handed frame. The current dataset stores orientation as `ee_ori`, a 3-vector interpreted as `rotvec` in the current pose-aware benchmark runs.
+
+For `panda_true`, the recorded source Panda orientation maps directly to the evaluated Panda TCP once the representation is normalized. For non-source robots, a pose result should be called canonical/fair only when the robot has an explicit `canonical_tool` mapping entry. Otherwise orientation-aware results must remain labeled diagnostic.
 
 Tool-frame cases:
 
 - `panda_true`: source gripper-chain baseline; eligible for direct source-orientation pose evaluation after `ee_ori` normalization.
-- `xarm6_true`: official xArm gripper TCP offset is included, but detailed gripper geometry and source-to-xArm tool-frame mapping are not modeled; orientation-aware results are diagnostic unless such a mapping is added.
+- `xarm6_true`: official xArm gripper TCP offset is included. It has a `canonical_tool` mapping for frame-level pose fairness, but detailed gripper geometry and dynamics are not modeled.
 - `ur5e_true`: bare-arm Menagerie `attachment_site` on `wrist_3_link`; position-only and pose-aware results remain attachment-site diagnostics.
-- `ur5e_true_robotiq2f85_tcp_proxy`: explicit Robotiq 2F-85 pinch TCP proxy; the TCP offset and fixed TCP orientation are included, but the concrete gripper is not modeled.
+- `ur5e_true_robotiq2f85_tcp_proxy`: explicit Robotiq 2F-85 pinch TCP proxy. It has a `canonical_tool` mapping for frame-level pose fairness, but the concrete gripper is not modeled.
 - `*_proxy`: simplified endpoint chains; orientation-aware results are diagnostic only.
 
 Pose reports should include these fields in addition to the existing position metrics:
@@ -132,5 +137,6 @@ Pose reports should include these fields in addition to the existing position me
 - `mean_orientation_error_rad` and `max_orientation_error_rad`.
 - `pose_success_rate`, counting a waypoint as successful only when both position and orientation errors are within tolerance.
 - `trajectory_pose_success_rate`, counting a trajectory as successful only when every selected waypoint is pose-successful.
+- `tool_frame_mapping`, set to `identity` for diagnostic pose runs or `canonical_tool` for mapped pose-fairness runs.
 
 Use the existing position tolerance (`0.002` m by default) for the position half of pose success unless a benchmark run explicitly documents a different tolerance.

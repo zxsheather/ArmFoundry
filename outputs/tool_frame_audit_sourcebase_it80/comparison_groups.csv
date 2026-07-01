@@ -1,0 +1,5 @@
+comparison_group,robots,count,position_results_available,pose_results_available,fairness_status
+attachment_site_diagnostic,ur5e_true,1,1,1,diagnostic_only_missing_gripper_tcp
+proxy_endpoint_diagnostic,"simple_default, panda_proxy, ur5_proxy, xarm6_proxy",4,4,0,diagnostic_only
+source_robot_gripper_chain,panda_true,1,1,1,source_reference_only
+tcp_offset_only_kinematic_tcp,"xarm6_true, ur5e_true_robotiq2f85_tcp_proxy",2,2,2,currently_best_cross_robot_tcp_family

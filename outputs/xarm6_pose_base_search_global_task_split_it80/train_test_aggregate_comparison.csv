@@ -1,0 +1,5 @@
+base_label,split,num_trajectories,num_waypoints,ik_success_rate,trajectory_success_rate,mean_position_error,max_position_error,pose_success_rate,trajectory_pose_success_rate,mean_orientation_error_rad,max_orientation_error_rad
+best_train_base,test,450,35981,0.839638,0.448889,0.008424,0.133828,0.839638,0.448889,0.014155,0.515854
+reference_base,test,450,35981,0.290348,0.0,0.051215,0.227367,0.290348,0.0,0.193582,1.451059
+best_train_base,train,1050,83994,0.900064,0.547619,0.003489,0.127003,0.900064,0.547619,0.007943,0.551085
+reference_base,train,1050,83994,0.200669,0.0,0.049394,0.206252,0.200669,0.0,0.170142,1.803748

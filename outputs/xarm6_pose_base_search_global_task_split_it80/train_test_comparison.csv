@@ -1,0 +1,2 @@
+group,reference_test_trajectory_success,best_test_trajectory_success,test_trajectory_success_delta,reference_test_waypoint_success,best_test_waypoint_success,test_waypoint_success_delta,best_base_x,best_base_y,best_base_z,best_base_yaw
+global,0.0,0.448889,0.448889,0.290348,0.839638,0.54929,-0.304931,-0.138489,0.644111,0.677363

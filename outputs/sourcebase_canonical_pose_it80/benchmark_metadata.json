@@ -1,0 +1,281 @@
+{
+  "benchmark": "sourcebase_canonical_pose_it80",
+  "purpose": "Canonical frame-level pose fairness rerun for mapped gripper TCP rows.",
+  "data": "data/libero_ee_trajectories_armforge",
+  "run_settings": {
+    "base_pose_mode": "source",
+    "evaluation_mode": "pose",
+    "tool_frame_mapping": "canonical_tool",
+    "orientation_format": "rotvec",
+    "orientation_tolerance_rad": 0.1,
+    "position_tolerance_m": 0.002,
+    "max_waypoints_per_trajectory": 80,
+    "max_iters": 80,
+    "num_workers": 16
+  },
+  "commands": {
+    "panda_true": "uv run python -m ddird.experiments.run_eval_baselines --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_canonical_pose_it80/panda_true --robots panda_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10 --tool-frame-mapping canonical_tool",
+    "xarm6_true": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf outputs/generated_models/xarm6_true/xarm6_true.xml --robot-name xarm6_true --base-body link_base --target-site link_tcp --target-body link6 --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_canonical_pose_it80/xarm6_true --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10 --tool-frame-mapping canonical_tool",
+    "ur5e_true_robotiq2f85_tcp_proxy": "uv run --extra mujoco python -m ddird.experiments.run_eval_mjcf_robot --mjcf outputs/generated_models/ur5e_robotiq2f85_tcp_proxy/ur5e_true_robotiq2f85_tcp_proxy.xml --robot-name ur5e_true_robotiq2f85_tcp_proxy --base-body base --target-site ur5e_robotiq2f85_tcp --target-body wrist_3_link --data data/libero_ee_trajectories_armforge --outputs outputs/sourcebase_canonical_pose_it80/ur5e_true_robotiq2f85_tcp_proxy --max-waypoints-per-trajectory 80 --max-iters 80 --num-workers 16 --base-pose-mode source --evaluation-mode pose --orientation-format rotvec --orientation-tolerance 0.10 --tool-frame-mapping canonical_tool"
+  },
+  "robots": [
+    {
+      "robot_name": "panda_true",
+      "output_dir": "outputs/sourcebase_canonical_pose_it80/panda_true",
+      "result": {
+        "robot_name": "panda_true",
+        "num_trajectories": "1500",
+        "num_waypoints": "119975",
+        "ik_success_rate": "0.995299",
+        "trajectory_success_rate": "0.946667",
+        "mean_position_error": "0.000495",
+        "max_position_error": "0.08294",
+        "mean_joint_margin": "0.39912",
+        "min_joint_margin": "0.0",
+        "mean_manipulability": "0.17995762",
+        "min_manipulability": "0.02193688",
+        "manipulability_below_threshold": "0.0",
+        "smoothness_cost": "0.01949797",
+        "collision_proxy": "0.01513034",
+        "hardware_cost": "1.415762",
+        "orientation_tolerance_rad": "0.1",
+        "mean_orientation_error_rad": "0.011822",
+        "max_orientation_error_rad": "1.686391",
+        "pose_success_rate": "0.995299",
+        "trajectory_pose_success_rate": "0.946667"
+      },
+      "tool_frame": {
+        "base_body": "robot0_base",
+        "concrete_gripper_modeled": true,
+        "robot_name": "panda_true",
+        "semantics": "LIBERO source Panda gripper/eef kinematic chain is included up to the recorded gripper site.",
+        "source": "real_kinematics",
+        "target_body": "gripper0_eef",
+        "target_frame": "gripper0_grip_site",
+        "target_offset_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_site": "gripper0_grip_site",
+        "tcp_offset_included": true,
+        "tool_modeling": "source_gripper_chain"
+      },
+      "tool_frame_mapping": {
+        "canonical_frame": {
+          "name": "parallel_jaw_pinch_tcp",
+          "origin": "pinch center / gripper TCP",
+          "x_axis": "+Y cross +Z; completes a right-handed frame",
+          "y_axis": "finger opening/closing direction between left and right jaws",
+          "z_axis": "tool approach direction from palm/wrist toward the pinch point"
+        },
+        "canonical_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "eligible": true,
+        "mode": "canonical_tool",
+        "pose_fairness_claim": true,
+        "rationale": "LIBERO ee_ori is recorded at the Panda gripper0_grip_site; that site is the source canonical parallel-jaw TCP frame.",
+        "source_frame": "libero_panda/gripper0_grip_site",
+        "source_to_canonical_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "status": "source_canonical",
+        "target_frame": "gripper0_grip_site",
+        "target_robot": "panda_true"
+      }
+    },
+    {
+      "robot_name": "xarm6_true",
+      "output_dir": "outputs/sourcebase_canonical_pose_it80/xarm6_true",
+      "result": {
+        "robot_name": "xarm6_true",
+        "num_trajectories": "1500",
+        "num_waypoints": "119975",
+        "ik_success_rate": "0.719183",
+        "trajectory_success_rate": "0.242",
+        "mean_position_error": "0.0112",
+        "max_position_error": "0.111168",
+        "mean_joint_margin": "1.274039",
+        "min_joint_margin": "0.299946",
+        "mean_manipulability": "0.14035062",
+        "min_manipulability": "0.02604513",
+        "manipulability_below_threshold": "0.0",
+        "smoothness_cost": "0.01468042",
+        "collision_proxy": "0.00247573",
+        "hardware_cost": "1.202873",
+        "orientation_tolerance_rad": "0.1",
+        "mean_orientation_error_rad": "0.023499",
+        "max_orientation_error_rad": "1.244216",
+        "pose_success_rate": "0.719183",
+        "trajectory_pose_success_rate": "0.242"
+      },
+      "tool_frame": {
+        "base_body": "link_base",
+        "concrete_gripper_modeled": false,
+        "model_path": "outputs/generated_models/xarm6_true/xarm6_true.xml",
+        "robot_name": "xarm6_true",
+        "semantics": "Official xArm gripper TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+        "source": "real_kinematics",
+        "target_body": "link6",
+        "target_frame": "link_tcp",
+        "target_offset_xyz": [
+          0.0,
+          0.0,
+          0.172
+        ],
+        "target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_site": "link_tcp",
+        "tcp_offset_included": true,
+        "tool_modeling": "tcp_offset_only"
+      },
+      "tool_frame_mapping": {
+        "canonical_frame": {
+          "name": "parallel_jaw_pinch_tcp",
+          "origin": "pinch center / gripper TCP",
+          "x_axis": "+Y cross +Z; completes a right-handed frame",
+          "y_axis": "finger opening/closing direction between left and right jaws",
+          "z_axis": "tool approach direction from palm/wrist toward the pinch point"
+        },
+        "canonical_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "eligible": true,
+        "mode": "canonical_tool",
+        "pose_fairness_claim": true,
+        "rationale": "Official xArm gripper joint_tcp has rpy=0, +Z offset to the TCP, and symmetric finger structure along +/-Y, matching the canonical parallel-jaw axes. The benchmark model still includes only the TCP offset, not full gripper geometry.",
+        "source_frame": "libero_panda/gripper0_grip_site",
+        "source_to_canonical_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "status": "mapped_tcp_offset_only",
+        "target_frame": "link_tcp",
+        "target_robot": "xarm6_true"
+      }
+    },
+    {
+      "robot_name": "ur5e_true_robotiq2f85_tcp_proxy",
+      "output_dir": "outputs/sourcebase_canonical_pose_it80/ur5e_true_robotiq2f85_tcp_proxy",
+      "result": {
+        "robot_name": "ur5e_true_robotiq2f85_tcp_proxy",
+        "num_trajectories": "1500",
+        "num_waypoints": "119975",
+        "ik_success_rate": "0.996833",
+        "trajectory_success_rate": "0.967333",
+        "mean_position_error": "0.000395",
+        "max_position_error": "0.025089",
+        "mean_joint_margin": "1.609774",
+        "min_joint_margin": "0.284121",
+        "mean_manipulability": "0.11879035",
+        "min_manipulability": "0.01692633",
+        "manipulability_below_threshold": "0.0",
+        "smoothness_cost": "1.20048076",
+        "collision_proxy": "0.00229377",
+        "hardware_cost": "1.620531",
+        "orientation_tolerance_rad": "0.1",
+        "mean_orientation_error_rad": "0.001411",
+        "max_orientation_error_rad": "0.09955",
+        "pose_success_rate": "0.996833",
+        "trajectory_pose_success_rate": "0.967333"
+      },
+      "tool_frame": {
+        "base_body": "base",
+        "concrete_gripper_modeled": false,
+        "model_path": "outputs/generated_models/ur5e_robotiq2f85_tcp_proxy/ur5e_true_robotiq2f85_tcp_proxy.xml",
+        "robot_name": "ur5e_true_robotiq2f85_tcp_proxy",
+        "semantics": "Explicit UR TCP offset is included; detailed gripper geometry and actuation are not modeled.",
+        "source": "real_kinematics",
+        "target_body": "wrist_3_link",
+        "target_frame": "ur5e_robotiq2f85_tcp",
+        "target_offset_xyz": [
+          0.0,
+          0.2558,
+          0.0
+        ],
+        "target_quat_wxyz": [
+          -0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "target_site": "ur5e_robotiq2f85_tcp",
+        "tcp_offset_included": true,
+        "tool_modeling": "tcp_offset_only"
+      },
+      "tool_frame_mapping": {
+        "canonical_frame": {
+          "name": "parallel_jaw_pinch_tcp",
+          "origin": "pinch center / gripper TCP",
+          "x_axis": "+Y cross +Z; completes a right-handed frame",
+          "y_axis": "finger opening/closing direction between left and right jaws",
+          "z_axis": "tool approach direction from palm/wrist toward the pinch point"
+        },
+        "canonical_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "eligible": true,
+        "mode": "canonical_tool",
+        "pose_fairness_claim": true,
+        "rationale": "The Robotiq 2F-85 pinch site uses +Z from gripper base to pinch center and +/-Y jaw symmetry, matching the canonical parallel-jaw axes after composition onto the UR5e attachment_site. The benchmark model remains tcp_offset_only.",
+        "source_frame": "libero_panda/gripper0_grip_site",
+        "source_to_canonical_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_to_target_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "status": "mapped_tcp_offset_only",
+        "target_frame": "ur5e_robotiq2f85_tcp",
+        "target_robot": "ur5e_true_robotiq2f85_tcp_proxy"
+      }
+    }
+  ],
+  "excluded_rows": {
+    "ur5e_true": "attachment_site diagnostic, not a gripper TCP canonical frame",
+    "*_proxy": "simplified endpoints without concrete tool-frame axes"
+  }
+}
